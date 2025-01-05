@@ -16,7 +16,7 @@ const AboutSection = () => {
       scrollTrigger: {
         trigger: ".about-section",
         toggleActions: "play reverse play reverse", // Repeats animation on entering and leaving
-        start: "top 50%", // Trigger when the section enters 80% of the viewport
+        start: "top 80%", // Trigger when the section enters 80% of the viewport
       },
     });
 
@@ -28,7 +28,7 @@ const AboutSection = () => {
       scrollTrigger: {
         trigger: ".about-section",
         toggleActions: "play reverse play reverse", // Repeats animation on entering and leaving
-        start: "top 50%",
+        start: "top 80%",
       },
     });
   }, []);
