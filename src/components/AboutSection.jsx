@@ -35,7 +35,7 @@ const AboutSection = () => {
 
   return (
     <section
-      className="about-section w-full py-4 md:py-16 flex flex-col items-center justify-center"
+      className="md:about-section w-full py-4 md:py-16 flex flex-col items-center justify-center"
       id="about"
     >
       {/* Heading */}
