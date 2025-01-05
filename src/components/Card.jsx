@@ -18,7 +18,7 @@ const Card = ({ work,inside=false }) => {
 
   return (
     <div
-      className="card cursor-pointer overflow-hidden"
+      className="cursor-pointer overflow-hidden"
       onClick={handleClick}
       role="button"
       tabIndex={0}
