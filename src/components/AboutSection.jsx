@@ -11,7 +11,7 @@ const AboutSection = () => {
     gsap.from(".about-text", {
       x: -100, // Text slides in from the left
       opacity: 0,
-      duration: 1.2,
+      duration: 2,
       ease: "power3.out",
       scrollTrigger: {
         trigger: ".about-section",
@@ -23,7 +23,7 @@ const AboutSection = () => {
     gsap.from(".about-image", {
       x: -100, // Image slides in from the right
       opacity: 0,
-      duration: 1.2,
+      duration: 2,
       ease: "power3.out",
       scrollTrigger: {
         trigger: ".about-section",
@@ -35,18 +35,18 @@ const AboutSection = () => {
 
   return (
     <section
-      className="about-section w-full py-16 flex flex-col items-center justify-center"
+      className="about-section w-full py-4 md:py-16 flex flex-col items-center justify-center"
       id="about"
     >
       {/* Heading */}
-      <h2 className="text-4xl font-bold text-gray-800 mb-12 text-center">
+      <h2 className="text-lg md:text-4xl font-bold text-gray-800 md:mb-12 text-center">
         About Me
       </h2>
 
       {/* Content */}
-      <div className="container mx-auto flex flex-col md:flex-row gap-10 items-center justify-between px-4 md:px-16">
+      <div className="container mx-auto flex flex-col-reverse md:flex-row gap-10 items-center justify-between px-4 md:px-16">
         {/* Text */}
-        <div className="about-text text-gray-700 flex-1 text-lg leading-relaxed">
+        <div className="about-text text-gray-700 md:flex-1 text-sm md:text-lg text-justify md:text-left leading-relaxed">
           <p>
             Hi, I’m Chandra Shekar , a passionate photographer with a knack for capturing
             life’s beautiful moments. With years of experience in portrait,
@@ -62,7 +62,7 @@ const AboutSection = () => {
         </div>
 
         {/* Image */}
-        <div className="about-image flex-1 mt-8 md:mt-0 h-[400px]">
+        <div className="about-image md:flex-1 mt-8 md:mt-0 h-[50vh] md:h-[400px]">
           <img
             src="/images/home-section/about.jpg"
             alt="Photographer"

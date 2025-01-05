@@ -1,14 +1,14 @@
 import React from "react";
 
 const Tabs = ({ categories, activeCategory, onCategoryChange }) => (
-  <div className="flex space-x-4">
+  <div className="flex flex-wrap">
     {categories.map((category) => (
       <button
         key={category}
-        className={`px-6 py-2 rounded-full ${
+        className={`px-4 py-2 rounded-full text-nowrap ${
           activeCategory === category
-            ? "bg-blue-600 text-white"
-            : "bg-gray-200 text-gray-700"
+            ? "underline text-blue-600"
+            : " text-gray-700"
         }`}
         onClick={() => onCategoryChange(category)}
       >

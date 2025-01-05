@@ -3,18 +3,22 @@ import { useRouter } from "next/navigation";
 import React from "react";
 import Image from "next/image";
 
-const Card = ({ work }) => {
+
+const Card = ({ work,inside=false }) => {
   const router = useRouter();
 
   if (!work) return null;
 
   const handleClick = () => {
-    router.push(`/works/${work.slug}`);
+    if (!inside) {
+      router.push(`/works/${work.slug}`);
+    }
   };
+
 
   return (
     <div
-      className="cursor-pointer transform hover:scale-105 transition duration-300 ease-in-out"
+      className="card cursor-pointer overflow-hidden"
       onClick={handleClick}
       role="button"
       tabIndex={0}
@@ -25,9 +29,9 @@ const Card = ({ work }) => {
         alt={`alt-${work.name}`}
         width={300}
         height={240}
-        className="w-full h-60 object-cover rounded-lg shadow-lg"
+        className="w-full h-32 md:h-60 object-cover transform hover:scale-105 transition duration-700 ease-in-out"
       />
-      <p className="text-center mt-4 font-semibold text-lg">{work.name}</p>
+      <p className="text-center mt-4 font-semibold text-sm md:text-lg">{work.name}</p>
     </div>
   );
 };

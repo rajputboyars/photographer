@@ -16,11 +16,11 @@ const HomeSection = () => {
   }, []);
 
   return (
-    <section className="relative w-full h-screen flex items-center justify-center overflow-hidden">
+    <section className="relative w-full h-[50vh] md:h-screen flex items-center justify-center overflow-hidden">
       {/* Centered Text */}
       <div className="absolute z-10 text-center">
-        <h1 className="text-4xl font-bold text-white mb-4">Isha Photography</h1>
-        <p className="text-lg text-white">Making Your Special Moments Unforgettable</p>
+        <h1 className="text-lg md:text-4xl font-bold text-white md:mb-4">Isha Photography</h1>
+        <p className="text-sm md:text-lg text-white">Making Your Special Moments Unforgettable</p>
       </div>
       <div className=" absolute h-full w-full">
         <img

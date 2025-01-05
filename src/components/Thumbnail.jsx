@@ -2,7 +2,7 @@ import React from "react";
 
 const Thumbnail = ({ thumbnail, name }) => (
   <div
-    className="w-full h-screen bg-cover bg-center relative"
+    className="w-full h-[50vh] md:h-screen bg-cover bg-center relative"
   >
     <div className=" absolute h-full w-full">
         <img
