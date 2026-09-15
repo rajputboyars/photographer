@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 import Icon from "@/components/Icon";
 import { store } from "@/lib/store";
 import { deleteGallery, saveGallery } from "@/app/(admin)/admin/actions";
@@ -41,8 +42,12 @@ export default async function GalleriesPage() {
                 </span>
               </div>
               <div className="flex flex-col gap-2 p-4">
-                <span className="text-[15px]">{g.name}</span>
-                <span className="text-[13px] text-ink/40">/works/{g.slug}</span>
+                <Link href={`/admin/galleries/${g.slug}`} className="text-[15px] hover:text-accent">
+                  {g.name}
+                </Link>
+                <span className="text-[13px] text-ink/40">
+                  {Object.values(g.cards ?? {}).flat().length} photographs · /works/{g.slug}
+                </span>
                 <div className="flex flex-wrap gap-1.5 pt-1">
                   {g.categories.length ? (
                     g.categories.map((c) => (
@@ -54,6 +59,13 @@ export default async function GalleriesPage() {
                     <span className="text-[12px] text-ink/35">No categories</span>
                   )}
                 </div>
+                <Link
+                  href={`/admin/galleries/${g.slug}`}
+                  className="mt-1 inline-flex items-center gap-1.5 self-start rounded-lg border border-white/15 px-3 py-1.5 text-[13px] text-ink/80 transition hover:border-white/35 hover:text-white"
+                >
+                  <Icon name="images" className="h-3.5 w-3.5" />
+                  Manage photographs
+                </Link>
                 <form action={deleteGallery} className="pt-2">
                   <input type="hidden" name="slug" value={g.slug} />
                   <button type="submit" className="inline-flex items-center gap-1.5 text-[13px] text-rose-300/70 transition hover:text-rose-200">
