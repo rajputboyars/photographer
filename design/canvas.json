@@ -11,6 +11,10 @@
     {
       "id": "page-4",
       "name": "Themes 6–10"
+    },
+    {
+      "id": "page-5",
+      "name": "Home page styles"
     }
   ],
   "artboards": [
@@ -166,6 +170,51 @@
       "y": 0,
       "w": 1440,
       "h": 1320
+    },
+    {
+      "file": "StyleSkeuomorphic.dc.html",
+      "title": "Skeuomorphism",
+      "page": "page-5",
+      "x": 0,
+      "y": 0,
+      "w": 1440,
+      "h": 2050
+    },
+    {
+      "file": "StyleNeobrutalist.dc.html",
+      "title": "Neobrutalism",
+      "page": "page-5",
+      "x": 1600,
+      "y": 0,
+      "w": 1440,
+      "h": 2200
+    },
+    {
+      "file": "StyleClaymorphic.dc.html",
+      "title": "Claymorphism",
+      "page": "page-5",
+      "x": 3200,
+      "y": 0,
+      "w": 1440,
+      "h": 2250
+    },
+    {
+      "file": "StyleMinimal.dc.html",
+      "title": "Minimalism",
+      "page": "page-5",
+      "x": 4800,
+      "y": 0,
+      "w": 1440,
+      "h": 2750
+    },
+    {
+      "file": "StyleLiquidGlass.dc.html",
+      "title": "Liquid Glass",
+      "page": "page-5",
+      "x": 6400,
+      "y": 0,
+      "w": 1440,
+      "h": 2500
     }
   ],
   "annotations": [
@@ -200,10 +249,18 @@
       "y": -190,
       "w": 780,
       "text": "Themes 6–10. Number 10, Ink & Petal, is the one built out across the website pages."
+    },
+    {
+      "id": "note-6",
+      "page": "page-5",
+      "x": 0,
+      "y": -190,
+      "w": 800,
+      "text": "The same home page — same copy, same sections, same photographs — rendered in five interface styles.\nDifferences are surface treatment only: material, depth, corner radius, shadow and type weight. Say which one and I'll carry it across the other pages."
     }
   ],
   "launch": {
     "view": "canvas",
-    "page": "page-1"
+    "page": "page-5"
   }
 }

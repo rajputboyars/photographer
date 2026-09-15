@@ -1,0 +1,120 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bitter:wght@400;600;700&family=Source+Sans+3:wght@300;400;600&display=swap">
+  <style>
+    body { margin: 0; background: #2B211A; color: #F3E9DA; font-family: "Source Sans 3", "Avenir Next", sans-serif; font-weight: 400; -webkit-font-smoothing: antialiased; }
+    a { color: #C9922F; } a:hover { color: #E3B356; }
+    h1, h2, h3 { font-family: "Bitter", Georgia, serif; font-weight: 700; margin: 0; }
+    p { margin: 0; text-wrap: pretty; }
+    .leather { background-color: #3A2C22; background-image: radial-gradient(rgba(255,255,255,0.045) 1px, transparent 1px), radial-gradient(rgba(0,0,0,0.3) 1px, transparent 1px); background-size: 7px 7px, 11px 11px; background-position: 0 0, 3px 4px; }
+    .stitch { border: 1px solid #241B14; box-shadow: inset 0 0 0 2px #3A2C22, inset 0 0 0 3px #6B5340; }
+    .brass { background: linear-gradient(180deg, #E8C877 0%, #C9922F 48%, #A8761F 52%, #D4A448 100%); color: #2B211A; box-shadow: 0 2px 0 #7A5416, 0 5px 10px rgba(0,0,0,0.45), inset 0 1px 0 rgba(255,255,255,0.65); }
+    .plate { background: linear-gradient(180deg, #4A392C 0%, #33261D 100%); box-shadow: inset 0 1px 0 rgba(255,255,255,0.12), 0 8px 18px rgba(0,0,0,0.5); }
+    .inset { box-shadow: inset 0 3px 8px rgba(0,0,0,0.6), inset 0 -1px 0 rgba(255,255,255,0.08); }
+    .photo { border: 7px solid; border-image: linear-gradient(180deg, #6B5340, #3A2C22) 1; box-shadow: 0 10px 22px rgba(0,0,0,0.55), inset 0 0 26px rgba(0,0,0,0.5); }
+    .engraved { text-shadow: 0 1px 0 rgba(0,0,0,0.7), 0 -1px 0 rgba(255,255,255,0.08); }
+  </style>
+</helmet>
+
+<div class="leather" style="width: 1440px;">
+
+  <!-- NAV -->
+  <div class="plate" style="display: flex; align-items: center; justify-content: space-between; padding: 18px 48px; border-bottom: 3px solid #241B14;">
+    <div style="display: flex; align-items: center; gap: 14px;">
+      <span style="width: 46px; height: 46px; border-radius: 50%; background: radial-gradient(circle at 34% 30%, #6E6E70 0%, #2A2A2C 62%, #131314 100%); box-shadow: inset 0 0 0 3px #8A8A8C, 0 3px 6px rgba(0,0,0,0.6); display: inline-flex; align-items: center; justify-content: center;">
+        <span style="width: 16px; height: 16px; border-radius: 50%; background: radial-gradient(circle at 36% 30%, rgba(255,255,255,0.85), rgba(60,90,120,0.6) 45%, #0B1218 75%);"></span>
+      </span>
+      <div style="display: flex; flex-direction: column;">
+        <span class="engraved" style="font-family: 'Bitter', serif; font-size: 22px; font-weight: 700; color: #E8DCC6;">Isha Photography</span>
+        <span style="font-size: 10px; letter-spacing: 0.26em; text-transform: uppercase; color: #A08A6C;">Estd. [YEAR]</span>
+      </div>
+    </div>
+    <div style="display: flex; align-items: center; gap: 12px;">
+      <span class="stitch" style="padding: 11px 20px; font-size: 13px; color: #E8DCC6; background: #46362A;">Portfolio</span>
+      <span class="stitch" style="padding: 11px 20px; font-size: 13px; color: #E8DCC6; background: #46362A;">Collections</span>
+      <span class="stitch" style="padding: 11px 20px; font-size: 13px; color: #E8DCC6; background: #46362A;">About</span>
+      <span class="brass" style="padding: 12px 24px; font-size: 13px; font-weight: 600;">Check your date</span>
+    </div>
+  </div>
+
+  <!-- HERO -->
+  <div style="padding: 44px 48px; display: grid; grid-template-columns: repeat(12, minmax(0, 1fr)); gap: 40px; align-items: center;">
+    <div style="grid-column: span 6; display: flex; flex-direction: column; gap: 20px;">
+      <span class="stitch" style="align-self: flex-start; background: #46362A; padding: 9px 16px; font-size: 11px; letter-spacing: 0.2em; text-transform: uppercase; color: #C9922F;">Weddings &amp; celebrations &middot; [YOUR CITY]</span>
+      <h1 class="engraved" style="font-size: 60px; line-height: 1.06; color: #F3E9DA;">Every frame,<br>developed with<br><span style="color: #C9922F;">care</span></h1>
+      <p style="font-size: 17px; line-height: 1.8; color: #C9B79B; max-width: 460px;">Wedding photography and film made the old way — patient, personal, and printed on paper you can hold. Two of us, at every event from haldi to the last song.</p>
+      <div style="display: flex; align-items: center; gap: 16px; padding-top: 8px;">
+        <span class="brass" style="padding: 16px 30px; font-size: 14px; font-weight: 600;">Check your date</span>
+        <span class="stitch" style="background: #46362A; padding: 15px 26px; font-size: 14px; color: #E8DCC6;">Watch a wedding film</span>
+      </div>
+    </div>
+    <div style="grid-column: span 6; display: flex; gap: 18px;">
+      <div class="photo" style="flex-grow: 1; height: 420px; overflow: hidden;"><img src="g5.jpg" alt="Couple at their pre-wedding shoot" style="width: 100%; height: 100%; object-fit: cover;"></div>
+      <div style="display: flex; flex-direction: column; gap: 18px; width: 200px;">
+        <div class="photo" style="height: 201px; overflow: hidden;"><img src="g7.jpg" alt="Haldi ceremony" style="width: 100%; height: 100%; object-fit: cover;"></div>
+        <div class="photo" style="height: 201px; overflow: hidden;"><img src="g6.jpg" alt="Mehndi ceremony" style="width: 100%; height: 100%; object-fit: cover;"></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- COLLECTIONS -->
+  <div class="plate" style="padding: 48px; display: flex; flex-direction: column; gap: 30px; border-top: 3px solid #241B14; border-bottom: 3px solid #241B14;">
+    <div style="display: flex; flex-direction: column; align-items: center; gap: 8px;">
+      <h2 class="engraved" style="font-size: 38px; color: #F3E9DA;">Three collections</h2>
+      <p style="font-size: 15px; color: #A08A6C;">Every one includes a photographer and a film-maker.</p>
+    </div>
+    <div style="display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 24px;">
+      <div class="stitch leather" style="padding: 28px 26px; display: flex; flex-direction: column; gap: 10px;">
+        <h3 style="font-size: 24px; color: #E8DCC6;">The Portrait</h3>
+        <p style="font-size: 15px; line-height: 1.7; color: #A08A6C;">Half a day. Pre-wedding, engagement or a studio session.</p>
+        <span class="inset" style="align-self: flex-start; background: #241B14; padding: 8px 14px; font-size: 14px; color: #C9922F; margin-top: 4px;">[YOUR PRICE]</span>
+      </div>
+      <div class="stitch leather" style="padding: 28px 26px; display: flex; flex-direction: column; gap: 10px;">
+        <h3 style="font-size: 24px; color: #E8DCC6;">The Ceremony</h3>
+        <p style="font-size: 15px; line-height: 1.7; color: #A08A6C;">One full day, end to end, with a highlight film and an album.</p>
+        <span class="inset" style="align-self: flex-start; background: #241B14; padding: 8px 14px; font-size: 14px; color: #C9922F; margin-top: 4px;">[YOUR PRICE]</span>
+      </div>
+      <div class="stitch leather" style="padding: 28px 26px; display: flex; flex-direction: column; gap: 10px;">
+        <h3 style="font-size: 24px; color: #E8DCC6;">The Whole Wedding</h3>
+        <p style="font-size: 15px; line-height: 1.7; color: #A08A6C;">Haldi through reception, two shooters, an album for each family.</p>
+        <span class="inset" style="align-self: flex-start; background: #241B14; padding: 8px 14px; font-size: 14px; color: #C9922F; margin-top: 4px;">[YOUR PRICE]</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- WORK -->
+  <div style="padding: 48px; display: flex; flex-direction: column; gap: 26px;">
+    <h2 class="engraved" style="font-size: 34px; color: #F3E9DA;">From the archive</h2>
+    <div style="display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 22px;">
+      <div class="photo" style="height: 230px; overflow: hidden;"><img src="g9.jpg" alt="Reception" style="width: 100%; height: 100%; object-fit: cover;"></div>
+      <div class="photo" style="height: 230px; overflow: hidden;"><img src="g10.jpg" alt="Sangeet" style="width: 100%; height: 100%; object-fit: cover;"></div>
+      <div class="photo" style="height: 230px; overflow: hidden;"><img src="g8.jpg" alt="Celebration" style="width: 100%; height: 100%; object-fit: cover;"></div>
+      <div class="photo" style="height: 230px; overflow: hidden;"><img src="g4.jpg" alt="First birthday" style="width: 100%; height: 100%; object-fit: cover;"></div>
+    </div>
+  </div>
+
+  <!-- CTA -->
+  <div class="plate" style="padding: 44px 48px; display: flex; align-items: center; justify-content: space-between; gap: 40px; border-top: 3px solid #241B14;">
+    <div style="display: flex; flex-direction: column; gap: 8px;">
+      <h2 class="engraved" style="font-size: 32px; color: #F3E9DA;">Tell me about your day</h2>
+      <p style="font-size: 15px; color: #A08A6C;">Reply within [N] hours with availability and a full price list.</p>
+    </div>
+    <span class="brass" style="padding: 17px 34px; font-size: 15px; font-weight: 600;">Check your date</span>
+  </div>
+
+  <div style="background: #241B14; padding: 18px 48px; display: flex; justify-content: space-between; font-size: 12px; color: #7A6650;">
+    <span>Skeuomorphism &mdash; leather, brass and glass</span>
+    <span>Bitter + Source Sans 3</span>
+  </div>
+
+</div>
+</x-dc>
+</body>
+</html>
