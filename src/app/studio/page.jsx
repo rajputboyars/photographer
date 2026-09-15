@@ -4,7 +4,7 @@ import GalleryCard from "@/components/GalleryCard";
 import CtaBand from "@/components/CtaBand";
 import Icon from "@/components/Icon";
 import { Arrow, BrightLink, Panel, Pill, SectionHead } from "@/components/Glass";
-import { principles, site, venues } from "@/lib/site";
+import { photos, principles, site, venues } from "@/lib/site";
 
 export const metadata = {
   title: "Studio",
@@ -12,15 +12,15 @@ export const metadata = {
 };
 
 const ON_THE_DAY = [
-  { src: "/images/home-section/IMG-20250104-WA0012.jpg", alt: "Sangeet night" },
-  { src: "/images/home-section/IMG-20250104-WA0017.jpg", alt: "Wedding ceremony" },
-  { src: "/images/home-section/IMG-20250104-WA0021.jpg", alt: "Guests celebrating" },
-  { src: "/images/home-section/card2.jpg", alt: "Haldi ceremony" },
+  { src: photos.sangeet, alt: "Sangeet night" },
+  { src: photos.wedding, alt: "Wedding ceremony" },
+  { src: photos.celebration, alt: "Guests celebrating" },
+  { src: photos.haldi, alt: "Haldi ceremony" },
 ];
 
 export default function StudioPage() {
   return (
-    <PageShell image="/images/home-section/about.jpg">
+    <PageShell image={photos.heroStudio}>
       {/* INTRO */}
       <section className="grid gap-10 py-10 md:grid-cols-12 md:items-center md:py-14">
         <div className="flex flex-col gap-5 md:col-span-7">
@@ -45,7 +45,7 @@ export default function StudioPage() {
         <Panel className="p-3 md:col-span-5">
           <div className="relative h-[380px] overflow-hidden rounded-[20px] md:h-[520px]">
             <Image
-              src="/images/home-section/about.jpg"
+              src={photos.heroStudio}
               alt="Chandra Shekar at work"
               fill
               sizes="(max-width: 768px) 100vw, 40vw"

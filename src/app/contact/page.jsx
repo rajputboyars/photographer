@@ -3,7 +3,7 @@ import PageShell from "@/components/PageShell";
 import EnquiryForm from "@/components/EnquiryForm";
 import Icon from "@/components/Icon";
 import { Panel, Pill } from "@/components/Glass";
-import { site } from "@/lib/site";
+import { photos, site } from "@/lib/site";
 
 export const metadata = {
   title: "Check your date",
@@ -20,7 +20,7 @@ const SOCIAL_ICONS = { Instagram: "instagram", Facebook: "facebook", YouTube: "y
 
 export default function ContactPage() {
   return (
-    <PageShell image="/images/home-section/card5.jpg">
+    <PageShell image={photos.heroContact}>
       <div className="grid gap-6 py-8 md:grid-cols-12 md:items-start md:py-10">
         {/* FORM */}
         <Panel className="flex flex-col gap-7 p-7 md:col-span-7 md:p-11">
@@ -42,7 +42,7 @@ export default function ContactPage() {
           <Panel className="p-3">
             <div className="relative h-[240px] overflow-hidden rounded-[20px] md:h-[280px]">
               <Image
-                src="/images/home-section/card5.jpg"
+                src={photos.heroContact}
                 alt="Couple at their pre-wedding shoot"
                 fill
                 sizes="(max-width: 768px) 100vw, 40vw"

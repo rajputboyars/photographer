@@ -2,7 +2,7 @@ import PageShell from "@/components/PageShell";
 import CtaBand from "@/components/CtaBand";
 import Icon from "@/components/Icon";
 import { BrightLink, GhostLink, Panel, SectionHead } from "@/components/Glass";
-import { collections, extras, faqs, process, site } from "@/lib/site";
+import { collections, extras, faqs, photos, process, site } from "@/lib/site";
 
 export const metadata = {
   title: "Collections & pricing",
@@ -11,7 +11,7 @@ export const metadata = {
 
 export default function CollectionsPage() {
   return (
-    <PageShell image="/images/home-section/IMG-20250104-WA0019.jpg">
+    <PageShell image={photos.heroCollections}>
       <section className="flex flex-col items-center gap-4 py-10 text-center md:py-14">
         <span className="meta">Collections &amp; pricing</span>
         <h1 className="max-w-[820px] text-[clamp(2.2rem,5vw,3.9rem)] font-light leading-[1.05] tracking-tight">
