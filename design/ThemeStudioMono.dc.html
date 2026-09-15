@@ -1,0 +1,94 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700&family=Space+Mono:wght@400&display=swap">
+  <style>
+    body { margin: 0; background: #FFFFFF; color: #000000; font-family: "Archivo", "Helvetica Neue", sans-serif; font-weight: 400; -webkit-font-smoothing: antialiased; }
+    a { color: #000000; } a:hover { color: #FF3B1F; }
+    h1, h2, h3 { font-family: "Archivo", "Helvetica Neue", sans-serif; font-weight: 700; margin: 0; letter-spacing: -0.04em; }
+    p { margin: 0; text-wrap: pretty; }
+    .mono { font-family: "Space Mono", ui-monospace, monospace; font-size: 11px; letter-spacing: 0.08em; text-transform: uppercase; }
+    .cell { border-right: 1px solid #000; }
+  </style>
+</helmet>
+
+<div style="width: 1440px; background: #FFFFFF;">
+
+  <div style="display: flex; align-items: center; justify-content: space-between; padding: 18px 40px; border-bottom: 1px solid #000;">
+    <span class="mono">Isha Photography &mdash; [YOUR CITY]</span>
+    <div style="display: flex; align-items: center; gap: 28px;" class="mono">
+      <span>Index</span><span>Services</span><span>Studio</span>
+      <span style="background: #FF3B1F; color: #FFF; padding: 10px 16px;">Check your date &rarr;</span>
+    </div>
+  </div>
+
+  <div style="display: grid; grid-template-columns: repeat(12, minmax(0, 1fr)); border-bottom: 1px solid #000;">
+    <div style="grid-column: span 8; padding: 44px 40px 36px; border-right: 1px solid #000; display: flex; flex-direction: column; gap: 26px;">
+      <span class="mono" style="color: #FF3B1F;">Est. [YEAR] / weddings, events, film</span>
+      <h1 style="font-size: 104px; line-height: 0.88;">WE SHOOT<br>THE PARTS<br>NOBODY<br>POSES FOR</h1>
+      <div style="display: flex; gap: 40px; align-items: flex-end; padding-top: 6px;">
+        <p style="font-size: 16px; line-height: 1.6; max-width: 380px;">Documentary photography and film. No staging, no filters, no three-hour portrait session while your guests eat without you.</p>
+        <span style="background: #000; color: #FFF; padding: 16px 26px;" class="mono">Check your date &rarr;</span>
+      </div>
+    </div>
+    <div style="grid-column: span 4; display: flex; flex-direction: column;">
+      <div style="height: 340px; border-bottom: 1px solid #000; overflow: hidden;"><img src="g7.jpg" alt="Wedding ceremony" style="width: 100%; height: 100%; object-fit: cover; filter: grayscale(1) contrast(1.15);"></div>
+      <div style="flex-grow: 1; padding: 22px 26px; display: flex; flex-direction: column; justify-content: space-between;">
+        <span class="mono">Fig. 01 &mdash; [Couple], [Venue]</span>
+        <span class="mono" style="color: #FF3B1F;">&darr; Scroll index</span>
+      </div>
+    </div>
+  </div>
+
+  <div style="display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); border-bottom: 1px solid #000;">
+    <div class="cell" style="padding: 30px 26px; display: flex; flex-direction: column; gap: 10px;">
+      <span class="mono" style="color: #FF3B1F;">001</span>
+      <h3 style="font-size: 26px;">WEDDINGS</h3>
+      <p style="font-size: 14px; line-height: 1.55;">2&ndash;5 days. Two shooters. Everything.</p>
+      <span class="mono" style="padding-top: 8px;">From [YOUR PRICE]</span>
+    </div>
+    <div class="cell" style="padding: 30px 26px; display: flex; flex-direction: column; gap: 10px;">
+      <span class="mono" style="color: #FF3B1F;">002</span>
+      <h3 style="font-size: 26px;">PRE&ndash;WEDDING</h3>
+      <p style="font-size: 14px; line-height: 1.55;">Half day, one location, one reel.</p>
+      <span class="mono" style="padding-top: 8px;">From [YOUR PRICE]</span>
+    </div>
+    <div class="cell" style="padding: 30px 26px; display: flex; flex-direction: column; gap: 10px;">
+      <span class="mono" style="color: #FF3B1F;">003</span>
+      <h3 style="font-size: 26px;">EVENTS</h3>
+      <p style="font-size: 14px; line-height: 1.55;">Birthdays, anniversaries, festivals.</p>
+      <span class="mono" style="padding-top: 8px;">From [YOUR PRICE]</span>
+    </div>
+    <div style="padding: 30px 26px; display: flex; flex-direction: column; gap: 10px; background: #000; color: #FFF;">
+      <span class="mono" style="color: #FF3B1F;">004</span>
+      <h3 style="font-size: 26px;">CORPORATE</h3>
+      <p style="font-size: 14px; line-height: 1.55;">Conferences, portraits, product film.</p>
+      <span class="mono" style="padding-top: 8px;">From [YOUR PRICE]</span>
+    </div>
+  </div>
+
+  <div style="display: grid; grid-template-columns: repeat(12, minmax(0, 1fr)); border-bottom: 1px solid #000;">
+    <div style="grid-column: span 3; height: 260px; border-right: 1px solid #000; overflow: hidden;"><img src="g6.jpg" alt="Mehndi" style="width: 100%; height: 100%; object-fit: cover; filter: grayscale(1) contrast(1.15);"></div>
+    <div style="grid-column: span 3; height: 260px; border-right: 1px solid #000; overflow: hidden;"><img src="g9.jpg" alt="Reception" style="width: 100%; height: 100%; object-fit: cover; filter: grayscale(1) contrast(1.15);"></div>
+    <div style="grid-column: span 3; height: 260px; border-right: 1px solid #000; overflow: hidden;"><img src="g5.jpg" alt="Pre-wedding" style="width: 100%; height: 100%; object-fit: cover; filter: grayscale(1) contrast(1.15);"></div>
+    <div style="grid-column: span 3; height: 260px; padding: 26px; display: flex; flex-direction: column; justify-content: space-between;">
+      <p style="font-size: 20px; line-height: 1.35; font-weight: 500;">[Paste a real review here.]</p>
+      <span class="mono">&mdash; [Client name], [Month Year]</span>
+    </div>
+  </div>
+
+  <div style="padding: 20px 40px; display: flex; justify-content: space-between;" class="mono">
+    <span>Theme 3 &mdash; Studio Mono</span>
+    <span>Archivo + Space Mono &middot; #000 / #FFF / #FF3B1F</span>
+  </div>
+
+</div>
+</x-dc>
+</body>
+</html>

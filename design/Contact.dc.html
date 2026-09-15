@@ -1,0 +1,205 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Outfit:wght@200;300;400;500;600&display=swap">
+  <style>
+    body { margin: 0; background: #0A0F1C; color: #F4F6FB; font-family: "Outfit", "Avenir Next", sans-serif; font-weight: 300; -webkit-font-smoothing: antialiased; }
+    a { color: #9CC7FF; text-decoration: none; } a:hover { color: #C7DEFF; }
+    h1, h2, h3 { font-family: "Outfit", sans-serif; font-weight: 400; margin: 0; letter-spacing: -0.02em; }
+    p { margin: 0; text-wrap: pretty; }
+    .glass { background: rgba(255,255,255,0.09); backdrop-filter: blur(26px) saturate(150%); -webkit-backdrop-filter: blur(26px) saturate(150%); border: 1px solid rgba(255,255,255,0.22); border-radius: 28px; box-shadow: 0 18px 50px rgba(3,8,20,0.5), inset 0 1px 0 rgba(255,255,255,0.45), inset 0 -18px 34px rgba(255,255,255,0.05); }
+    .glass-strong { background: rgba(255,255,255,0.16); backdrop-filter: blur(26px) saturate(150%); -webkit-backdrop-filter: blur(26px) saturate(150%); border: 1px solid rgba(255,255,255,0.3); border-radius: 28px; box-shadow: 0 18px 50px rgba(3,8,20,0.5), inset 0 1px 0 rgba(255,255,255,0.55); }
+    .glass-sm { background: rgba(255,255,255,0.11); backdrop-filter: blur(20px) saturate(150%); -webkit-backdrop-filter: blur(20px) saturate(150%); border: 1px solid rgba(255,255,255,0.24); border-radius: 100px; box-shadow: 0 8px 22px rgba(3,8,20,0.38), inset 0 1px 0 rgba(255,255,255,0.5); }
+    .glass-field { background: rgba(255,255,255,0.07); backdrop-filter: blur(18px); -webkit-backdrop-filter: blur(18px); border: 1px solid rgba(255,255,255,0.2); border-radius: 16px; box-shadow: inset 0 1px 0 rgba(255,255,255,0.3); }
+    .bright { background: rgba(255,255,255,0.92); color: #0A0F1C; border: 1px solid rgba(255,255,255,0.9); border-radius: 100px; box-shadow: 0 10px 26px rgba(3,8,20,0.42), inset 0 1px 0 rgba(255,255,255,0.95); display: inline-flex; align-items: center; gap: 10px; font-weight: 500; }
+    .meta { font-size: 12px; letter-spacing: 0.16em; text-transform: uppercase; color: rgba(244,246,251,0.62); }
+    .blob { position: absolute; border-radius: 50%; }
+  </style>
+</helmet>
+
+<div style="width: 1440px; background: #0A0F1C; position: relative; overflow: hidden;">
+    <img src="g5.jpg" alt="" style="position: absolute; left: 0; top: 0; width: 100%; height: 760px; object-fit: cover; opacity: 0.5;">
+    <div class="blob" style="left: -180px; top: 120px; width: 620px; height: 620px; background: rgba(92,132,255,0.5); filter: blur(130px);"></div>
+    <div class="blob" style="right: -140px; top: 460px; width: 560px; height: 560px; background: rgba(226,114,196,0.4); filter: blur(130px);"></div>
+    <div class="blob" style="left: 300px; top: 1200px; width: 700px; height: 700px; background: rgba(64,196,208,0.3); filter: blur(130px);"></div>
+    <div class="blob" style="right: -200px; top: 1900px; width: 640px; height: 640px; background: rgba(126,110,255,0.34); filter: blur(130px);"></div>
+    <div style="position: absolute; left: 0; top: 560px; right: 0; height: 360px; background: linear-gradient(180deg, rgba(10,15,28,0) 0%, #0A0F1C 72%);"></div>
+  <div style="position: relative;">
+    <div style="padding: 24px 44px;">
+      <div class="glass-sm" style="padding: 12px 14px 12px 26px; display: flex; align-items: center; justify-content: space-between;">
+        <span style="font-size: 20px; font-weight: 500; letter-spacing: -0.01em;">Isha Photography</span>
+        <div style="display: flex; align-items: center; gap: 8px; font-size: 15px;">
+          <span class="" style="padding: 11px 20px; border-radius: 100px;">Home</span>
+          <span class="" style="padding: 11px 20px; border-radius: 100px;">Portfolio</span>
+          <span class="" style="padding: 11px 20px; border-radius: 100px;">Collections</span>
+          <span class="" style="padding: 11px 20px; border-radius: 100px;">Studio</span>
+          <span class="bright" style="padding: 12px 24px;">Check your date</span>
+        </div>
+      </div>
+    </div>
+
+    <div style="padding: 50px 44px 60px; display: grid; grid-template-columns: repeat(12, minmax(0, 1fr)); gap: 26px; align-items: start;">
+
+      <div class="glass" style="grid-column: span 7; padding: 44px 40px; display: flex; flex-direction: column; gap: 28px;">
+        <div style="display: flex; flex-direction: column; gap: 14px;">
+          <span class="meta">Check your date</span>
+          <h1 style="font-size: 50px; line-height: 1.08; font-weight: 300;">Tell me about<br>your <span style="font-weight: 200; font-style: italic;">celebration</span></h1>
+          <p style="font-size: 16px; line-height: 1.8; color: rgba(244,246,251,0.76); max-width: 500px;">Six fields, one minute. You&rsquo;ll get availability and a full price list back within [N] hours — and nothing else, ever.</p>
+        </div>
+
+        <div style="display: flex; flex-direction: column; gap: 12px;">
+          <span class="meta" style="font-size: 11px;">What are we photographing?</span>
+          <div style="display: flex; flex-wrap: wrap; gap: 10px;">
+            <span class="bright" style="padding: 11px 20px; font-size: 14px;">Wedding</span>
+            <span class="glass-sm" style="padding: 11px 20px; font-size: 14px;">Pre-wedding</span>
+            <span class="glass-sm" style="padding: 11px 20px; font-size: 14px;">Haldi / Mehndi</span>
+            <span class="glass-sm" style="padding: 11px 20px; font-size: 14px;">Sangeet</span>
+            <span class="glass-sm" style="padding: 11px 20px; font-size: 14px;">Reception</span>
+            <span class="glass-sm" style="padding: 11px 20px; font-size: 14px;">Birthday</span>
+            <span class="glass-sm" style="padding: 11px 20px; font-size: 14px;">Corporate</span>
+            <span class="glass-sm" style="padding: 11px 20px; font-size: 14px;">Something else</span>
+          </div>
+        </div>
+
+        <div style="display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 18px;">
+          <div style="display: flex; flex-direction: column; gap: 9px;">
+            <span class="meta" style="font-size: 11px;">Your name</span>
+            <div class="glass-field" style="height: 54px; display: flex; align-items: center; padding: 0 18px; font-size: 16px; border-color: rgba(255,255,255,0.45);">Priya &amp; Arjun</div>
+          </div>
+          <div style="display: flex; flex-direction: column; gap: 9px;">
+            <span class="meta" style="font-size: 11px;">WhatsApp number</span>
+            <div class="glass-field" style="height: 54px; display: flex; align-items: center; padding: 0 18px; font-size: 16px; color: rgba(244,246,251,0.45);">+91</div>
+          </div>
+          <div style="display: flex; flex-direction: column; gap: 9px;">
+            <span class="meta" style="font-size: 11px;">Email</span>
+            <div class="glass-field" style="height: 54px; display: flex; align-items: center; padding: 0 18px; font-size: 16px; color: rgba(244,246,251,0.45);">you@email.com</div>
+          </div>
+          <div style="display: flex; flex-direction: column; gap: 9px;">
+            <span class="meta" style="font-size: 11px;">Date of the main event</span>
+            <div class="glass-field" style="height: 54px; display: flex; align-items: center; justify-content: space-between; padding: 0 18px; font-size: 16px; color: rgba(244,246,251,0.45);">
+              <span>DD / MM / YYYY</span>
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="rgba(244,246,251,0.5)" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="16" rx="2"></rect><path d="M3 10h18"></path><path d="M8 3v4"></path><path d="M16 3v4"></path></svg>
+            </div>
+          </div>
+          <div style="display: flex; flex-direction: column; gap: 9px;">
+            <span class="meta" style="font-size: 11px;">City or venue</span>
+            <div class="glass-field" style="height: 54px; display: flex; align-items: center; padding: 0 18px; font-size: 16px; color: rgba(244,246,251,0.45);">Where is it happening?</div>
+          </div>
+          <div style="display: flex; flex-direction: column; gap: 9px;">
+            <span class="meta" style="font-size: 11px;">Budget range</span>
+            <div class="glass-field" style="height: 54px; display: flex; align-items: center; justify-content: space-between; padding: 0 18px; font-size: 16px; color: rgba(244,246,251,0.45);">
+              <span>Select a range</span>
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="rgba(244,246,251,0.5)" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"></path></svg>
+            </div>
+          </div>
+        </div>
+
+        <div style="display: flex; flex-direction: column; gap: 9px;">
+          <span class="meta" style="font-size: 11px;">Anything I should know?</span>
+          <div class="glass-field" style="height: 124px; padding: 18px; font-size: 16px; line-height: 1.7; color: rgba(244,246,251,0.45);">How many events, roughly how many guests, and the one photograph you&rsquo;d be upset not to have.</div>
+        </div>
+
+        <div style="display: flex; align-items: flex-start; gap: 12px;">
+          <span style="width: 20px; height: 20px; border-radius: 6px; background: rgba(255,255,255,0.9); display: inline-flex; align-items: center; justify-content: center; flex-shrink: 0; margin-top: 2px;">
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="#0A0F1C" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"></path></svg>
+          </span>
+          <span style="font-size: 15px; line-height: 1.6; color: rgba(244,246,251,0.78);">Reply on WhatsApp is fine — it&rsquo;s usually faster than email.</span>
+        </div>
+
+        <div style="display: flex; align-items: center; gap: 20px;">
+          <span class="bright" style="padding: 18px 34px; font-size: 16px;">Send enquiry
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"></path><path d="m13 6 6 6-6 6"></path></svg>
+          </span>
+          <span style="font-size: 14px; color: rgba(244,246,251,0.6);">No advance to ask &middot; No mailing list</span>
+        </div>
+      </div>
+
+      <div style="grid-column: span 5; display: flex; flex-direction: column; gap: 24px;">
+        <div class="glass" style="padding: 12px;">
+          <div style="height: 280px; border-radius: 20px; overflow: hidden;"><img src="g5.jpg" alt="Couple at their pre-wedding shoot" style="width: 100%; height: 100%; object-fit: cover;"></div>
+        </div>
+
+        <div class="glass-strong" style="padding: 34px 32px; display: flex; flex-direction: column; gap: 20px;">
+          <span class="meta" style="color: #9CC7FF;">Rather just talk?</span>
+          <div style="display: flex; align-items: center; gap: 14px;">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#9CC7FF" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink: 0;"><path d="M21 15.5v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 1 2.7 2 2 0 0 1 3 .5h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.4 2.1L7 8.5a16 16 0 0 0 6 6l1.4-1.3a2 2 0 0 1 2.1-.5c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2Z"></path></svg>
+            <span style="font-size: 17px;">[+91 00000 00000]</span>
+          </div>
+          <div style="display: flex; align-items: center; gap: 14px;">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#9CC7FF" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink: 0;"><rect x="2" y="4" width="20" height="16" rx="2"></rect><path d="m2.5 6 9.5 7 9.5-7"></path></svg>
+            <span style="font-size: 17px;">[hello@yourdomain.com]</span>
+          </div>
+          <div style="display: flex; align-items: flex-start; gap: 14px;">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#9CC7FF" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink: 0; margin-top: 2px;"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"></path><circle cx="12" cy="10" r="2.8"></circle></svg>
+            <span style="font-size: 16px; line-height: 1.6; color: rgba(244,246,251,0.82);">[Studio address]<br>[YOUR CITY]</span>
+          </div>
+          <div style="height: 1px; background: rgba(255,255,255,0.18);"></div>
+          <div style="display: flex; gap: 12px;">
+            <span class="glass-sm" style="width: 46px; height: 46px; display: inline-flex; align-items: center; justify-content: center;">
+              <svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="#F4F6FB" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="5"></rect><circle cx="12" cy="12" r="4"></circle><circle cx="17.5" cy="6.5" r="1"></circle></svg>
+            </span>
+            <span class="glass-sm" style="width: 46px; height: 46px; display: inline-flex; align-items: center; justify-content: center;">
+              <svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="#F4F6FB" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M14 8h3V4h-3a4 4 0 0 0-4 4v3H8v4h2v7h4v-7h3l1-4h-4V8.6c0-.4.3-.6.6-.6Z"></path></svg>
+            </span>
+            <span class="glass-sm" style="width: 46px; height: 46px; display: inline-flex; align-items: center; justify-content: center;">
+              <svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="#F4F6FB" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="5" width="20" height="14" rx="4"></rect><path d="m10 9 5 3-5 3Z"></path></svg>
+            </span>
+          </div>
+        </div>
+
+        <div class="glass" style="padding: 32px 30px; display: flex; flex-direction: column; gap: 20px;">
+          <span class="meta">What happens next</span>
+          <div style="display: flex; gap: 16px; align-items: flex-start;">
+            <span style="font-size: 26px; font-weight: 200; color: #9CC7FF; line-height: 1;">01</span>
+            <p style="font-size: 15px; line-height: 1.7; color: rgba(244,246,251,0.74);">I check the date against the calendar and reply within [N] hours.</p>
+          </div>
+          <div style="display: flex; gap: 16px; align-items: flex-start;">
+            <span style="font-size: 26px; font-weight: 200; color: #9CC7FF; line-height: 1;">02</span>
+            <p style="font-size: 15px; line-height: 1.7; color: rgba(244,246,251,0.74);">You get the full price list and two or three galleries like your day.</p>
+          </div>
+          <div style="display: flex; gap: 16px; align-items: flex-start;">
+            <span style="font-size: 26px; font-weight: 200; color: #9CC7FF; line-height: 1;">03</span>
+            <p style="font-size: 15px; line-height: 1.7; color: rgba(244,246,251,0.74);">If it feels right, we talk. If not, no follow-ups from me.</p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+    <div style="padding: 0 44px 40px;">
+      <div class="glass" style="padding: 44px 40px 30px;">
+        <div style="display: grid; grid-template-columns: repeat(12, minmax(0, 1fr)); gap: 40px; padding-bottom: 34px;">
+          <div style="grid-column: span 5; display: flex; flex-direction: column; gap: 14px;">
+            <span style="font-size: 22px; font-weight: 500;">Isha Photography</span>
+            <p style="font-size: 15px; line-height: 1.8; color: rgba(244,246,251,0.7); max-width: 330px;">Wedding photography and cinema in [YOUR CITY], travelling anywhere you&rsquo;ll have us.</p>
+          </div>
+          <div style="grid-column: span 2; display: flex; flex-direction: column; gap: 12px; font-size: 15px; color: rgba(244,246,251,0.78);">
+            <span class="meta" style="margin-bottom: 4px;">Pages</span>
+            <span>Portfolio</span><span>Collections</span><span>Studio</span><span>Contact</span>
+          </div>
+          <div style="grid-column: span 2; display: flex; flex-direction: column; gap: 12px; font-size: 15px; color: rgba(244,246,251,0.78);">
+            <span class="meta" style="margin-bottom: 4px;">Follow</span>
+            <span>Instagram</span><span>Facebook</span><span>YouTube</span>
+          </div>
+          <div style="grid-column: span 3; display: flex; flex-direction: column; gap: 12px; font-size: 15px; color: rgba(244,246,251,0.78);">
+            <span class="meta" style="margin-bottom: 4px;">Get in touch</span>
+            <span>[hello@yourdomain.com]</span><span>[+91 00000 00000]</span><span>[Studio address, City]</span>
+          </div>
+        </div>
+        <div style="height: 1px; background: rgba(255,255,255,0.16);"></div>
+        <div style="display: flex; justify-content: space-between; padding-top: 22px; font-size: 13px; color: rgba(244,246,251,0.55);">
+          <span>&copy; [YEAR] Isha Photography</span><span>Privacy &middot; Terms</span>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+</x-dc>
+</body>
+</html>

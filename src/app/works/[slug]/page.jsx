@@ -1,22 +1,27 @@
-// app/work/[slug]/page.js
-
-import React from "react";
+import { notFound } from "next/navigation";
 import ClientWorkPage from "@/components/ClientWorkPage";
-import DATA from "../../../data.js";
-// import clientsData from "@/data";
+import DATA from "@/data.js";
 
-DATA
-const WorkDetailPage = ({ params }) => {
-  const { slug } = params;
+export function generateStaticParams() {
+  return DATA.map((client) => ({ slug: client.slug }));
+}
 
-  // Find the client data based on the slug
+export async function generateMetadata({ params }) {
+  const { slug } = await params;
+  const client = DATA.find((c) => c.slug === slug);
+  if (!client) return { title: "Gallery not found" };
+
+  return {
+    title: client.name,
+    description: `${client.type} photography and film — ${client.name}.`,
+  };
+}
+
+export default async function WorkDetailPage({ params }) {
+  const { slug } = await params;
   const clientData = DATA.find((client) => client.slug === slug);
 
-  if (!clientData) {
-    return <div className="text-center py-12">Client not found!</div>;
-  }
+  if (!clientData) notFound();
 
   return <ClientWorkPage clientData={clientData} />;
-};
-
-export default WorkDetailPage;
+}

@@ -1,0 +1,266 @@
+{
+  "pages": [
+    {
+      "id": "page-1",
+      "name": "Website pages"
+    },
+    {
+      "id": "page-3",
+      "name": "Themes 1–5"
+    },
+    {
+      "id": "page-4",
+      "name": "Themes 6–10"
+    },
+    {
+      "id": "page-5",
+      "name": "Home page styles"
+    }
+  ],
+  "artboards": [
+    {
+      "file": "Main.dc.html",
+      "title": "Home",
+      "page": "page-1",
+      "x": 0,
+      "y": 0,
+      "w": 1440,
+      "h": 3900
+    },
+    {
+      "file": "Portfolio.dc.html",
+      "title": "Portfolio",
+      "page": "page-1",
+      "x": 1600,
+      "y": 0,
+      "w": 1440,
+      "h": 2900
+    },
+    {
+      "file": "Services.dc.html",
+      "title": "Collections & Pricing",
+      "page": "page-1",
+      "x": 3200,
+      "y": 0,
+      "w": 1440,
+      "h": 3100
+    },
+    {
+      "file": "About.dc.html",
+      "title": "About",
+      "page": "page-1",
+      "x": 4800,
+      "y": 0,
+      "w": 1440,
+      "h": 2600
+    },
+    {
+      "file": "Contact.dc.html",
+      "title": "Contact & Booking",
+      "page": "page-1",
+      "x": 6400,
+      "y": 0,
+      "w": 1440,
+      "h": 1900
+    },
+    {
+      "file": "MobileHome.dc.html",
+      "title": "Home — mobile",
+      "page": "page-1",
+      "x": 8000,
+      "y": 0,
+      "w": 390,
+      "h": 2600
+    },
+    {
+      "file": "StyleSheet.dc.html",
+      "title": "Style sheet",
+      "page": "page-1",
+      "x": 8560,
+      "y": 0,
+      "w": 1240,
+      "h": 900
+    },
+    {
+      "file": "ThemeMidnightGold.dc.html",
+      "title": "1 — Midnight Gold",
+      "page": "page-3",
+      "x": 0,
+      "y": 0,
+      "w": 1440,
+      "h": 1350
+    },
+    {
+      "file": "ThemeSaffronBloom.dc.html",
+      "title": "2 — Saffron Bloom",
+      "page": "page-3",
+      "x": 1600,
+      "y": 0,
+      "w": 1440,
+      "h": 1180
+    },
+    {
+      "file": "ThemeStudioMono.dc.html",
+      "title": "3 — Studio Mono",
+      "page": "page-3",
+      "x": 3200,
+      "y": 0,
+      "w": 1440,
+      "h": 1200
+    },
+    {
+      "file": "ThemeBlushFilm.dc.html",
+      "title": "4 — Blush Film",
+      "page": "page-3",
+      "x": 4800,
+      "y": 0,
+      "w": 1440,
+      "h": 1450
+    },
+    {
+      "file": "ThemeTerraFrame.dc.html",
+      "title": "5 — Terra Frame",
+      "page": "page-3",
+      "x": 6400,
+      "y": 0,
+      "w": 1440,
+      "h": 1220
+    },
+    {
+      "file": "ThemeReelStack.dc.html",
+      "title": "6 — Reel Stack",
+      "page": "page-4",
+      "x": 0,
+      "y": 0,
+      "w": 1440,
+      "h": 1150
+    },
+    {
+      "file": "ThemeChromaticOverlap.dc.html",
+      "title": "7 — Chromatic Overlap",
+      "page": "page-4",
+      "x": 1600,
+      "y": 0,
+      "w": 1440,
+      "h": 1300
+    },
+    {
+      "file": "ThemeMarqueeType.dc.html",
+      "title": "8 — Marquee Type",
+      "page": "page-4",
+      "x": 3200,
+      "y": 0,
+      "w": 1440,
+      "h": 1400
+    },
+    {
+      "file": "ThemeFilmStripNoir.dc.html",
+      "title": "9 — Film Strip Noir",
+      "page": "page-4",
+      "x": 4800,
+      "y": 0,
+      "w": 1440,
+      "h": 1250
+    },
+    {
+      "file": "ThemeInkAndPetal.dc.html",
+      "title": "10 — Ink & Petal",
+      "page": "page-4",
+      "x": 6400,
+      "y": 0,
+      "w": 1440,
+      "h": 1320
+    },
+    {
+      "file": "StyleSkeuomorphic.dc.html",
+      "title": "Skeuomorphism",
+      "page": "page-5",
+      "x": 0,
+      "y": 0,
+      "w": 1440,
+      "h": 2050
+    },
+    {
+      "file": "StyleNeobrutalist.dc.html",
+      "title": "Neobrutalism",
+      "page": "page-5",
+      "x": 1600,
+      "y": 0,
+      "w": 1440,
+      "h": 2200
+    },
+    {
+      "file": "StyleClaymorphic.dc.html",
+      "title": "Claymorphism",
+      "page": "page-5",
+      "x": 3200,
+      "y": 0,
+      "w": 1440,
+      "h": 2250
+    },
+    {
+      "file": "StyleMinimal.dc.html",
+      "title": "Minimalism",
+      "page": "page-5",
+      "x": 4800,
+      "y": 0,
+      "w": 1440,
+      "h": 2750
+    },
+    {
+      "file": "StyleLiquidGlass.dc.html",
+      "title": "Liquid Glass",
+      "page": "page-5",
+      "x": 6400,
+      "y": 0,
+      "w": 1440,
+      "h": 2500
+    }
+  ],
+  "annotations": [
+    {
+      "id": "note-1",
+      "page": "page-1",
+      "x": 0,
+      "y": -170,
+      "w": 520,
+      "text": "Built in Liquid Glass.\nEverything in square brackets is a placeholder for a real fact: prices, phone, city, review quotes, couple and venue names. Replace them before this goes live; nothing here is invented."
+    },
+    {
+      "id": "note-2",
+      "page": "page-1",
+      "x": 6400,
+      "y": -170,
+      "w": 460,
+      "text": "The whole site points at one action: \"Check your date\".\nThis form is the conversion page — every other CTA lands here."
+    },
+    {
+      "id": "note-4",
+      "page": "page-3",
+      "x": 0,
+      "y": -190,
+      "w": 760,
+      "text": "Themes 1–5 (not chosen). Kept for reference."
+    },
+    {
+      "id": "note-5",
+      "page": "page-4",
+      "x": 0,
+      "y": -190,
+      "w": 780,
+      "text": "Themes 6–10. Number 10, Ink & Petal, is the one built out across the website pages."
+    },
+    {
+      "id": "note-6",
+      "page": "page-5",
+      "x": 0,
+      "y": -190,
+      "w": 800,
+      "text": "Five interface styles compared. Liquid Glass is the one built out across the website pages."
+    }
+  ],
+  "launch": {
+    "view": "canvas",
+    "page": "page-1"
+  }
+}

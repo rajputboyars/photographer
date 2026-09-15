@@ -1,0 +1,84 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;1,400&family=Jost:wght@300;400;500&display=swap">
+  <style>
+    body { margin: 0; background: #0B0A09; color: #F2EDE4; font-family: "Jost", "Avenir Next", sans-serif; font-weight: 300; -webkit-font-smoothing: antialiased; }
+    a { color: #C9A227; } a:hover { color: #E0BE4A; }
+    h1, h2, h3 { font-family: "Playfair Display", Georgia, serif; font-weight: 400; margin: 0; }
+    p { margin: 0; text-wrap: pretty; }
+    .gold { color: #C9A227; }
+    .kicker { font-size: 11px; letter-spacing: 0.34em; text-transform: uppercase; color: #C9A227; }
+  </style>
+</helmet>
+
+<div style="width: 1440px; background: #0B0A09;">
+
+  <div style="position: relative; height: 700px; overflow: hidden;">
+    <img src="hero-d.jpg" alt="Couple at their wedding" style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; opacity: 0.62; filter: saturate(0.7) contrast(1.1);">
+    <div style="position: absolute; inset: 0; background: linear-gradient(180deg, rgba(11,10,9,0.85) 0%, rgba(11,10,9,0.35) 45%, rgba(11,10,9,0.95) 100%);"></div>
+
+    <div style="position: relative; display: flex; align-items: center; justify-content: space-between; padding: 30px 64px;">
+      <div style="font-family: 'Playfair Display', Georgia, serif; font-size: 26px; letter-spacing: 0.04em;">Isha <span class="gold">Photography</span></div>
+      <div style="display: flex; align-items: center; gap: 36px; font-size: 12px; letter-spacing: 0.2em; text-transform: uppercase; color: rgba(242,237,228,0.82);">
+        <span>Portfolio</span><span>Services</span><span>About</span>
+        <span style="border: 1px solid #C9A227; color: #C9A227; padding: 13px 24px;">Check your date</span>
+      </div>
+    </div>
+
+    <div style="position: absolute; left: 64px; bottom: 90px; width: 780px; display: flex; flex-direction: column; gap: 24px;">
+      <span class="kicker">Luxury wedding photography &amp; film</span>
+      <h1 style="font-size: 84px; line-height: 1.0;">An heirloom,<br>not a <em style="font-style: italic;" class="gold">gallery link</em></h1>
+      <p style="font-size: 17px; line-height: 1.75; color: rgba(242,237,228,0.75); max-width: 520px;">Hand-finished photographs and cinema for weddings across [YOUR CITY]. Limited to [N] celebrations a year.</p>
+      <span style="align-self: flex-start; background: linear-gradient(180deg, #D8B23C 0%, #C9A227 100%); color: #0B0A09; padding: 18px 34px; font-size: 12px; letter-spacing: 0.2em; text-transform: uppercase; font-weight: 400; margin-top: 8px;">Check your date</span>
+    </div>
+  </div>
+
+  <div style="padding: 80px 64px; display: flex; flex-direction: column; gap: 38px; border-top: 1px solid rgba(201,162,39,0.25);">
+    <div style="display: flex; align-items: flex-end; justify-content: space-between;">
+      <h2 style="font-size: 44px; line-height: 1.1;">What we cover</h2>
+      <span style="font-size: 12px; letter-spacing: 0.2em; text-transform: uppercase; color: #C9A227;">All packages &rarr;</span>
+    </div>
+    <div style="display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 22px;">
+      <div style="border: 1px solid rgba(242,237,228,0.14); background: #121110; padding: 0 0 30px;">
+        <div style="height: 200px; overflow: hidden;"><img src="g1.jpg" alt="Wedding" style="width: 100%; height: 100%; object-fit: cover; opacity: 0.9;"></div>
+        <div style="padding: 26px 28px 0; display: flex; flex-direction: column; gap: 10px;">
+          <span class="kicker">01</span>
+          <h3 style="font-size: 28px;">Wedding days</h3>
+          <p style="font-size: 15px; line-height: 1.7; color: rgba(242,237,228,0.68);">Haldi to vidaai, covered by a team that stays invisible.</p>
+        </div>
+      </div>
+      <div style="border: 1px solid rgba(242,237,228,0.14); background: #121110; padding: 0 0 30px;">
+        <div style="height: 200px; overflow: hidden;"><img src="g5.jpg" alt="Pre-wedding" style="width: 100%; height: 100%; object-fit: cover; opacity: 0.9;"></div>
+        <div style="padding: 26px 28px 0; display: flex; flex-direction: column; gap: 10px;">
+          <span class="kicker">02</span>
+          <h3 style="font-size: 28px;">Pre-wedding</h3>
+          <p style="font-size: 15px; line-height: 1.7; color: rgba(242,237,228,0.68);">A half day somewhere that means something, plus the film.</p>
+        </div>
+      </div>
+      <div style="border: 1px solid rgba(201,162,39,0.5); background: #151310; padding: 0 0 30px;">
+        <div style="height: 200px; overflow: hidden;"><img src="g9.jpg" alt="Reception" style="width: 100%; height: 100%; object-fit: cover; opacity: 0.9;"></div>
+        <div style="padding: 26px 28px 0; display: flex; flex-direction: column; gap: 10px;">
+          <span class="kicker">03</span>
+          <h3 style="font-size: 28px;">Receptions &amp; events</h3>
+          <p style="font-size: 15px; line-height: 1.7; color: rgba(242,237,228,0.68);">Full coverage with a same-day edit screened at the party.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div style="background: #121110; border-top: 1px solid rgba(201,162,39,0.25); padding: 26px 64px; display: flex; justify-content: space-between; font-size: 11px; letter-spacing: 0.24em; text-transform: uppercase; color: rgba(242,237,228,0.5);">
+    <span>Theme 1 &mdash; Midnight Gold</span>
+    <span>Playfair Display + Jost &middot; #0B0A09 / #C9A227 / #F2EDE4</span>
+  </div>
+
+</div>
+</x-dc>
+</body>
+</html>

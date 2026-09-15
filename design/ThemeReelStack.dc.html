@@ -1,0 +1,111 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Manrope:wght@300;400;500;700&display=swap">
+  <style>
+    body { margin: 0; background: #131316; color: #F5F5F2; font-family: "Manrope", "Avenir Next", sans-serif; font-weight: 300; -webkit-font-smoothing: antialiased; }
+    a { color: #D8FF3E; } a:hover { color: #E9FF8A; }
+    h1, h2, h3 { font-family: "Bebas Neue", "Haettenschweiler", sans-serif; font-weight: 400; margin: 0; letter-spacing: 0.005em; }
+    p { margin: 0; text-wrap: pretty; }
+    .lime { color: #D8FF3E; }
+    .tag { font-size: 11px; letter-spacing: 0.18em; text-transform: uppercase; font-weight: 500; }
+    .vframe { border-radius: 18px; overflow: hidden; position: relative; background: #1E1E22; }
+    .playdot { position: absolute; left: 14px; bottom: 14px; width: 34px; height: 34px; border-radius: 50%; background: rgba(19,19,22,0.72); display: flex; align-items: center; justify-content: center; }
+  </style>
+</helmet>
+
+<div style="width: 1440px; background: #131316; overflow: hidden;">
+
+  <div style="display: flex; align-items: center; justify-content: space-between; padding: 22px 48px;">
+    <div style="display: flex; align-items: baseline; gap: 10px;">
+      <span style="font-family: 'Bebas Neue', sans-serif; font-size: 30px; letter-spacing: 0.04em;">ISHA</span>
+      <span class="tag lime">Photo / Film</span>
+    </div>
+    <div style="display: flex; align-items: center; gap: 10px; font-size: 14px;">
+      <span style="padding: 10px 18px; border-radius: 100px; background: #1E1E22;">Reels</span>
+      <span style="padding: 10px 18px; border-radius: 100px;">Weddings</span>
+      <span style="padding: 10px 18px; border-radius: 100px;">Pricing</span>
+      <span style="padding: 12px 24px; border-radius: 100px; background: #D8FF3E; color: #131316; font-weight: 700;">Check your date</span>
+    </div>
+  </div>
+
+  <div style="padding: 26px 48px 54px; display: grid; grid-template-columns: repeat(12, minmax(0, 1fr)); gap: 28px; align-items: center;">
+    <div style="grid-column: span 5; display: flex; flex-direction: column; gap: 22px;">
+      <span style="display: inline-flex; align-items: center; gap: 8px; align-self: flex-start; background: rgba(216,255,62,0.14); color: #D8FF3E; padding: 8px 16px; border-radius: 100px;" class="tag">
+        <span style="width: 7px; height: 7px; border-radius: 50%; background: #D8FF3E; display: block;"></span>
+        [N] dates left for [YEAR]
+      </span>
+      <h1 style="font-size: 112px; line-height: 0.84;">MADE TO<br>BE <span class="lime">WATCHED</span><br>AGAIN</h1>
+      <p style="font-size: 17px; line-height: 1.7; color: rgba(245,245,242,0.7); max-width: 420px;">Wedding films cut for the way your family actually watches them — on a phone, at 2am, ten times in a row. Plus every photograph, obviously.</p>
+      <div style="display: flex; align-items: center; gap: 14px; padding-top: 6px;">
+        <span style="padding: 17px 30px; border-radius: 100px; background: #D8FF3E; color: #131316; font-weight: 700; font-size: 15px;">Check your date</span>
+        <span style="display: inline-flex; align-items: center; gap: 10px; padding: 16px 26px; border-radius: 100px; border: 1px solid rgba(245,245,242,0.25); font-size: 15px;">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="#D8FF3E"><path d="m7 4 13 8-13 8Z"></path></svg>
+          Watch the showreel
+        </span>
+      </div>
+    </div>
+
+    <div style="grid-column: span 7; display: flex; gap: 16px; align-items: center;">
+      <div class="vframe" style="width: 230px; height: 400px;">
+        <img src="g5.jpg" alt="Pre-wedding reel" style="width: 100%; height: 100%; object-fit: cover;">
+        <span class="playdot"><svg width="12" height="12" viewBox="0 0 24 24" fill="#F5F5F2"><path d="m7 4 13 8-13 8Z"></path></svg></span>
+      </div>
+      <div class="vframe" style="width: 260px; height: 470px;">
+        <img src="g6.jpg" alt="Mehndi reel" style="width: 100%; height: 100%; object-fit: cover;">
+        <span class="playdot"><svg width="12" height="12" viewBox="0 0 24 24" fill="#F5F5F2"><path d="m7 4 13 8-13 8Z"></path></svg></span>
+        <span style="position: absolute; right: 14px; top: 14px; background: #D8FF3E; color: #131316; padding: 5px 12px; border-radius: 100px;" class="tag">2:14</span>
+      </div>
+      <div class="vframe" style="width: 230px; height: 400px;">
+        <img src="g9.jpg" alt="Reception reel" style="width: 100%; height: 100%; object-fit: cover;">
+        <span class="playdot"><svg width="12" height="12" viewBox="0 0 24 24" fill="#F5F5F2"><path d="m7 4 13 8-13 8Z"></path></svg></span>
+      </div>
+      <div style="display: flex; flex-direction: column; gap: 16px;">
+        <div class="vframe" style="width: 150px; height: 192px;"><img src="g7.jpg" alt="Haldi" style="width: 100%; height: 100%; object-fit: cover;"></div>
+        <div class="vframe" style="width: 150px; height: 192px;"><img src="g10.jpg" alt="Sangeet" style="width: 100%; height: 100%; object-fit: cover;"></div>
+      </div>
+    </div>
+  </div>
+
+  <div style="background: #D8FF3E; color: #131316; padding: 14px 0; display: flex; gap: 40px; align-items: center; justify-content: center; font-family: 'Bebas Neue', sans-serif; font-size: 26px; letter-spacing: 0.06em;">
+    <span>WEDDING FILMS</span><span>&starf;</span><span>PRE-WEDDING REELS</span><span>&starf;</span><span>SANGEET</span><span>&starf;</span><span>SAME-DAY EDITS</span><span>&starf;</span><span>BIRTHDAYS</span><span>&starf;</span><span>CORPORATE</span>
+  </div>
+
+  <div style="padding: 54px 48px 60px; display: grid; grid-template-columns: repeat(12, minmax(0, 1fr)); gap: 20px;">
+    <div style="grid-column: span 4; background: #1E1E22; border-radius: 24px; padding: 30px 28px; display: flex; flex-direction: column; gap: 14px;">
+      <span class="tag lime">Most booked</span>
+      <h3 style="font-size: 40px;">THE FULL WEDDING</h3>
+      <p style="font-size: 15px; line-height: 1.65; color: rgba(245,245,242,0.68);">Every event, two shooters, a highlight film and a reel cut for each ceremony.</p>
+      <span style="font-family: 'Bebas Neue', sans-serif; font-size: 34px; padding-top: 4px;" class="lime">[YOUR PRICE]</span>
+    </div>
+    <div style="grid-column: span 4; background: #1E1E22; border-radius: 24px; padding: 30px 28px; display: flex; flex-direction: column; gap: 14px;">
+      <span class="tag" style="color: rgba(245,245,242,0.5);">Half day</span>
+      <h3 style="font-size: 40px;">PRE-WEDDING</h3>
+      <p style="font-size: 15px; line-height: 1.65; color: rgba(245,245,242,0.68);">One location, [N]+ photographs and a save-the-date reel in 48 hours.</p>
+      <span style="font-family: 'Bebas Neue', sans-serif; font-size: 34px; padding-top: 4px;" class="lime">[YOUR PRICE]</span>
+    </div>
+    <div style="grid-column: span 4; border-radius: 24px; padding: 30px 28px; display: flex; flex-direction: column; justify-content: space-between; border: 1px dashed rgba(245,245,242,0.3);">
+      <div style="display: flex; flex-direction: column; gap: 12px;">
+        <span class="tag" style="color: rgba(245,245,242,0.5);">Not sure yet?</span>
+        <h3 style="font-size: 40px;">BUILD YOUR OWN</h3>
+        <p style="font-size: 15px; line-height: 1.65; color: rgba(245,245,242,0.68);">Tell us the events and we price it in one message. No call needed.</p>
+      </div>
+      <span style="align-self: flex-start; padding: 14px 26px; border-radius: 100px; background: #F5F5F2; color: #131316; font-weight: 700; font-size: 14px;">Start here</span>
+    </div>
+  </div>
+
+  <div style="background: #1E1E22; padding: 20px 48px; display: flex; justify-content: space-between;" class="tag">
+    <span class="lime">Theme 6 &mdash; Reel Stack</span>
+    <span style="color: rgba(245,245,242,0.5);">Bebas Neue + Manrope &middot; #131316 / #D8FF3E</span>
+  </div>
+
+</div>
+</x-dc>
+</body>
+</html>

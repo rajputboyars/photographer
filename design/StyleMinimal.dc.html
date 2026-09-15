@@ -1,0 +1,125 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@200;300;400&display=swap">
+  <style>
+    body { margin: 0; background: #FFFFFF; color: #111111; font-family: "Public Sans", "Helvetica Neue", sans-serif; font-weight: 300; -webkit-font-smoothing: antialiased; }
+    a { color: #111111; } a:hover { color: #777777; }
+    h1, h2, h3 { font-family: "Public Sans", sans-serif; font-weight: 200; margin: 0; letter-spacing: -0.02em; }
+    p { margin: 0; text-wrap: pretty; }
+    .meta { font-size: 11px; letter-spacing: 0.18em; text-transform: uppercase; color: #949494; }
+    .rule { height: 1px; background: #E8E8E8; }
+  </style>
+</helmet>
+
+<div style="width: 1440px; background: #FFFFFF;">
+
+  <!-- NAV -->
+  <div style="display: flex; align-items: center; justify-content: space-between; padding: 40px 80px 0;">
+    <span style="font-size: 15px; letter-spacing: 0.1em;">Isha Photography</span>
+    <div style="display: flex; align-items: center; gap: 40px;" class="meta">
+      <span style="color: #111111;">Work</span><span>Services</span><span>Studio</span><span>Contact</span>
+    </div>
+  </div>
+
+  <!-- HERO -->
+  <div style="padding: 150px 80px 130px; display: flex; flex-direction: column; gap: 46px;">
+    <h1 style="font-size: 64px; line-height: 1.18; max-width: 820px;">Wedding photography<br>and film.</h1>
+    <div style="display: flex; gap: 90px; align-items: flex-end;">
+      <p style="font-size: 16px; line-height: 2; color: #6E6E6E; max-width: 340px;">Documentary coverage of weddings and celebrations in [YOUR CITY]. Working since [YEAR]. [N] weddings a year, no more.</p>
+      <span class="meta" style="color: #111111; border-bottom: 1px solid #111111; padding-bottom: 8px;">Check your date</span>
+    </div>
+  </div>
+
+  <!-- ONE IMAGE -->
+  <div style="padding: 0 80px;">
+    <div style="height: 520px; overflow: hidden;"><img src="hero-d.jpg" alt="Couple at their wedding" style="width: 100%; height: 100%; object-fit: cover;"></div>
+    <div style="display: flex; justify-content: space-between; padding: 16px 0 0;" class="meta">
+      <span>[Couple] &amp; [Couple]</span><span>[Venue], [Month Year]</span>
+    </div>
+  </div>
+
+  <!-- SERVICES -->
+  <div style="padding: 130px 80px 0;">
+    <div class="rule"></div>
+    <div style="display: grid; grid-template-columns: repeat(12, minmax(0, 1fr)); gap: 40px; padding: 40px 0;">
+      <span class="meta" style="grid-column: span 3;">01</span>
+      <h3 style="grid-column: span 4; font-size: 26px;">Weddings</h3>
+      <p style="grid-column: span 4; font-size: 15px; line-height: 1.95; color: #6E6E6E;">Two to five days. A photographer and a film-maker throughout.</p>
+      <span style="grid-column: span 1; font-size: 15px; color: #6E6E6E; text-align: right;">[PRICE]</span>
+    </div>
+    <div class="rule"></div>
+    <div style="display: grid; grid-template-columns: repeat(12, minmax(0, 1fr)); gap: 40px; padding: 40px 0;">
+      <span class="meta" style="grid-column: span 3;">02</span>
+      <h3 style="grid-column: span 4; font-size: 26px;">Pre-wedding</h3>
+      <p style="grid-column: span 4; font-size: 15px; line-height: 1.95; color: #6E6E6E;">Half a day, one location, and a save-the-date film.</p>
+      <span style="grid-column: span 1; font-size: 15px; color: #6E6E6E; text-align: right;">[PRICE]</span>
+    </div>
+    <div class="rule"></div>
+    <div style="display: grid; grid-template-columns: repeat(12, minmax(0, 1fr)); gap: 40px; padding: 40px 0;">
+      <span class="meta" style="grid-column: span 3;">03</span>
+      <h3 style="grid-column: span 4; font-size: 26px;">Events</h3>
+      <p style="grid-column: span 4; font-size: 15px; line-height: 1.95; color: #6E6E6E;">Birthdays, anniversaries and corporate days.</p>
+      <span style="grid-column: span 1; font-size: 15px; color: #6E6E6E; text-align: right;">[PRICE]</span>
+    </div>
+    <div class="rule"></div>
+  </div>
+
+  <!-- WORK -->
+  <div style="padding: 120px 80px 0; display: flex; flex-direction: column; gap: 40px;">
+    <div style="display: flex; align-items: baseline; justify-content: space-between;">
+      <h2 style="font-size: 34px;">Selected work</h2>
+      <span class="meta">[N] galleries</span>
+    </div>
+    <div style="display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 40px;">
+      <div style="display: flex; flex-direction: column; gap: 14px;">
+        <div style="height: 340px; overflow: hidden;"><img src="g6.jpg" alt="Mehndi ceremony" style="width: 100%; height: 100%; object-fit: cover;"></div>
+        <span class="meta">[Couple] &mdash; Mehndi</span>
+      </div>
+      <div style="display: flex; flex-direction: column; gap: 14px;">
+        <div style="height: 340px; overflow: hidden;"><img src="g9.jpg" alt="Reception" style="width: 100%; height: 100%; object-fit: cover;"></div>
+        <span class="meta">[Couple] &mdash; Reception</span>
+      </div>
+      <div style="display: flex; flex-direction: column; gap: 14px;">
+        <div style="height: 340px; overflow: hidden;"><img src="g5.jpg" alt="Pre-wedding" style="width: 100%; height: 100%; object-fit: cover;"></div>
+        <span class="meta">[Couple] &mdash; Pre-wedding</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- QUOTE -->
+  <div style="padding: 130px 80px; display: flex; justify-content: center;">
+    <p style="font-size: 28px; line-height: 1.7; font-weight: 200; max-width: 720px; text-align: center;">[Paste a real review here — one sentence is enough.]</p>
+  </div>
+
+  <!-- CTA -->
+  <div style="padding: 0 80px 130px;">
+    <div class="rule"></div>
+    <div style="display: flex; align-items: flex-end; justify-content: space-between; padding-top: 50px;">
+      <div style="display: flex; flex-direction: column; gap: 22px;">
+        <h2 style="font-size: 44px;">Check your date</h2>
+        <p style="font-size: 16px; line-height: 1.95; color: #6E6E6E; max-width: 380px;">Send the date and the venue. A reply within [N] hours with availability and the full price list.</p>
+      </div>
+      <div style="display: flex; flex-direction: column; gap: 12px; align-items: flex-end;" class="meta">
+        <span style="color: #111111; font-size: 15px; letter-spacing: 0.04em; text-transform: none;">[hello@yourdomain.com]</span>
+        <span style="color: #111111; font-size: 15px; letter-spacing: 0.04em; text-transform: none;">[+91 00000 00000]</span>
+        <span style="padding-top: 8px;">Instagram</span>
+      </div>
+    </div>
+  </div>
+
+  <div style="padding: 0 80px 40px; display: flex; justify-content: space-between;" class="meta">
+    <span>Minimalism &mdash; whitespace does the work</span>
+    <span>Public Sans 200/300</span>
+  </div>
+
+</div>
+</x-dc>
+</body>
+</html>

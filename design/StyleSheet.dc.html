@@ -1,0 +1,101 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Outfit:wght@200;300;400;500;600&display=swap">
+  <style>
+    body { margin: 0; background: #0A0F1C; color: #F4F6FB; font-family: "Outfit", "Avenir Next", sans-serif; font-weight: 300; }
+    a { color: #9CC7FF; } a:hover { color: #C7DEFF; }
+    h1, h2 { font-family: "Outfit", sans-serif; font-weight: 400; margin: 0; letter-spacing: -0.02em; }
+    p { margin: 0; }
+    .glass { background: rgba(255,255,255,0.09); backdrop-filter: blur(26px) saturate(150%); -webkit-backdrop-filter: blur(26px) saturate(150%); border: 1px solid rgba(255,255,255,0.22); border-radius: 28px; box-shadow: 0 18px 50px rgba(3,8,20,0.5), inset 0 1px 0 rgba(255,255,255,0.45), inset 0 -18px 34px rgba(255,255,255,0.05); }
+    .glass-strong { background: rgba(255,255,255,0.16); backdrop-filter: blur(26px) saturate(150%); -webkit-backdrop-filter: blur(26px) saturate(150%); border: 1px solid rgba(255,255,255,0.3); border-radius: 28px; box-shadow: 0 18px 50px rgba(3,8,20,0.5), inset 0 1px 0 rgba(255,255,255,0.55); }
+    .glass-sm { background: rgba(255,255,255,0.11); backdrop-filter: blur(20px) saturate(150%); -webkit-backdrop-filter: blur(20px) saturate(150%); border: 1px solid rgba(255,255,255,0.24); border-radius: 100px; box-shadow: 0 8px 22px rgba(3,8,20,0.38), inset 0 1px 0 rgba(255,255,255,0.5); }
+    .glass-field { background: rgba(255,255,255,0.07); backdrop-filter: blur(18px); -webkit-backdrop-filter: blur(18px); border: 1px solid rgba(255,255,255,0.2); border-radius: 16px; box-shadow: inset 0 1px 0 rgba(255,255,255,0.3); }
+    .bright { background: rgba(255,255,255,0.92); color: #0A0F1C; border-radius: 100px; box-shadow: 0 10px 26px rgba(3,8,20,0.42), inset 0 1px 0 rgba(255,255,255,0.95); }
+    .meta { font-size: 12px; letter-spacing: 0.16em; text-transform: uppercase; color: rgba(244,246,251,0.62); }
+    .sw { height: 84px; border-radius: 18px; display: flex; align-items: flex-end; padding: 10px; font-size: 11px; }
+  </style>
+</helmet>
+
+<div style="width: 1240px; background: #0A0F1C; position: relative; overflow: hidden; padding: 52px;">
+  <div style="position: absolute; left: -160px; top: -60px; width: 560px; height: 560px; border-radius: 50%; background: rgba(92,132,255,0.45); filter: blur(130px);"></div>
+  <div style="position: absolute; right: -120px; top: 300px; width: 520px; height: 520px; border-radius: 50%; background: rgba(226,114,196,0.35); filter: blur(130px);"></div>
+  <div style="position: absolute; left: 400px; bottom: -200px; width: 600px; height: 600px; border-radius: 50%; background: rgba(64,196,208,0.28); filter: blur(140px);"></div>
+
+  <div style="position: relative;">
+    <div style="display: flex; flex-direction: column; gap: 10px; margin-bottom: 36px;">
+      <span class="meta" style="color: #9CC7FF;">Design system &mdash; Liquid Glass</span>
+      <h1 style="font-size: 42px; font-weight: 300;">Isha Photography &mdash; visual language</h1>
+    </div>
+
+    <div style="display: grid; grid-template-columns: repeat(12, minmax(0, 1fr)); gap: 24px;">
+
+      <div class="glass" style="grid-column: span 7; padding: 34px 32px; display: flex; flex-direction: column; gap: 18px;">
+        <span class="meta">Typography &mdash; Outfit, one family</span>
+        <div style="display: flex; flex-direction: column; gap: 10px;">
+          <span style="font-size: 52px; font-weight: 200; line-height: 1.05;">Display 200 &mdash; 62/82</span>
+          <span style="font-size: 34px; font-weight: 300; line-height: 1.1;">Section 300 &mdash; 42/44</span>
+          <span style="font-size: 26px; font-weight: 400;">Card heading 400 &mdash; 28</span>
+          <span style="font-size: 16px; line-height: 1.8; color: rgba(244,246,251,0.76); max-width: 500px;">Body 300 &mdash; 15/16 at 1.75&ndash;1.9. Paragraphs stay under 580px wide.</span>
+          <span class="meta">Meta 12 / 0.16em uppercase</span>
+        </div>
+        <p style="font-size: 14px; line-height: 1.75; color: rgba(244,246,251,0.62);">Weight carries the hierarchy, not size alone: the lighter the weight, the larger the type. Italic 200 is the one emphasis, used once per page.</p>
+      </div>
+
+      <div class="glass" style="grid-column: span 5; padding: 34px 32px; display: flex; flex-direction: column; gap: 18px;">
+        <span class="meta">The backdrop is the palette</span>
+        <div style="display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 10px;">
+          <div class="sw" style="background: #0A0F1C; border: 1px solid rgba(255,255,255,0.18); color: rgba(244,246,251,0.8);">Ground<br>#0A0F1C</div>
+          <div class="sw" style="background: rgba(92,132,255,0.5); color: #F4F6FB;">Blue blob</div>
+          <div class="sw" style="background: rgba(226,114,196,0.4); color: #F4F6FB;">Pink blob</div>
+          <div class="sw" style="background: rgba(64,196,208,0.32); color: #F4F6FB;">Teal blob</div>
+          <div class="sw" style="background: rgba(255,255,255,0.09); border: 1px solid rgba(255,255,255,0.22); color: #F4F6FB;">Panel 9%</div>
+          <div class="sw" style="background: rgba(255,255,255,0.92); color: #0A0F1C;">Bright 92%</div>
+        </div>
+        <p style="font-size: 14px; line-height: 1.75; color: rgba(244,246,251,0.62);">Colour comes from a photograph and three blurred blobs behind the panels — never from the panels themselves. #9CC7FF is the only literal accent, used on labels and numerals.</p>
+      </div>
+
+      <div class="glass" style="grid-column: span 12; padding: 34px 32px; display: flex; flex-direction: column; gap: 20px;">
+        <span class="meta">Surfaces &amp; controls</span>
+        <div style="display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 20px; align-items: start;">
+          <div class="glass" style="padding: 22px 20px; display: flex; flex-direction: column; gap: 8px;">
+            <span style="font-size: 18px;">Panel</span>
+            <span style="font-size: 13px; line-height: 1.6; color: rgba(244,246,251,0.66);">white 9% &middot; blur 26 &middot; radius 28 &middot; 1px border at 22%</span>
+          </div>
+          <div class="glass-strong" style="padding: 22px 20px; display: flex; flex-direction: column; gap: 8px;">
+            <span style="font-size: 18px;">Panel, emphasised</span>
+            <span style="font-size: 13px; line-height: 1.6; color: rgba(244,246,251,0.74);">white 16% &middot; border 30% &middot; for the chosen tier and every CTA</span>
+          </div>
+          <div class="glass-field" style="padding: 22px 20px; display: flex; flex-direction: column; gap: 8px;">
+            <span style="font-size: 18px;">Field</span>
+            <span style="font-size: 13px; line-height: 1.6; color: rgba(244,246,251,0.66);">white 7% &middot; radius 16 &middot; 54px tall &middot; border brightens when filled</span>
+          </div>
+          <div style="display: flex; flex-direction: column; gap: 12px;">
+            <span class="bright" style="padding: 15px 26px; font-size: 15px; font-weight: 500; text-align: center;">Primary</span>
+            <span class="glass-sm" style="padding: 14px 24px; font-size: 15px; text-align: center;">Secondary</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="glass" style="grid-column: span 12; padding: 30px 32px; display: flex; flex-direction: column; gap: 14px;">
+        <span class="meta">Rules</span>
+        <div style="display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 24px;">
+          <p style="font-size: 15px; line-height: 1.75; color: rgba(244,246,251,0.74);"><strong style="font-weight: 500; color: #F4F6FB;">Grid.</strong> 12 columns, 44px page margin on desktop, 18px on mobile, 24px gutters.</p>
+          <p style="font-size: 15px; line-height: 1.75; color: rgba(244,246,251,0.74);"><strong style="font-weight: 500; color: #F4F6FB;">Photos sit inside glass.</strong> 12px panel padding, 20px inner radius. Captions are small glass pills on top of the image, never bars beneath it.</p>
+          <p style="font-size: 15px; line-height: 1.75; color: rgba(244,246,251,0.74);"><strong style="font-weight: 500; color: #F4F6FB;">Depth by offset.</strong> Cards in a row shift by &plusmn;24&ndash;40px so they read as floating at different distances.</p>
+          <p style="font-size: 15px; line-height: 1.75; color: rgba(244,246,251,0.74);"><strong style="font-weight: 500; color: #F4F6FB;">Fallback.</strong> Where <span style="font-family: ui-monospace, monospace; font-size: 13px;">backdrop-filter</span> is unsupported, panels fall back to a solid #141A2B at 96% — test it.</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
+</x-dc>
+</body>
+</html>

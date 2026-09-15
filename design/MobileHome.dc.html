@@ -1,0 +1,133 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Outfit:wght@200;300;400;500;600&display=swap">
+  <style>
+    body { margin: 0; background: #0A0F1C; color: #F4F6FB; font-family: "Outfit", "Avenir Next", sans-serif; font-weight: 300; -webkit-font-smoothing: antialiased; }
+    a { color: #9CC7FF; text-decoration: none; } a:hover { color: #C7DEFF; }
+    h1, h2, h3 { font-family: "Outfit", sans-serif; font-weight: 400; margin: 0; letter-spacing: -0.02em; }
+    p { margin: 0; text-wrap: pretty; }
+    .glass { background: rgba(255,255,255,0.09); backdrop-filter: blur(26px) saturate(150%); -webkit-backdrop-filter: blur(26px) saturate(150%); border: 1px solid rgba(255,255,255,0.22); border-radius: 28px; box-shadow: 0 18px 50px rgba(3,8,20,0.5), inset 0 1px 0 rgba(255,255,255,0.45), inset 0 -18px 34px rgba(255,255,255,0.05); }
+    .glass-strong { background: rgba(255,255,255,0.16); backdrop-filter: blur(26px) saturate(150%); -webkit-backdrop-filter: blur(26px) saturate(150%); border: 1px solid rgba(255,255,255,0.3); border-radius: 28px; box-shadow: 0 18px 50px rgba(3,8,20,0.5), inset 0 1px 0 rgba(255,255,255,0.55); }
+    .glass-sm { background: rgba(255,255,255,0.11); backdrop-filter: blur(20px) saturate(150%); -webkit-backdrop-filter: blur(20px) saturate(150%); border: 1px solid rgba(255,255,255,0.24); border-radius: 100px; box-shadow: 0 8px 22px rgba(3,8,20,0.38), inset 0 1px 0 rgba(255,255,255,0.5); }
+    .glass-field { background: rgba(255,255,255,0.07); backdrop-filter: blur(18px); -webkit-backdrop-filter: blur(18px); border: 1px solid rgba(255,255,255,0.2); border-radius: 16px; box-shadow: inset 0 1px 0 rgba(255,255,255,0.3); }
+    .bright { background: rgba(255,255,255,0.92); color: #0A0F1C; border: 1px solid rgba(255,255,255,0.9); border-radius: 100px; box-shadow: 0 10px 26px rgba(3,8,20,0.42), inset 0 1px 0 rgba(255,255,255,0.95); display: inline-flex; align-items: center; gap: 10px; font-weight: 500; }
+    .meta { font-size: 12px; letter-spacing: 0.16em; text-transform: uppercase; color: rgba(244,246,251,0.62); }
+    .blob { position: absolute; border-radius: 50%; }
+  </style>
+</helmet>
+
+<div style="width: 390px; background: #0A0F1C; position: relative; overflow: hidden;">
+    <img src="g5.jpg" alt="" style="position: absolute; left: 0; top: 0; width: 100%; height: 760px; object-fit: cover; opacity: 0.5;">
+    <div class="blob" style="left: -180px; top: 120px; width: 620px; height: 620px; background: rgba(92,132,255,0.5); filter: blur(130px);"></div>
+    <div class="blob" style="right: -140px; top: 460px; width: 560px; height: 560px; background: rgba(226,114,196,0.4); filter: blur(130px);"></div>
+    <div class="blob" style="left: 300px; top: 1200px; width: 700px; height: 700px; background: rgba(64,196,208,0.3); filter: blur(130px);"></div>
+    <div class="blob" style="right: -200px; top: 1900px; width: 640px; height: 640px; background: rgba(126,110,255,0.34); filter: blur(130px);"></div>
+    <div class="blob" style="left: 200px; top: 2600px; width: 680px; height: 680px; background: rgba(64,196,208,0.26); filter: blur(130px);"></div>
+    <div style="position: absolute; left: 0; top: 560px; right: 0; height: 360px; background: linear-gradient(180deg, rgba(10,15,28,0) 0%, #0A0F1C 72%);"></div>
+  <div style="position: relative;">
+    <div style="padding: 16px 18px;">
+      <div class="glass-sm" style="padding: 10px 10px 10px 20px; display: flex; align-items: center; justify-content: space-between;">
+        <span style="font-size: 17px; font-weight: 500;">Isha Photography</span>
+        <span class="glass-sm" style="width: 44px; height: 44px; display: inline-flex; align-items: center; justify-content: center;">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#F4F6FB" stroke-width="1.5" stroke-linecap="round"><path d="M4 7h16"></path><path d="M4 12h16"></path><path d="M4 17h16"></path></svg>
+        </span>
+      </div>
+    </div>
+
+    <div style="padding: 6px 18px 30px; display: flex; flex-direction: column; align-items: center; gap: 18px; text-align: center;">
+      <span class="glass-sm" style="padding: 9px 18px; font-size: 13px;">Booking [YEAR] &middot; [N] dates left</span>
+      <h1 style="font-size: 44px; line-height: 1.04; font-weight: 300;">The day, kept clear as <span style="font-weight: 200; font-style: italic;">the light</span></h1>
+      <p style="font-size: 15px; line-height: 1.75; color: rgba(244,246,251,0.78);">Wedding photography and cinema in [YOUR CITY]. Shot on fast primes, graded by hand.</p>
+      <div class="glass" style="padding: 10px; width: 100%; margin-top: 6px;">
+        <div style="height: 320px; border-radius: 20px; overflow: hidden;"><img src="g5.jpg" alt="Couple at their pre-wedding shoot" style="width: 100%; height: 100%; object-fit: cover;"></div>
+      </div>
+    </div>
+
+    <div style="padding: 0 18px 30px; display: flex; flex-direction: column; gap: 18px; align-items: center;">
+      <span class="meta">The collections</span>
+      <h2 style="font-size: 30px; font-weight: 300; text-align: center;">Three ways to book</h2>
+      <div style="display: flex; flex-direction: column; gap: 14px; width: 100%;">
+        <div class="glass" style="padding: 24px 22px; display: flex; flex-direction: column; gap: 8px;">
+          <span class="meta" style="font-size: 11px;">Half day</span>
+          <h3 style="font-size: 24px;">Pre-wedding</h3>
+          <p style="font-size: 14px; line-height: 1.7; color: rgba(244,246,251,0.72);">Four hours, one location, plus the save-the-date film.</p>
+          <span style="font-size: 22px; font-weight: 300;">[YOUR PRICE]</span>
+        </div>
+        <div class="glass-strong" style="padding: 24px 22px; display: flex; flex-direction: column; gap: 8px;">
+          <span class="meta" style="font-size: 11px; color: #9CC7FF;">Most booked</span>
+          <h3 style="font-size: 24px;">The wedding day</h3>
+          <p style="font-size: 14px; line-height: 1.7; color: rgba(244,246,251,0.8);">Full day, photographer and film-maker, highlight film and album.</p>
+          <span style="font-size: 22px; font-weight: 300;">[YOUR PRICE]</span>
+        </div>
+        <div class="glass" style="padding: 24px 22px; display: flex; flex-direction: column; gap: 8px;">
+          <span class="meta" style="font-size: 11px;">Every event</span>
+          <h3 style="font-size: 24px;">Full celebration</h3>
+          <p style="font-size: 14px; line-height: 1.7; color: rgba(244,246,251,0.72);">Haldi through reception, two shooters, two albums.</p>
+          <span style="font-size: 22px; font-weight: 300;">[YOUR PRICE]</span>
+        </div>
+      </div>
+    </div>
+
+    <div style="padding: 0 18px 30px; display: flex; flex-direction: column; gap: 18px; align-items: center;">
+      <span class="meta">Recent celebrations</span>
+      <h2 style="font-size: 30px; font-weight: 300; text-align: center;">A few days we&rsquo;re still thinking about</h2>
+      <div style="display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px; width: 100%;">
+        <div class="glass" style="padding: 8px;"><div style="height: 170px; border-radius: 16px; overflow: hidden;"><img src="g6.jpg" alt="Mehndi" style="width: 100%; height: 100%; object-fit: cover;"></div></div>
+        <div class="glass" style="padding: 8px;"><div style="height: 170px; border-radius: 16px; overflow: hidden;"><img src="g9.jpg" alt="Reception" style="width: 100%; height: 100%; object-fit: cover;"></div></div>
+        <div class="glass" style="padding: 8px;"><div style="height: 170px; border-radius: 16px; overflow: hidden;"><img src="g7.jpg" alt="Haldi" style="width: 100%; height: 100%; object-fit: cover;"></div></div>
+        <div class="glass" style="padding: 8px;"><div style="height: 170px; border-radius: 16px; overflow: hidden;"><img src="g10.jpg" alt="Sangeet" style="width: 100%; height: 100%; object-fit: cover;"></div></div>
+      </div>
+      <span class="glass-sm" style="width: 100%; height: 52px; display: inline-flex; align-items: center; justify-content: center; gap: 10px; font-size: 15px; box-sizing: border-box;">View full portfolio
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"></path><path d="m13 6 6 6-6 6"></path></svg>
+      </span>
+    </div>
+
+    <div style="padding: 0 18px 30px;">
+      <div class="glass" style="padding: 12px 12px 28px; display: flex; flex-direction: column; gap: 16px; align-items: center; text-align: center;">
+        <div style="height: 280px; border-radius: 20px; overflow: hidden; width: 100%;"><img src="portrait.jpg" alt="Chandra Shekar" style="width: 100%; height: 100%; object-fit: cover;"></div>
+        <span class="meta" style="font-size: 11px;">Behind the camera</span>
+        <h2 style="font-size: 28px; font-weight: 300;">Hi, I&rsquo;m Chandra Shekar</h2>
+        <p style="font-size: 15px; line-height: 1.8; color: rgba(244,246,251,0.76); padding: 0 12px;">On your day you work with me and one film-maker — not a rotating crew. I shoot quietly, waiting for the moment rather than arranging it.</p>
+      </div>
+    </div>
+
+    <div style="padding: 0 18px 30px;">
+      <div class="glass" style="padding: 28px 24px; display: flex; flex-direction: column; gap: 14px;">
+        <p style="font-size: 17px; line-height: 1.7; font-weight: 300;">[Paste a real review here — the one that mentions how relaxed the day felt.]</p>
+        <span class="meta" style="font-size: 11px;">[Client name] &middot; Wedding &middot; [Month Year]</span>
+      </div>
+    </div>
+
+    <div style="padding: 0 18px 30px;">
+      <div class="glass-strong" style="padding: 36px 26px; display: flex; flex-direction: column; gap: 14px; align-items: center; text-align: center;">
+        <span class="meta" style="font-size: 11px; color: #9CC7FF;">Now booking [YEAR]</span>
+        <h2 style="font-size: 30px; font-weight: 300;">Tell me about your day</h2>
+        <p style="font-size: 15px; line-height: 1.75; color: rgba(244,246,251,0.78);">Send the date and the venue — a reply within [N] hours.</p>
+      </div>
+    </div>
+
+    <div style="padding: 0 18px 110px; display: flex; flex-direction: column; gap: 10px; font-size: 14px; color: rgba(244,246,251,0.7);">
+      <span>[hello@yourdomain.com]</span>
+      <span>[+91 00000 00000]</span>
+      <span style="font-size: 12px; padding-top: 6px; color: rgba(244,246,251,0.5);">&copy; [YEAR] Isha Photography</span>
+    </div>
+
+  </div>
+  <div style="position: absolute; left: 0; right: 0; bottom: 0; padding: 12px 16px 20px; display: flex; gap: 10px; background: rgba(10,15,28,0.55); backdrop-filter: blur(24px); -webkit-backdrop-filter: blur(24px); border-top: 1px solid rgba(255,255,255,0.18);">
+    <span class="bright" style="flex-grow: 1; height: 52px; justify-content: center; font-size: 15px;">Check your date</span>
+    <span class="glass-sm" style="width: 52px; height: 52px; display: inline-flex; align-items: center; justify-content: center; flex-shrink: 0;">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#F4F6FB" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15.5v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 1 2.7 2 2 0 0 1 3 .5h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.4 2.1L7 8.5a16 16 0 0 0 6 6l1.4-1.3a2 2 0 0 1 2.1-.5c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2Z"></path></svg>
+    </span>
+  </div>
+
+</div>
+</x-dc>
+</body>
+</html>

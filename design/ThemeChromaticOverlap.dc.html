@@ -1,0 +1,97 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400;0,6..96,700;1,6..96,400&family=Work+Sans:wght@300;400;600&display=swap">
+  <style>
+    body { margin: 0; background: #F2EFE9; color: #16143A; font-family: "Work Sans", "Avenir Next", sans-serif; font-weight: 300; -webkit-font-smoothing: antialiased; }
+    a { color: #E2553D; } a:hover { color: #B93C28; }
+    h1, h2, h3 { font-family: "Bodoni Moda", Didot, Georgia, serif; font-weight: 400; margin: 0; }
+    p { margin: 0; text-wrap: pretty; }
+    .outline { color: transparent; -webkit-text-stroke: 1.5px #16143A; }
+    .tag { font-size: 11px; letter-spacing: 0.2em; text-transform: uppercase; font-weight: 600; }
+    .card { position: absolute; overflow: hidden; box-shadow: 0 30px 60px rgba(22,20,58,0.22); }
+  </style>
+</helmet>
+
+<div style="width: 1440px; background: #F2EFE9; overflow: hidden;">
+
+  <div style="display: flex; align-items: center; justify-content: space-between; padding: 24px 52px;">
+    <span style="font-family: 'Bodoni Moda', serif; font-size: 27px; font-weight: 700;">Isha<span style="color: #E2553D;">.</span></span>
+    <div style="display: flex; align-items: center; gap: 30px;" class="tag">
+      <span>Work</span><span>Services</span><span>Studio</span>
+      <span style="background: #16143A; color: #F2EFE9; padding: 12px 22px;">Check your date</span>
+    </div>
+  </div>
+
+  <div style="position: relative; height: 620px; padding: 0 52px;">
+    <div style="position: absolute; left: 52px; top: 26px; width: 780px; z-index: 3;">
+      <h1 style="font-size: 130px; line-height: 0.82;">LOUD</h1>
+      <h1 class="outline" style="font-size: 130px; line-height: 0.82; margin-left: 150px;">LOVELY</h1>
+      <h1 style="font-size: 130px; line-height: 0.82; font-style: italic; color: #E2553D; margin-left: 40px;">yours</h1>
+    </div>
+
+    <div class="card" style="right: 52px; top: 10px; width: 330px; height: 430px; transform: rotate(4deg);">
+      <img src="g6.jpg" alt="Mehndi ceremony" style="width: 100%; height: 100%; object-fit: cover;">
+    </div>
+    <div class="card" style="right: 330px; top: 150px; width: 260px; height: 340px; transform: rotate(-6deg); z-index: 4;">
+      <img src="g9.jpg" alt="Reception" style="width: 100%; height: 100%; object-fit: cover; filter: saturate(1.15);">
+    </div>
+    <div class="card" style="left: 90px; bottom: 26px; width: 240px; height: 300px; transform: rotate(-3deg); z-index: 5; background: #E2553D;">
+      <img src="g5.jpg" alt="Pre-wedding" style="width: 100%; height: 100%; object-fit: cover; mix-blend-mode: luminosity; opacity: 0.92;">
+    </div>
+
+    <div style="position: absolute; right: 52px; bottom: 34px; width: 330px; display: flex; flex-direction: column; gap: 18px; z-index: 6;">
+      <p style="font-size: 16px; line-height: 1.7; color: #423F6B;">Weddings, pre-weddings and celebrations photographed and filmed in [YOUR CITY]. Nothing beige about any of it.</p>
+      <span style="align-self: flex-start; background: #E2553D; color: #FFF; padding: 16px 28px;" class="tag">Check your date &rarr;</span>
+    </div>
+  </div>
+
+  <div style="background: #16143A; color: #F2EFE9; padding: 56px 52px; display: grid; grid-template-columns: repeat(12, minmax(0, 1fr)); gap: 30px; align-items: center;">
+    <div style="grid-column: span 4;">
+      <h2 style="font-size: 52px; line-height: 1.02;">Pick your<br><em style="font-style: italic; color: #E2553D;">chaos</em></h2>
+    </div>
+    <div style="grid-column: span 8; display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 18px;">
+      <div style="border-top: 2px solid #E2553D; padding-top: 18px; display: flex; flex-direction: column; gap: 10px;">
+        <h3 style="font-size: 26px; color: #F2EFE9;">Weddings</h3>
+        <p style="font-size: 14px; line-height: 1.6; color: rgba(242,239,233,0.68);">2&ndash;5 days, two shooters, film included.</p>
+        <span class="tag" style="color: #E2553D;">[YOUR PRICE]</span>
+      </div>
+      <div style="border-top: 2px solid rgba(242,239,233,0.3); padding-top: 18px; display: flex; flex-direction: column; gap: 10px;">
+        <h3 style="font-size: 26px; color: #F2EFE9;">Pre-wedding</h3>
+        <p style="font-size: 14px; line-height: 1.6; color: rgba(242,239,233,0.68);">Half a day, one location, one reel.</p>
+        <span class="tag" style="color: #E2553D;">[YOUR PRICE]</span>
+      </div>
+      <div style="border-top: 2px solid rgba(242,239,233,0.3); padding-top: 18px; display: flex; flex-direction: column; gap: 10px;">
+        <h3 style="font-size: 26px; color: #F2EFE9;">Events</h3>
+        <p style="font-size: 14px; line-height: 1.6; color: rgba(242,239,233,0.68);">Birthdays, corporate, anniversaries.</p>
+        <span class="tag" style="color: #E2553D;">[YOUR PRICE]</span>
+      </div>
+    </div>
+  </div>
+
+  <div style="padding: 46px 52px 52px; display: flex; align-items: center; gap: 34px;">
+    <div style="flex-grow: 1;">
+      <p style="font-family: 'Bodoni Moda', serif; font-size: 30px; line-height: 1.35; font-style: italic;">&ldquo;[Paste a real review here &mdash; the one that made you smile.]&rdquo;</p>
+      <span class="tag" style="color: #6B688F; display: block; padding-top: 14px;">[Client name] &middot; [Month Year]</span>
+    </div>
+    <div style="display: flex; gap: 12px;">
+      <div style="width: 130px; height: 160px; overflow: hidden; transform: rotate(3deg);"><img src="g7.jpg" alt="Haldi" style="width: 100%; height: 100%; object-fit: cover;"></div>
+      <div style="width: 130px; height: 160px; overflow: hidden; transform: rotate(-4deg);"><img src="g10.jpg" alt="Sangeet" style="width: 100%; height: 100%; object-fit: cover;"></div>
+    </div>
+  </div>
+
+  <div style="background: #16143A; padding: 20px 52px; display: flex; justify-content: space-between;" class="tag">
+    <span style="color: #E2553D;">Theme 7 &mdash; Chromatic Overlap</span>
+    <span style="color: rgba(242,239,233,0.55);">Bodoni Moda + Work Sans &middot; #16143A / #E2553D / #F2EFE9</span>
+  </div>
+
+</div>
+</x-dc>
+</body>
+</html>
