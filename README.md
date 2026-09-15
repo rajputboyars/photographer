@@ -29,11 +29,13 @@ npm run build
    `src/lib/site.js` and `src/data.js`. Nothing there is invented; it is all
    waiting for a real value.
 
-2. **Replace the placeholder photography.** `public/images/placeholder/` holds
-   generated stand-in images (soft bokeh, no real people), produced by
-   `python3 scripts/generate-placeholders.py`. Drop real photographs in at the
-   same filenames, or point `photos` in `src/lib/site.js` and the thumbnails in
-   `src/data.js` wherever you like.
+2. **Check the photography.** `public/images/photos/` holds the studio's own
+   photographs, cropped to the aspect ratios the layout uses and with the
+   watermarked promotional versions left out. Several images repeat across
+   sections because only a handful of clean originals existed — swap in more
+   as they become available, by dropping files in at the same names or
+   pointing `photos` in `src/lib/site.js` and the thumbnails in `src/data.js`
+   elsewhere.
 
 3. **Point the enquiry form at a real endpoint.** It currently opens a
    pre-filled mail draft; `src/components/EnquiryForm.jsx` marks where to POST
