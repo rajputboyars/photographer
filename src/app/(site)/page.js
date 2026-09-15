@@ -1,10 +1,12 @@
 import Image from "next/image";
+import Link from "next/link";
 import PageShell from "@/components/PageShell";
 import GalleryCard from "@/components/GalleryCard";
 import CtaBand from "@/components/CtaBand";
 import Icon from "@/components/Icon";
 import { Arrow, BrightLink, GhostLink, Panel, Pill, SectionHead } from "@/components/Glass";
 import { collections, photos, site, testimonials } from "@/lib/site";
+import { services } from "@/lib/services";
 
 const FEATURED = [
   { src: photos.mehndi, alt: "Mehndi ceremony", height: "h-[260px] md:h-[300px]" },
@@ -67,6 +69,28 @@ export default function Home() {
             See everything included
             <Arrow />
           </GhostLink>
+        </div>
+      </section>
+
+      {/* SERVICES */}
+      <section className="flex flex-col gap-7 pb-14">
+        <SectionHead
+          kicker="What we shoot"
+          title="Six ways people book us"
+          blurb="Each has its own page — what it covers, what you get, and the questions that come up every time."
+        />
+        <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+          {services.map((service) => (
+            <Link key={service.slug} href={`/services/${service.slug}`}>
+              <Panel className="flex h-full items-center justify-between gap-4 p-6 transition hover:border-white/35">
+                <div className="flex flex-col gap-1">
+                  <span className="text-lg">{service.name}</span>
+                  <span className="text-sm text-ink/60">From {service.price}</span>
+                </div>
+                <Arrow className="h-5 w-5 shrink-0 text-accent" />
+              </Panel>
+            </Link>
+          ))}
         </div>
       </section>
 
