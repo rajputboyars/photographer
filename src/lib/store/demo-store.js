@@ -101,6 +101,61 @@ export const demoStore = {
     return clone(gallery);
   },
 
+  async addGalleryCategory(slug, name) {
+    const gallery = db.galleries.find((g) => g.slug === slug);
+    const category = String(name || "").trim();
+    if (!gallery || !category) return null;
+
+    gallery.categories ??= [];
+    gallery.cards ??= {};
+    if (!gallery.categories.includes(category)) gallery.categories.push(category);
+    gallery.cards[category] ??= [];
+    return clone(gallery);
+  },
+
+  async removeGalleryCategory(slug, name) {
+    const gallery = db.galleries.find((g) => g.slug === slug);
+    if (!gallery) return null;
+
+    gallery.categories = (gallery.categories ?? []).filter((c) => c !== name);
+    delete gallery.cards?.[name];
+    return clone(gallery);
+  },
+
+  /** Attach already-uploaded photographs to one category of a gallery. */
+  async addGalleryCards(slug, category, items) {
+    const gallery = db.galleries.find((g) => g.slug === slug);
+    if (!gallery || !category) return null;
+
+    gallery.categories ??= [];
+    gallery.cards ??= {};
+    if (!gallery.categories.includes(category)) gallery.categories.push(category);
+    gallery.cards[category] ??= [];
+
+    const existing = Object.values(gallery.cards).flat();
+    let nextId = existing.reduce((max, card) => Math.max(max, Number(card.id) || 0), 0);
+
+    for (const item of items) {
+      nextId += 1;
+      gallery.cards[category].push({
+        id: nextId,
+        thumbnail: item.thumbnail,
+        title: item.title || `${gallery.name} — ${category}`,
+      });
+    }
+
+    return clone(gallery);
+  },
+
+  async removeGalleryCard(slug, category, cardId) {
+    const gallery = db.galleries.find((g) => g.slug === slug);
+    const cards = gallery?.cards?.[category];
+    if (!cards) return null;
+
+    gallery.cards[category] = cards.filter((card) => String(card.id) !== String(cardId));
+    return clone(gallery);
+  },
+
   async deleteGallery(slug) {
     const before = db.galleries.length;
     db.galleries = db.galleries.filter((g) => g.slug !== slug);

@@ -107,3 +107,61 @@ export async function saveCollection(formData) {
   });
   revalidatePath("/admin/settings");
 }
+
+export async function addCategory(formData) {
+  const slug = formData.get("slug");
+  await store.addGalleryCategory(slug, formData.get("category"));
+  revalidatePath(`/admin/galleries/${slug}`);
+  revalidatePath("/admin/galleries");
+}
+
+export async function removeCategory(formData) {
+  const slug = formData.get("slug");
+  await store.removeGalleryCategory(slug, formData.get("category"));
+  revalidatePath(`/admin/galleries/${slug}`);
+  revalidatePath("/admin/galleries");
+}
+
+/** Attach photographs already uploaded via /api/uploads to one category. */
+export async function attachPhotos({ slug, category, photos }) {
+  if (!slug || !category || !Array.isArray(photos) || photos.length === 0) {
+    return { error: "Nothing to attach." };
+  }
+
+  await store.addGalleryCards(
+    slug,
+    category,
+    photos.map((photo) => ({ thumbnail: photo.url, title: photo.title }))
+  );
+
+  revalidatePath(`/admin/galleries/${slug}`);
+  revalidatePath("/admin/galleries");
+  revalidatePath(`/works/${slug}`);
+  revalidatePath("/portfolio");
+  return { ok: true };
+}
+
+export async function removePhoto(formData) {
+  const slug = formData.get("slug");
+  await store.removeGalleryCard(slug, formData.get("category"), formData.get("cardId"));
+  revalidatePath(`/admin/galleries/${slug}`);
+  revalidatePath(`/works/${slug}`);
+}
+
+export async function updateGalleryDetails(formData) {
+  const slug = formData.get("slug");
+  const existing = await store.getGallery(slug);
+  if (!existing) return;
+
+  await store.saveGallery({
+    ...existing,
+    name: formData.get("name") || existing.name,
+    type: formData.get("type") || existing.type,
+    thumbnail: formData.get("thumbnail") || existing.thumbnail,
+  });
+
+  revalidatePath(`/admin/galleries/${slug}`);
+  revalidatePath("/admin/galleries");
+  revalidatePath(`/works/${slug}`);
+  revalidatePath("/portfolio");
+}

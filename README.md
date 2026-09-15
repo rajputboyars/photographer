@@ -27,6 +27,7 @@ npm run build
 | `/contact` | The enquiry form every CTA points at |
 | `/works/[slug]` | A single gallery, by category |
 | `/admin` | Overview, enquiries, galleries, journal, settings |
+| `/admin/galleries/[slug]` | One gallery: categories and the photographs in each |
 
 Sign in to the admin with the password in `ADMIN_PASSWORD` (default `demo`).
 Enquiries from the contact form POST to `/api/enquiries` and land in the
