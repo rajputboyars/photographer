@@ -22,6 +22,36 @@
   ::selection {
     background: rgba(156, 199, 255, 0.28);
   }
+
+  /* Anything clickable gets the hand. Browsers give buttons, selects and
+     checkboxes an arrow by default, which makes them read as decoration —
+     especially here, where the filter and event-type controls look like
+     pills rather than buttons. Text fields keep the I-beam; date fields open a picker, so they get the
+     hand too. */
+  a[href],
+  button,
+  summary,
+  [role="button"],
+  select,
+  input[type="checkbox"],
+  input[type="radio"],
+  input[type="submit"],
+  input[type="button"],
+  input[type="reset"],
+  input[type="file"],
+  input[type="date"],
+  input[type="time"],
+  label:has(input[type="checkbox"]),
+  label:has(input[type="radio"]) {
+    cursor: pointer;
+  }
+
+  button:disabled,
+  select:disabled,
+  input:disabled,
+  [aria-disabled="true"] {
+    cursor: not-allowed;
+  }
 }
 
 @layer components {
