@@ -1,0 +1,89 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Marcellus&family=Karla:wght@300;400;500&display=swap">
+  <style>
+    body { margin: 0; background: #FFF6E9; color: #4A1220; font-family: "Karla", "Avenir Next", sans-serif; font-weight: 300; -webkit-font-smoothing: antialiased; }
+    a { color: #B3202E; } a:hover { color: #7C1420; }
+    h1, h2, h3 { font-family: "Marcellus", Georgia, serif; font-weight: 400; margin: 0; }
+    p { margin: 0; text-wrap: pretty; }
+    .kicker { font-size: 11px; letter-spacing: 0.3em; text-transform: uppercase; color: #B3202E; }
+    .arch { border-radius: 260px 260px 0 0; overflow: hidden; }
+  </style>
+</helmet>
+
+<div style="width: 1440px; background: #FFF6E9;">
+
+  <div style="display: flex; align-items: center; justify-content: space-between; padding: 24px 64px; background: #4A1220; color: #FFF6E9;">
+    <div style="font-family: 'Marcellus', Georgia, serif; font-size: 25px; letter-spacing: 0.05em;">Isha Photography</div>
+    <div style="display: flex; align-items: center; gap: 34px; font-size: 13px; letter-spacing: 0.14em; text-transform: uppercase; color: rgba(255,246,233,0.85);">
+      <span>Portfolio</span><span>Services</span><span>About</span>
+      <span style="background: #E8A33D; color: #4A1220; padding: 12px 22px;">Check your date</span>
+    </div>
+  </div>
+
+  <div style="position: relative; padding: 70px 64px 60px; display: grid; grid-template-columns: repeat(12, minmax(0, 1fr)); gap: 44px; align-items: center; overflow: hidden;">
+    <div style="position: absolute; right: -120px; top: -120px; width: 420px; height: 420px; border-radius: 50%; background: rgba(232,163,61,0.16);"></div>
+    <div style="grid-column: span 6; display: flex; flex-direction: column; gap: 24px; position: relative;">
+      <div style="display: flex; align-items: center; gap: 12px;">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#E8A33D" stroke-width="1.3"><path d="M12 3c2 3 5 4 5 7a5 5 0 0 1-10 0c0-3 3-4 5-7Z"></path><path d="M12 14v7"></path></svg>
+        <span class="kicker">Weddings &amp; celebrations</span>
+      </div>
+      <h1 style="font-size: 76px; line-height: 1.02; color: #4A1220;">Colour, noise,<br>and every <span style="color: #B3202E;">aunty</span><br>in frame</h1>
+      <p style="font-size: 17px; line-height: 1.8; color: #6B3A44; max-width: 480px;">Big Indian weddings, photographed the way they actually feel — loud, crowded and joyful. Haldi to reception, across [YOUR CITY].</p>
+      <div style="display: flex; align-items: center; gap: 18px; padding-top: 6px;">
+        <span style="background: #B3202E; color: #FFF6E9; padding: 17px 32px; font-size: 13px; letter-spacing: 0.14em; text-transform: uppercase;">Check your date</span>
+        <span style="color: #4A1220; border-bottom: 2px solid #E8A33D; padding-bottom: 6px; font-size: 13px; letter-spacing: 0.14em; text-transform: uppercase;">See the work</span>
+      </div>
+    </div>
+    <div style="grid-column: span 6; display: flex; gap: 18px; position: relative;">
+      <div class="arch" style="flex-grow: 1; height: 480px;"><img src="g6.jpg" alt="Mehndi ceremony" style="width: 100%; height: 100%; object-fit: cover;"></div>
+      <div style="display: flex; flex-direction: column; gap: 18px; width: 200px;">
+        <div style="height: 231px; overflow: hidden; border-radius: 100px 0 0 0;"><img src="g7.jpg" alt="Haldi" style="width: 100%; height: 100%; object-fit: cover;"></div>
+        <div style="height: 231px; overflow: hidden; border-radius: 0 0 100px 0;"><img src="g10.jpg" alt="Sangeet" style="width: 100%; height: 100%; object-fit: cover;"></div>
+      </div>
+    </div>
+  </div>
+
+  <div style="display: flex; align-items: center; justify-content: center; gap: 20px; padding: 0 64px 50px;">
+    <span style="flex-grow: 1; height: 1px; background: #E3CFAE;"></span>
+    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#E8A33D" stroke-width="1.2"><path d="M12 2v20"></path><path d="M2 12h20"></path><path d="m5 5 14 14"></path><path d="m19 5-14 14"></path></svg>
+    <span style="flex-grow: 1; height: 1px; background: #E3CFAE;"></span>
+  </div>
+
+  <div style="padding: 0 64px 70px; display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 24px;">
+    <div style="background: #FFFFFF; border: 1px solid #F0DDBE; padding: 34px 30px; display: flex; flex-direction: column; gap: 12px;">
+      <span class="kicker">Three days +</span>
+      <h3 style="font-size: 30px;">The whole wedding</h3>
+      <p style="font-size: 15px; line-height: 1.7; color: #6B3A44;">Haldi, mehndi, sangeet, wedding, reception — one continuous story.</p>
+      <span style="font-family: 'Marcellus', serif; font-size: 26px; color: #B3202E; padding-top: 6px;">[YOUR PRICE]</span>
+    </div>
+    <div style="background: #4A1220; padding: 34px 30px; display: flex; flex-direction: column; gap: 12px;">
+      <span style="font-size: 11px; letter-spacing: 0.3em; text-transform: uppercase; color: #E8A33D;">One day</span>
+      <h3 style="font-size: 30px; color: #FFF6E9;">The ceremony</h3>
+      <p style="font-size: 15px; line-height: 1.7; color: rgba(255,246,233,0.78);">A single day covered end to end by a photographer and a film-maker.</p>
+      <span style="font-family: 'Marcellus', serif; font-size: 26px; color: #E8A33D; padding-top: 6px;">[YOUR PRICE]</span>
+    </div>
+    <div style="background: #FFFFFF; border: 1px solid #F0DDBE; padding: 34px 30px; display: flex; flex-direction: column; gap: 12px;">
+      <span class="kicker">Half day</span>
+      <h3 style="font-size: 30px;">Pre-wedding</h3>
+      <p style="font-size: 15px; line-height: 1.7; color: #6B3A44;">One location, [N]+ edited photographs and the save-the-date reel.</p>
+      <span style="font-family: 'Marcellus', serif; font-size: 26px; color: #B3202E; padding-top: 6px;">[YOUR PRICE]</span>
+    </div>
+  </div>
+
+  <div style="background: #4A1220; padding: 24px 64px; display: flex; justify-content: space-between; font-size: 11px; letter-spacing: 0.24em; text-transform: uppercase; color: rgba(255,246,233,0.6);">
+    <span>Theme 2 &mdash; Saffron Bloom</span>
+    <span>Marcellus + Karla &middot; #4A1220 / #B3202E / #E8A33D / #FFF6E9</span>
+  </div>
+
+</div>
+</x-dc>
+</body>
+</html>
