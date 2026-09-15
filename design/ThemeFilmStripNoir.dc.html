@@ -1,0 +1,96 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500&family=IBM+Plex+Mono:wght@300;400&family=IBM+Plex+Sans:wght@300;400;500&display=swap">
+  <style>
+    body { margin: 0; background: #07100F; color: #E8E4DA; font-family: "IBM Plex Sans", "Avenir Next", sans-serif; font-weight: 300; -webkit-font-smoothing: antialiased; }
+    a { color: #E0A33C; } a:hover { color: #F0C471; }
+    h1, h2, h3 { font-family: "Cinzel", Georgia, serif; font-weight: 400; margin: 0; letter-spacing: 0.02em; }
+    p { margin: 0; text-wrap: pretty; }
+    .mono { font-family: "IBM Plex Mono", ui-monospace, monospace; font-size: 11px; letter-spacing: 0.14em; text-transform: uppercase; }
+    .amber { color: #E0A33C; }
+    .sprocket { width: 14px; height: 20px; border-radius: 3px; background: #07100F; }
+  </style>
+</helmet>
+
+<div style="width: 1440px; background: #07100F; overflow: hidden;">
+
+  <div style="display: flex; align-items: center; justify-content: space-between; padding: 22px 52px; border-bottom: 1px solid rgba(232,228,218,0.12);">
+    <div style="display: flex; align-items: baseline; gap: 14px;">
+      <span style="font-family: 'Cinzel', serif; font-size: 23px; letter-spacing: 0.14em;">ISHA</span>
+      <span class="mono" style="color: rgba(232,228,218,0.5);">Motion picture &amp; stills</span>
+    </div>
+    <div style="display: flex; align-items: center; gap: 30px;" class="mono">
+      <span>Films</span><span>Stills</span><span>Rates</span>
+      <span style="border: 1px solid #E0A33C; color: #E0A33C; padding: 11px 20px;">Check your date</span>
+    </div>
+  </div>
+
+  <div style="position: relative;">
+    <div style="height: 34px; background: #0D1A18; display: flex; align-items: center; gap: 26px; padding: 0 20px;">
+      <span class="sprocket"></span><span class="sprocket"></span><span class="sprocket"></span><span class="sprocket"></span><span class="sprocket"></span><span class="sprocket"></span><span class="sprocket"></span><span class="sprocket"></span><span class="sprocket"></span><span class="sprocket"></span><span class="sprocket"></span><span class="sprocket"></span><span class="sprocket"></span><span class="sprocket"></span><span class="sprocket"></span><span class="sprocket"></span><span class="sprocket"></span><span class="sprocket"></span><span class="sprocket"></span><span class="sprocket"></span><span class="sprocket"></span><span class="sprocket"></span><span class="sprocket"></span><span class="sprocket"></span><span class="sprocket"></span><span class="sprocket"></span><span class="sprocket"></span><span class="sprocket"></span><span class="sprocket"></span><span class="sprocket"></span>
+    </div>
+
+    <div style="position: relative; height: 540px; overflow: hidden;">
+      <img src="hero-d.jpg" alt="Couple at golden hour" style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; filter: saturate(0.55) contrast(1.12) sepia(0.18);">
+      <div style="position: absolute; inset: 0; background: linear-gradient(90deg, rgba(7,16,15,0.92) 0%, rgba(7,16,15,0.35) 55%, rgba(7,16,15,0.75) 100%);"></div>
+
+      <div style="position: absolute; left: 52px; top: 0; bottom: 0; width: 640px; display: flex; flex-direction: column; justify-content: center; gap: 24px;">
+        <span class="mono amber">REC &middot; 00:14:22:06 &middot; [YOUR CITY]</span>
+        <h1 style="font-size: 62px; line-height: 1.1;">SHOT LIKE<br>A FILM.<br><span class="amber">KEPT LIKE</span><br>AN HEIRLOOM.</h1>
+        <p style="font-size: 16px; line-height: 1.8; color: rgba(232,228,218,0.72); max-width: 440px;">Cinema-grade wedding films and photographs. Anamorphic lenses, proper colour grading, and a cut your family will actually sit through.</p>
+        <div style="display: flex; align-items: center; gap: 16px; padding-top: 6px;">
+          <span style="background: #E0A33C; color: #07100F; padding: 16px 28px;" class="mono">Check your date</span>
+          <span style="display: inline-flex; align-items: center; gap: 10px; border: 1px solid rgba(232,228,218,0.3); padding: 15px 24px;" class="mono">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="#E0A33C"><path d="m7 4 13 8-13 8Z"></path></svg>
+            Showreel &middot; 2:40
+          </span>
+        </div>
+      </div>
+
+      <div style="position: absolute; right: 52px; bottom: 30px; display: flex; flex-direction: column; align-items: flex-end; gap: 6px;" class="mono">
+        <span style="color: rgba(232,228,218,0.55);">ISO 800 &middot; 35mm &middot; f/1.4</span>
+        <span class="amber">Booking [YEAR] &mdash; [N] dates left</span>
+      </div>
+    </div>
+
+    <div style="height: 34px; background: #0D1A18; display: flex; align-items: center; gap: 26px; padding: 0 20px;">
+      <span class="sprocket"></span><span class="sprocket"></span><span class="sprocket"></span><span class="sprocket"></span><span class="sprocket"></span><span class="sprocket"></span><span class="sprocket"></span><span class="sprocket"></span><span class="sprocket"></span><span class="sprocket"></span><span class="sprocket"></span><span class="sprocket"></span><span class="sprocket"></span><span class="sprocket"></span><span class="sprocket"></span><span class="sprocket"></span><span class="sprocket"></span><span class="sprocket"></span><span class="sprocket"></span><span class="sprocket"></span><span class="sprocket"></span><span class="sprocket"></span><span class="sprocket"></span><span class="sprocket"></span><span class="sprocket"></span><span class="sprocket"></span><span class="sprocket"></span><span class="sprocket"></span><span class="sprocket"></span><span class="sprocket"></span>
+    </div>
+  </div>
+
+  <div style="padding: 52px 52px 20px; display: flex; align-items: flex-end; justify-content: space-between;">
+    <h2 style="font-size: 36px;">SELECTED WORKS</h2>
+    <span class="mono amber">Full index &rarr;</span>
+  </div>
+
+  <div style="padding: 0 52px 50px; display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 20px;">
+    <div style="display: flex; flex-direction: column; gap: 12px;">
+      <div style="height: 200px; overflow: hidden;"><img src="g6.jpg" alt="Mehndi" style="width: 100%; height: 100%; object-fit: cover; filter: saturate(0.6) contrast(1.1);"></div>
+      <div style="display: flex; justify-content: space-between;" class="mono"><span>[Couple], [Venue]</span><span class="amber">04:12</span></div>
+    </div>
+    <div style="display: flex; flex-direction: column; gap: 12px;">
+      <div style="height: 200px; overflow: hidden;"><img src="g9.jpg" alt="Reception" style="width: 100%; height: 100%; object-fit: cover; filter: saturate(0.6) contrast(1.1);"></div>
+      <div style="display: flex; justify-content: space-between;" class="mono"><span>[Couple], [Venue]</span><span class="amber">03:48</span></div>
+    </div>
+    <div style="display: flex; flex-direction: column; gap: 12px;">
+      <div style="height: 200px; overflow: hidden;"><img src="g5.jpg" alt="Pre-wedding" style="width: 100%; height: 100%; object-fit: cover; filter: saturate(0.6) contrast(1.1);"></div>
+      <div style="display: flex; justify-content: space-between;" class="mono"><span>[Couple], pre-wedding</span><span class="amber">01:02</span></div>
+    </div>
+  </div>
+
+  <div style="border-top: 1px solid rgba(232,228,218,0.12); padding: 20px 52px; display: flex; justify-content: space-between;" class="mono">
+    <span class="amber">Theme 9 &mdash; Film Strip Noir</span>
+    <span style="color: rgba(232,228,218,0.5);">Cinzel + IBM Plex &middot; #07100F / #E0A33C / #E8E4DA</span>
+  </div>
+
+</div>
+</x-dc>
+</body>
+</html>

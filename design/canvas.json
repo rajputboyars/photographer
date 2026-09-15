@@ -11,6 +11,10 @@
     {
       "id": "page-3",
       "name": "Theme options"
+    },
+    {
+      "id": "page-4",
+      "name": "More themes (6–10)"
     }
   ],
   "artboards": [
@@ -139,6 +143,51 @@
       "y": 0,
       "w": 1440,
       "h": 1220
+    },
+    {
+      "file": "ThemeReelStack.dc.html",
+      "title": "6 — Reel Stack",
+      "page": "page-4",
+      "x": 0,
+      "y": 0,
+      "w": 1440,
+      "h": 1150
+    },
+    {
+      "file": "ThemeChromaticOverlap.dc.html",
+      "title": "7 — Chromatic Overlap",
+      "page": "page-4",
+      "x": 1600,
+      "y": 0,
+      "w": 1440,
+      "h": 1300
+    },
+    {
+      "file": "ThemeMarqueeType.dc.html",
+      "title": "8 — Marquee Type",
+      "page": "page-4",
+      "x": 3200,
+      "y": 0,
+      "w": 1440,
+      "h": 1400
+    },
+    {
+      "file": "ThemeFilmStripNoir.dc.html",
+      "title": "9 — Film Strip Noir",
+      "page": "page-4",
+      "x": 4800,
+      "y": 0,
+      "w": 1440,
+      "h": 1250
+    },
+    {
+      "file": "ThemeInkAndPetal.dc.html",
+      "title": "10 — Ink & Petal",
+      "page": "page-4",
+      "x": 6400,
+      "y": 0,
+      "w": 1440,
+      "h": 1320
     }
   ],
   "annotations": [
@@ -173,10 +222,18 @@
       "y": -190,
       "w": 760,
       "text": "Five theme directions for the same site. Each shows a hero plus a services block so you can judge the type and colour, not just a palette.\nPick a number and I'll rebuild all five pages (and the mobile screen) in that theme."
+    },
+    {
+      "id": "note-5",
+      "page": "page-4",
+      "x": 0,
+      "y": -190,
+      "w": 780,
+      "text": "Second round — pushed much further than themes 1–5.\nThese lean on movement, scale and collage rather than colour alone: vertical reel frames, overlapping tilted cards, a headline filled with your photograph, film-strip framing, and hand-torn prints.\nPick a number, or tell me which parts of which ones to combine."
     }
   ],
   "launch": {
     "view": "canvas",
-    "page": "page-3"
+    "page": "page-4"
   }
 }
