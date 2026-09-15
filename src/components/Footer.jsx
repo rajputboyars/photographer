@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { nav, site } from "@/lib/site";
+import { footerNav, site } from "@/lib/site";
 import { Panel } from "./Glass";
 
 export default function Footer() {
@@ -16,14 +16,11 @@ export default function Footer() {
 
           <div className="flex flex-col gap-3 md:col-span-2">
             <span className="meta mb-1">Pages</span>
-            {nav.slice(1).map((item) => (
+            {footerNav.map((item) => (
               <Link key={item.href} href={item.href} className="text-[15px] text-ink/80 hover:text-white">
                 {item.label}
               </Link>
             ))}
-            <Link href="/contact" className="text-[15px] text-ink/80 hover:text-white">
-              Contact
-            </Link>
           </div>
 
           <div className="flex flex-col gap-3 md:col-span-2">

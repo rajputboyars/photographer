@@ -41,10 +41,18 @@ export const photos = {
 };
 
 export const nav = [
-  { label: "Home", href: "/" },
   { label: "Portfolio", href: "/portfolio" },
+  { label: "Services", href: "/services" },
+  { label: "Films", href: "/films" },
   { label: "Collections", href: "/collections" },
   { label: "Studio", href: "/studio" },
+];
+
+// Everything the footer links to, including the pages the header has no room for.
+export const footerNav = [
+  ...nav,
+  { label: "Journal", href: "/journal" },
+  { label: "Contact", href: "/contact" },
 ];
 
 export const collections = [

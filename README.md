@@ -17,6 +17,11 @@ npm run build
 | --- | --- |
 | `/` | Hero, collections, recent work, about, testimonials |
 | `/portfolio` | Filterable galleries |
+| `/services` | Index of the six services |
+| `/services/[slug]` | One service — what it covers, price, FAQs |
+| `/films` | The videography side: cuts, craft, same-day edit |
+| `/journal` | Published posts |
+| `/journal/[slug]` | A single post |
 | `/collections` | Priced tiers, extras, booking process, FAQ |
 | `/studio` | About the studio |
 | `/contact` | The enquiry form every CTA points at |
@@ -51,6 +56,9 @@ admin inbox.
    (default `demo`) with an HMAC-signed cookie. Fine behind a demo link, not
    for real enquiries — swap `src/lib/admin-auth.js` for per-user accounts
    with hashed passwords.
+
+Set `NEXT_PUBLIC_SITE_URL` so `/sitemap.xml` and `/robots.txt` carry the real
+domain. The sitemap lists every service, gallery and published post.
 
 ## Design
 
