@@ -8,8 +8,9 @@ import CtaBand from "./CtaBand";
 import { GhostLink, Arrow } from "./Glass";
 
 export default function ClientWorkPage({ clientData }) {
-  const [active, setActive] = useState(clientData.categories[0]);
-  const cards = clientData.cards[active] ?? [];
+  const categories = clientData.categories ?? [];
+  const [active, setActive] = useState(categories[0] ?? null);
+  const cards = (active && clientData.cards?.[active]) || [];
 
   return (
     <PageShell image={clientData.thumbnail}>
@@ -19,7 +20,7 @@ export default function ClientWorkPage({ clientData }) {
       </section>
 
       <div className="flex flex-wrap justify-center gap-2.5 pb-10">
-        {clientData.categories.map((category) => {
+        {categories.map((category) => {
           const on = category === active;
           return (
             <button
@@ -36,6 +37,10 @@ export default function ClientWorkPage({ clientData }) {
           );
         })}
       </div>
+
+      {cards.length === 0 ? (
+        <p className="pb-14 text-center text-ink/60">No photographs in this gallery yet.</p>
+      ) : null}
 
       <div className="grid gap-5 pb-14 sm:grid-cols-2 lg:grid-cols-3">
         {cards.map((card) => (

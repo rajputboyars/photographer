@@ -19,6 +19,7 @@ function initial() {
     leads: seedLeads(),
     journal: seedJournal(),
     galleries: clone(DATA),
+    uploads: [],
     settings: {
       name: site.name,
       tagline: site.tagline,
@@ -64,6 +65,21 @@ export const demoStore = {
     const before = db.leads.length;
     db.leads = db.leads.filter((l) => l.id !== leadId);
     return db.leads.length < before;
+  },
+
+  async listUploads() {
+    return clone(db.uploads);
+  },
+
+  async addUpload(upload) {
+    db.uploads.unshift(upload);
+    return clone(upload);
+  },
+
+  async removeUpload(name) {
+    const before = db.uploads.length;
+    db.uploads = db.uploads.filter((u) => u.name !== name);
+    return db.uploads.length < before;
   },
 
   async listGalleries() {

@@ -9,7 +9,14 @@ import { Panel } from "./Glass";
 export default function GalleryCard({ src, alt, caption, href, height = "h-[300px]", className, sizes = "(max-width: 768px) 100vw, 33vw" }) {
   const inner = (
     <div className={`relative overflow-hidden rounded-[20px] ${height}`}>
-      <Image src={src} alt={alt} fill sizes={sizes} className="object-cover transition duration-700 ease-out group-hover:scale-[1.04]" />
+      <Image
+        src={src}
+        alt={alt}
+        fill
+        sizes={sizes}
+        unoptimized={src.startsWith("/api/")}
+        className="object-cover transition duration-700 ease-out group-hover:scale-[1.04]"
+      />
       {caption ? (
         <span className="glass-pill absolute bottom-4 left-4 right-4 truncate px-5 py-2.5 text-sm">{caption}</span>
       ) : null}

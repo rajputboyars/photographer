@@ -47,12 +47,19 @@ admin inbox.
    pointing `photos` in `src/lib/site.js` and the thumbnails in `src/data.js`
    elsewhere.
 
-3. **Connect a database.** The admin runs on demo data held in memory: edits
+3. **Add object storage for uploads.** Photographs uploaded in the admin are
+   resized to 2000px and stored on the filesystem (`public/uploads`, gitignored)
+   where that is writable, and in memory where it is not — which includes
+   Vercel and most serverless hosts, so uploads there vanish on restart.
+   `src/lib/storage.js` is the seam: point `saveUpload`/`readUpload` at Vercel
+   Blob, S3 or Cloudinary and nothing else changes.
+
+4. **Connect a database.** The admin runs on demo data held in memory: edits
    show up but vanish on restart, and on serverless hosting each instance keeps
    its own copy. `src/lib/store/index.js` is the single seam — write a Mongo
    store with the same methods and return it when `MONGODB_URI` is set.
 
-4. **Replace the admin sign-in.** One shared password from `ADMIN_PASSWORD`
+5. **Replace the admin sign-in.** One shared password from `ADMIN_PASSWORD`
    (default `demo`) with an HMAC-signed cookie. Fine behind a demo link, not
    for real enquiries — swap `src/lib/admin-auth.js` for per-user accounts
    with hashed passwords.

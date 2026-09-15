@@ -1,14 +1,13 @@
 import { notFound } from "next/navigation";
 import ClientWorkPage from "@/components/ClientWorkPage";
-import DATA from "@/data.js";
+import { store } from "@/lib/store";
 
-export function generateStaticParams() {
-  return DATA.map((client) => ({ slug: client.slug }));
-}
+// Galleries come from the store so anything added in the admin appears here.
+export const dynamic = "force-dynamic";
 
 export async function generateMetadata({ params }) {
   const { slug } = await params;
-  const client = DATA.find((c) => c.slug === slug);
+  const client = await store.getGallery(slug);
   if (!client) return { title: "Gallery not found" };
 
   return {
@@ -19,7 +18,7 @@ export async function generateMetadata({ params }) {
 
 export default async function WorkDetailPage({ params }) {
   const { slug } = await params;
-  const clientData = DATA.find((client) => client.slug === slug);
+  const clientData = await store.getGallery(slug);
 
   if (!clientData) notFound();
 
