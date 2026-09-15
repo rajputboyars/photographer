@@ -7,139 +7,151 @@
 <body>
 <x-dc>
 <helmet>
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Petit+Formal+Script&family=Gilda+Display&family=Quattrocento+Sans:wght@400;700&display=swap">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Outfit:wght@200;300;400;500;600&display=swap">
   <style>
-    body { margin: 0; background: #FBF7EF; color: #2E3B34; font-family: "Quattrocento Sans", "Avenir Next", sans-serif; font-weight: 400; -webkit-font-smoothing: antialiased; }
-    a { color: #9C6B58; text-decoration: none; } a:hover { color: #7A4F3E; }
-    h1, h2, h3 { font-family: "Gilda Display", Georgia, serif; font-weight: 400; margin: 0; }
+    body { margin: 0; background: #0A0F1C; color: #F4F6FB; font-family: "Outfit", "Avenir Next", sans-serif; font-weight: 300; -webkit-font-smoothing: antialiased; }
+    a { color: #9CC7FF; text-decoration: none; } a:hover { color: #C7DEFF; }
+    h1, h2, h3 { font-family: "Outfit", sans-serif; font-weight: 400; margin: 0; letter-spacing: -0.02em; }
     p { margin: 0; text-wrap: pretty; }
-    .script { font-family: "Petit Formal Script", cursive; color: #9C6B58; }
-    .tag { font-size: 11px; letter-spacing: 0.28em; text-transform: uppercase; color: #7A8B5C; }
-    .torn { border: 1px solid #E6DCC8; background: #FFFFFF; padding: 12px; box-shadow: 0 10px 28px rgba(46,59,52,0.07); }
-    .btn-dark { background: #2E3B34; color: #FBF7EF; padding: 16px 30px; font-size: 11px; letter-spacing: 0.28em; text-transform: uppercase; display: inline-flex; align-items: center; gap: 12px; }
-    .btn-line { border: 1px solid #7A8B5C; color: #2E3B34; padding: 15px 28px; font-size: 11px; letter-spacing: 0.28em; text-transform: uppercase; display: inline-flex; align-items: center; gap: 12px; }
-    .nav { display: flex; align-items: center; gap: 32px; font-size: 11px; letter-spacing: 0.28em; text-transform: uppercase; color: #7A8B5C; }
-    .nav-on { color: #2E3B34; border-bottom: 1px solid #9C6B58; padding-bottom: 5px; }
+    .glass { background: rgba(255,255,255,0.09); backdrop-filter: blur(26px) saturate(150%); -webkit-backdrop-filter: blur(26px) saturate(150%); border: 1px solid rgba(255,255,255,0.22); border-radius: 28px; box-shadow: 0 18px 50px rgba(3,8,20,0.5), inset 0 1px 0 rgba(255,255,255,0.45), inset 0 -18px 34px rgba(255,255,255,0.05); }
+    .glass-strong { background: rgba(255,255,255,0.16); backdrop-filter: blur(26px) saturate(150%); -webkit-backdrop-filter: blur(26px) saturate(150%); border: 1px solid rgba(255,255,255,0.3); border-radius: 28px; box-shadow: 0 18px 50px rgba(3,8,20,0.5), inset 0 1px 0 rgba(255,255,255,0.55); }
+    .glass-sm { background: rgba(255,255,255,0.11); backdrop-filter: blur(20px) saturate(150%); -webkit-backdrop-filter: blur(20px) saturate(150%); border: 1px solid rgba(255,255,255,0.24); border-radius: 100px; box-shadow: 0 8px 22px rgba(3,8,20,0.38), inset 0 1px 0 rgba(255,255,255,0.5); }
+    .glass-field { background: rgba(255,255,255,0.07); backdrop-filter: blur(18px); -webkit-backdrop-filter: blur(18px); border: 1px solid rgba(255,255,255,0.2); border-radius: 16px; box-shadow: inset 0 1px 0 rgba(255,255,255,0.3); }
+    .bright { background: rgba(255,255,255,0.92); color: #0A0F1C; border: 1px solid rgba(255,255,255,0.9); border-radius: 100px; box-shadow: 0 10px 26px rgba(3,8,20,0.42), inset 0 1px 0 rgba(255,255,255,0.95); display: inline-flex; align-items: center; gap: 10px; font-weight: 500; }
+    .meta { font-size: 12px; letter-spacing: 0.16em; text-transform: uppercase; color: rgba(244,246,251,0.62); }
+    .blob { position: absolute; border-radius: 50%; }
   </style>
 </helmet>
 
-<div style="width: 1440px; background: #FBF7EF; overflow: hidden;">
-  <div style="display: flex; flex-direction: column; align-items: center; gap: 14px; padding: 32px 56px 20px;">
-    <span class="script" style="font-size: 36px;">Isha Photography</span>
-    <div class="nav">
-      <span class="">Home</span>
-      <span class="">Portfolio</span>
-      <span class="">Collections</span>
-      <span class="nav-on">About</span>
-      <span style="border: 1px solid #7A8B5C; color: #2E3B34; padding: 11px 20px;">Check your date</span>
+<div style="width: 1440px; background: #0A0F1C; position: relative; overflow: hidden;">
+    <img src="portrait.jpg" alt="" style="position: absolute; left: 0; top: 0; width: 100%; height: 760px; object-fit: cover; opacity: 0.5;">
+    <div class="blob" style="left: -180px; top: 120px; width: 620px; height: 620px; background: rgba(92,132,255,0.5); filter: blur(130px);"></div>
+    <div class="blob" style="right: -140px; top: 460px; width: 560px; height: 560px; background: rgba(226,114,196,0.4); filter: blur(130px);"></div>
+    <div class="blob" style="left: 300px; top: 1200px; width: 700px; height: 700px; background: rgba(64,196,208,0.3); filter: blur(130px);"></div>
+    <div class="blob" style="right: -200px; top: 1900px; width: 640px; height: 640px; background: rgba(126,110,255,0.34); filter: blur(130px);"></div>
+    <div class="blob" style="left: 200px; top: 2600px; width: 680px; height: 680px; background: rgba(64,196,208,0.26); filter: blur(130px);"></div>
+    <div style="position: absolute; left: 0; top: 560px; right: 0; height: 360px; background: linear-gradient(180deg, rgba(10,15,28,0) 0%, #0A0F1C 72%);"></div>
+  <div style="position: relative;">
+    <div style="padding: 24px 44px;">
+      <div class="glass-sm" style="padding: 12px 14px 12px 26px; display: flex; align-items: center; justify-content: space-between;">
+        <span style="font-size: 20px; font-weight: 500; letter-spacing: -0.01em;">Isha Photography</span>
+        <div style="display: flex; align-items: center; gap: 8px; font-size: 15px;">
+          <span class="" style="padding: 11px 20px; border-radius: 100px;">Home</span>
+          <span class="" style="padding: 11px 20px; border-radius: 100px;">Portfolio</span>
+          <span class="" style="padding: 11px 20px; border-radius: 100px;">Collections</span>
+          <span class="glass-sm" style="padding: 11px 20px; border-radius: 100px;">Studio</span>
+          <span class="bright" style="padding: 12px 24px;">Check your date</span>
+        </div>
+      </div>
     </div>
-  </div>
-  <div style="display: flex; align-items: center; justify-content: center; gap: 18px; padding: 0 56px 8px;">
-    <span style="flex-grow: 1; height: 1px; background: #E6DCC8;"></span>
-    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#C9A99E" stroke-width="1"><path d="M12 4c3 3 3 6 0 8-3-2-3-5 0-8Z"></path><path d="M12 12v8"></path><path d="M12 15c-2-1-4-1-5 0"></path><path d="M12 17c2-1 4-1 5 0"></path></svg>
-    <span style="flex-grow: 1; height: 1px; background: #E6DCC8;"></span>
-  </div>
 
-  <!-- INTRO -->
-  <div style="padding: 40px 56px 60px; display: grid; grid-template-columns: repeat(12, minmax(0, 1fr)); gap: 50px; align-items: center; position: relative;">
-    <div style="grid-column: span 7; display: flex; flex-direction: column; gap: 22px;">
-      <span class="tag">About the studio</span>
-      <h1 style="font-size: 56px; line-height: 1.1;">I&rsquo;d rather wait ten minutes<br>for a real moment than<br><span class="script" style="font-size: 62px;">stage one</span></h1>
-      <p style="font-size: 16px; line-height: 1.9; color: #5A665E; max-width: 580px;">I&rsquo;m Chandra Shekar. I started photographing weddings [N] years ago, mostly because I liked the parts nobody was pointing a camera at — a grandmother straightening someone&rsquo;s dupatta, two cousins laughing through a ceremony they were meant to be solemn for.</p>
-      <p style="font-size: 16px; line-height: 1.9; color: #5A665E; max-width: 580px;">That&rsquo;s still what I look for. Isha Photography is a small studio in [YOUR CITY]: me, one film-maker, and a second shooter on the bigger days. Small enough that you always know who&rsquo;s coming.</p>
-      <span class="btn-dark" style="align-self: flex-start; margin-top: 8px;">Check your date
-        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"></path><path d="m13 6 6 6-6 6"></path></svg>
-      </span>
-    </div>
-    <div style="grid-column: span 5;">
-      <div class="torn" style="transform: rotate(2.5deg);">
-        <div style="height: 520px; overflow: hidden;"><img src="portrait.jpg" alt="Chandra Shekar at work" style="width: 100%; height: 100%; object-fit: cover;"></div>
-        <div style="display: flex; justify-content: center; padding: 14px 0 4px;"><span class="script" style="font-size: 21px;">Chandra Shekar</span></div>
+    <div style="padding: 60px 44px 50px; display: grid; grid-template-columns: repeat(12, minmax(0, 1fr)); gap: 44px; align-items: center;">
+      <div style="grid-column: span 7; display: flex; flex-direction: column; gap: 20px;">
+        <span class="meta">About the studio</span>
+        <h1 style="font-size: 56px; line-height: 1.08; font-weight: 300;">I&rsquo;d rather wait ten minutes for a real moment than <span style="font-weight: 200; font-style: italic;">stage one</span></h1>
+        <p style="font-size: 16px; line-height: 1.9; color: rgba(244,246,251,0.78); max-width: 580px;">I&rsquo;m Chandra Shekar. I started photographing weddings [N] years ago, mostly because I liked the parts nobody was pointing a camera at — a grandmother straightening someone&rsquo;s dupatta, two cousins laughing through a ceremony they were meant to be solemn for.</p>
+        <p style="font-size: 16px; line-height: 1.9; color: rgba(244,246,251,0.78); max-width: 580px;">That&rsquo;s still what I look for. Isha Photography is a small studio in [YOUR CITY]: me, one film-maker, and a second shooter on the bigger days. Small enough that you always know who&rsquo;s coming.</p>
+        <span class="bright" style="padding: 17px 32px; font-size: 16px; align-self: flex-start; margin-top: 8px;">Check your date
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"></path><path d="m13 6 6 6-6 6"></path></svg>
+        </span>
+      </div>
+      <div class="glass" style="grid-column: span 5; padding: 12px;">
+        <div style="height: 520px; border-radius: 20px; overflow: hidden;"><img src="portrait.jpg" alt="Chandra Shekar at work" style="width: 100%; height: 100%; object-fit: cover;"></div>
       </div>
     </div>
-  </div>
 
-  <!-- PRINCIPLES -->
-  <div style="background: #EFEADD; padding: 70px 56px; display: flex; flex-direction: column; gap: 42px;">
-    <div style="display: flex; flex-direction: column; align-items: center; gap: 10px;">
-      <span class="tag">How I work</span>
-      <h2 style="font-size: 42px;">Three things I won&rsquo;t compromise on</h2>
+    <div style="padding: 20px 44px 60px; display: flex; flex-direction: column; gap: 30px;">
+      <div style="display: flex; flex-direction: column; align-items: center; gap: 10px;">
+        <span class="meta">How I work</span>
+        <h2 style="font-size: 42px; font-weight: 300;">Three things I won&rsquo;t compromise on</h2>
+      </div>
+      <div style="display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 24px;">
+        <div class="glass" style="padding: 34px 30px; display: flex; flex-direction: column; gap: 14px;">
+          <span class="glass-sm" style="width: 52px; height: 52px; display: inline-flex; align-items: center; justify-content: center;">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#9CC7FF" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M14.5 5h-5L7 8H4a2 2 0 0 0-2 2v8a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2v-8a2 2 0 0 0-2-2h-3Z"></path><circle cx="12" cy="13.5" r="3.5"></circle></svg>
+          </span>
+          <h3 style="font-size: 26px;">Documentary first</h3>
+          <p style="font-size: 15px; line-height: 1.8; color: rgba(244,246,251,0.72);">Posed portraits get their thirty minutes. The rest of the day I stay out of it and photograph what actually happens.</p>
+        </div>
+        <div class="glass" style="padding: 34px 30px; display: flex; flex-direction: column; gap: 14px;">
+          <span class="glass-sm" style="width: 52px; height: 52px; display: inline-flex; align-items: center; justify-content: center;">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#9CC7FF" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"></circle><path d="M12 7v5l3.5 2"></path></svg>
+          </span>
+          <h3 style="font-size: 26px;">Delivered when promised</h3>
+          <p style="font-size: 15px; line-height: 1.8; color: rgba(244,246,251,0.72);">Sneak peek in [N] days, everything else in [N] weeks. If a date slips you hear it from me first.</p>
+        </div>
+        <div class="glass" style="padding: 34px 30px; display: flex; flex-direction: column; gap: 14px;">
+          <span class="glass-sm" style="width: 52px; height: 52px; display: inline-flex; align-items: center; justify-content: center;">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#9CC7FF" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M4 7h16"></path><path d="M4 12h16"></path><path d="M4 17h10"></path></svg>
+          </span>
+          <h3 style="font-size: 26px;">One price, written down</h3>
+          <p style="font-size: 15px; line-height: 1.8; color: rgba(244,246,251,0.72);">Travel, overtime, extra events — all agreed before the advance. No invoice you didn&rsquo;t see coming.</p>
+        </div>
+      </div>
     </div>
-    <div style="display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 32px;">
-      <div style="display: flex; flex-direction: column; gap: 14px; align-items: center; text-align: center;">
-        <svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="#9C6B58" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"><path d="M14.5 5h-5L7 8H4a2 2 0 0 0-2 2v8a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2v-8a2 2 0 0 0-2-2h-3Z"></path><circle cx="12" cy="13.5" r="3.5"></circle></svg>
-        <h3 style="font-size: 26px;">Documentary first</h3>
-        <p style="font-size: 15px; line-height: 1.85; color: #5A665E;">Posed portraits get their thirty minutes. The rest of the day I stay out of it and photograph what actually happens.</p>
-      </div>
-      <div style="display: flex; flex-direction: column; gap: 14px; align-items: center; text-align: center;">
-        <svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="#9C6B58" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"></circle><path d="M12 7v5l3.5 2"></path></svg>
-        <h3 style="font-size: 26px;">Delivered when promised</h3>
-        <p style="font-size: 15px; line-height: 1.85; color: #5A665E;">Sneak peek in [N] days, everything else in [N] weeks. If a date slips you hear it from me first.</p>
-      </div>
-      <div style="display: flex; flex-direction: column; gap: 14px; align-items: center; text-align: center;">
-        <svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="#9C6B58" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"><path d="M4 7h16"></path><path d="M4 12h16"></path><path d="M4 17h10"></path></svg>
-        <h3 style="font-size: 26px;">One price, written down</h3>
-        <p style="font-size: 15px; line-height: 1.85; color: #5A665E;">Travel, overtime, extra events — all agreed before the advance. No invoice you didn&rsquo;t see coming.</p>
-      </div>
-    </div>
-  </div>
 
-  <!-- ON THE DAY -->
-  <div style="padding: 70px 56px 50px; display: flex; flex-direction: column; gap: 36px;">
-    <div style="display: flex; flex-direction: column; align-items: center; gap: 10px;">
-      <span class="tag">On the day</span>
-      <h2 style="font-size: 42px;">What it looks like from <span class="script" style="font-size: 46px;">where I stand</span></h2>
-      <p style="font-size: 16px; line-height: 1.8; color: #5A665E; max-width: 520px; text-align: center; padding-top: 4px;">Frames from recent weddings — no styling, no second takes.</p>
+    <div style="padding: 0 44px 60px; display: flex; flex-direction: column; gap: 28px;">
+      <div style="display: flex; flex-direction: column; align-items: center; gap: 10px;">
+        <span class="meta">On the day</span>
+        <h2 style="font-size: 42px; font-weight: 300;">What it looks like from where I stand</h2>
+        <p style="font-size: 16px; line-height: 1.75; color: rgba(244,246,251,0.7); max-width: 500px; text-align: center; padding-top: 4px;">Frames from recent weddings — no styling, no second takes.</p>
+      </div>
+      <div style="display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 22px;">
+        <div class="glass" style="padding: 10px;"><div style="height: 260px; border-radius: 18px; overflow: hidden;"><img src="g10.jpg" alt="Sangeet night" style="width: 100%; height: 100%; object-fit: cover;"></div></div>
+        <div class="glass" style="padding: 10px;"><div style="height: 260px; border-radius: 18px; overflow: hidden;"><img src="g7.jpg" alt="Wedding ceremony" style="width: 100%; height: 100%; object-fit: cover;"></div></div>
+        <div class="glass" style="padding: 10px;"><div style="height: 260px; border-radius: 18px; overflow: hidden;"><img src="g8.jpg" alt="Guests celebrating" style="width: 100%; height: 100%; object-fit: cover;"></div></div>
+        <div class="glass" style="padding: 10px;"><div style="height: 260px; border-radius: 18px; overflow: hidden;"><img src="g2.jpg" alt="Haldi ceremony" style="width: 100%; height: 100%; object-fit: cover;"></div></div>
+      </div>
     </div>
-    <div style="display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 24px; align-items: start;">
-      <div class="torn" style="transform: rotate(-2deg);"><div style="height: 260px; overflow: hidden;"><img src="g10.jpg" alt="Sangeet night" style="width: 100%; height: 100%; object-fit: cover;"></div></div>
-      <div class="torn" style="transform: rotate(1.5deg); margin-top: 22px;"><div style="height: 260px; overflow: hidden;"><img src="g7.jpg" alt="Wedding ceremony" style="width: 100%; height: 100%; object-fit: cover;"></div></div>
-      <div class="torn" style="transform: rotate(-1deg); margin-top: 6px;"><div style="height: 260px; overflow: hidden;"><img src="g8.jpg" alt="Guests celebrating" style="width: 100%; height: 100%; object-fit: cover;"></div></div>
-      <div class="torn" style="transform: rotate(2.5deg); margin-top: 26px;"><div style="height: 260px; overflow: hidden;"><img src="g2.jpg" alt="Haldi ceremony" style="width: 100%; height: 100%; object-fit: cover;"></div></div>
-    </div>
-  </div>
 
-  <!-- VENUES -->
-  <div style="padding: 30px 56px 70px; display: flex; flex-direction: column; gap: 22px; align-items: center;">
-    <span class="tag">Recently photographed at</span>
-    <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 44px; font-family: 'Gilda Display', Georgia, serif; font-size: 23px; color: #8C978A;">
-      <span>[Venue name]</span><span>[Venue name]</span><span>[Venue name]</span><span>[Venue name]</span><span>[Venue name]</span>
+    <div style="padding: 0 44px 60px; display: flex; flex-direction: column; align-items: center; gap: 20px;">
+      <span class="meta">Recently photographed at</span>
+      <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 12px;">
+        <span class="glass-sm" style="padding: 12px 24px; font-size: 15px;">[Venue name]</span>
+        <span class="glass-sm" style="padding: 12px 24px; font-size: 15px;">[Venue name]</span>
+        <span class="glass-sm" style="padding: 12px 24px; font-size: 15px;">[Venue name]</span>
+        <span class="glass-sm" style="padding: 12px 24px; font-size: 15px;">[Venue name]</span>
+        <span class="glass-sm" style="padding: 12px 24px; font-size: 15px;">[Venue name]</span>
+      </div>
     </div>
-  </div>
 
-  <!-- CTA -->
-  <div style="background: #2E3B34; padding: 66px 56px; display: flex; align-items: center; justify-content: space-between; gap: 50px;">
-    <div style="display: flex; flex-direction: column; gap: 12px;">
-      <h2 style="font-size: 42px; line-height: 1.12; color: #FBF7EF;">Let&rsquo;s see if we&rsquo;re a <span class="script" style="font-size: 48px; color: #E0C9A6;">fit</span></h2>
-      <p style="font-size: 16px; line-height: 1.8; color: rgba(251,247,239,0.78); max-width: 520px;">Most couples start with a short call. No pitch — just your date, your events and what you&rsquo;re hoping to remember.</p>
-    </div>
-    <span style="background: #E0C9A6; color: #2E3B34; padding: 16px 30px; font-size: 11px; letter-spacing: 0.28em; text-transform: uppercase; white-space: nowrap;">Book a call</span>
-  </div>
-  <div style="background: #2E3B34; color: rgba(251,247,239,0.76); padding: 56px 56px 30px;">
-    <div style="display: grid; grid-template-columns: repeat(12, minmax(0, 1fr)); gap: 40px; padding-bottom: 40px;">
-      <div style="grid-column: span 5; display: flex; flex-direction: column; gap: 14px;">
-        <span class="script" style="font-size: 30px; color: #E0C9A6;">Isha Photography</span>
-        <p style="font-size: 15px; line-height: 1.8; max-width: 330px;">Gentle, handmade coverage of weddings and family celebrations in [YOUR CITY] — printed properly and bound by hand.</p>
-      </div>
-      <div style="grid-column: span 2; display: flex; flex-direction: column; gap: 12px; font-size: 14px;">
-        <span class="tag" style="color: #E0C9A6; margin-bottom: 4px;">Pages</span>
-        <span>Portfolio</span><span>Collections</span><span>About</span><span>Contact</span>
-      </div>
-      <div style="grid-column: span 2; display: flex; flex-direction: column; gap: 12px; font-size: 14px;">
-        <span class="tag" style="color: #E0C9A6; margin-bottom: 4px;">Follow</span>
-        <span>Instagram</span><span>Facebook</span><span>YouTube</span>
-      </div>
-      <div style="grid-column: span 3; display: flex; flex-direction: column; gap: 12px; font-size: 14px;">
-        <span class="tag" style="color: #E0C9A6; margin-bottom: 4px;">Get in touch</span>
-        <span>[hello@yourdomain.com]</span><span>[+91 00000 00000]</span><span>[Studio address, City]</span>
+    <div style="padding: 0 44px 50px;">
+      <div class="glass-strong" style="padding: 48px 44px; display: flex; align-items: center; justify-content: space-between; gap: 40px;">
+        <div style="display: flex; flex-direction: column; gap: 12px;">
+          <h2 style="font-size: 42px; font-weight: 300;">Let&rsquo;s see if we&rsquo;re a fit</h2>
+          <p style="font-size: 16px; line-height: 1.8; color: rgba(244,246,251,0.78); max-width: 520px;">Most couples start with a short call. No pitch — just your date, your events and what you&rsquo;re hoping to remember.</p>
+        </div>
+        <span class="bright" style="padding: 17px 32px; font-size: 16px; white-space: nowrap;">Book a call</span>
       </div>
     </div>
-    <div style="height: 1px; background: rgba(251,247,239,0.16);"></div>
-    <div style="display: flex; justify-content: space-between; padding-top: 22px; font-size: 12px; letter-spacing: 0.1em;">
-      <span>&copy; [YEAR] Isha Photography</span><span>Privacy &middot; Terms</span>
+    <div style="padding: 0 44px 40px;">
+      <div class="glass" style="padding: 44px 40px 30px;">
+        <div style="display: grid; grid-template-columns: repeat(12, minmax(0, 1fr)); gap: 40px; padding-bottom: 34px;">
+          <div style="grid-column: span 5; display: flex; flex-direction: column; gap: 14px;">
+            <span style="font-size: 22px; font-weight: 500;">Isha Photography</span>
+            <p style="font-size: 15px; line-height: 1.8; color: rgba(244,246,251,0.7); max-width: 330px;">Wedding photography and cinema in [YOUR CITY], travelling anywhere you&rsquo;ll have us.</p>
+          </div>
+          <div style="grid-column: span 2; display: flex; flex-direction: column; gap: 12px; font-size: 15px; color: rgba(244,246,251,0.78);">
+            <span class="meta" style="margin-bottom: 4px;">Pages</span>
+            <span>Portfolio</span><span>Collections</span><span>Studio</span><span>Contact</span>
+          </div>
+          <div style="grid-column: span 2; display: flex; flex-direction: column; gap: 12px; font-size: 15px; color: rgba(244,246,251,0.78);">
+            <span class="meta" style="margin-bottom: 4px;">Follow</span>
+            <span>Instagram</span><span>Facebook</span><span>YouTube</span>
+          </div>
+          <div style="grid-column: span 3; display: flex; flex-direction: column; gap: 12px; font-size: 15px; color: rgba(244,246,251,0.78);">
+            <span class="meta" style="margin-bottom: 4px;">Get in touch</span>
+            <span>[hello@yourdomain.com]</span><span>[+91 00000 00000]</span><span>[Studio address, City]</span>
+          </div>
+        </div>
+        <div style="height: 1px; background: rgba(255,255,255,0.16);"></div>
+        <div style="display: flex; justify-content: space-between; padding-top: 22px; font-size: 13px; color: rgba(244,246,251,0.55);">
+          <span>&copy; [YEAR] Isha Photography</span><span>Privacy &middot; Terms</span>
+        </div>
+      </div>
     </div>
-  </div>
 
+  </div>
 </div>
 </x-dc>
 </body>

@@ -19,5 +19,5 @@ The five desktop pages share a header, nav and footer, kept in `_head.part`,
 stitches those around a page body. The mobile screen, style sheet and theme
 samples are standalone files.
 
-Theme in use: **Ink & Petal** (theme 10). Themes 1–9 are kept as reference
-artboards on their own canvas pages.
+Style in use: **Liquid Glass**. The ten earlier themes and the five interface-style
+studies are kept as reference artboards on their own canvas pages.

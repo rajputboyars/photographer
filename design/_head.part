@@ -1,16 +1,16 @@
 <helmet>
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Petit+Formal+Script&family=Gilda+Display&family=Quattrocento+Sans:wght@400;700&display=swap">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Outfit:wght@200;300;400;500;600&display=swap">
   <style>
-    body { margin: 0; background: #FBF7EF; color: #2E3B34; font-family: "Quattrocento Sans", "Avenir Next", sans-serif; font-weight: 400; -webkit-font-smoothing: antialiased; }
-    a { color: #9C6B58; text-decoration: none; } a:hover { color: #7A4F3E; }
-    h1, h2, h3 { font-family: "Gilda Display", Georgia, serif; font-weight: 400; margin: 0; }
+    body { margin: 0; background: #0A0F1C; color: #F4F6FB; font-family: "Outfit", "Avenir Next", sans-serif; font-weight: 300; -webkit-font-smoothing: antialiased; }
+    a { color: #9CC7FF; text-decoration: none; } a:hover { color: #C7DEFF; }
+    h1, h2, h3 { font-family: "Outfit", sans-serif; font-weight: 400; margin: 0; letter-spacing: -0.02em; }
     p { margin: 0; text-wrap: pretty; }
-    .script { font-family: "Petit Formal Script", cursive; color: #9C6B58; }
-    .tag { font-size: 11px; letter-spacing: 0.28em; text-transform: uppercase; color: #7A8B5C; }
-    .torn { border: 1px solid #E6DCC8; background: #FFFFFF; padding: 12px; box-shadow: 0 10px 28px rgba(46,59,52,0.07); }
-    .btn-dark { background: #2E3B34; color: #FBF7EF; padding: 16px 30px; font-size: 11px; letter-spacing: 0.28em; text-transform: uppercase; display: inline-flex; align-items: center; gap: 12px; }
-    .btn-line { border: 1px solid #7A8B5C; color: #2E3B34; padding: 15px 28px; font-size: 11px; letter-spacing: 0.28em; text-transform: uppercase; display: inline-flex; align-items: center; gap: 12px; }
-    .nav { display: flex; align-items: center; gap: 32px; font-size: 11px; letter-spacing: 0.28em; text-transform: uppercase; color: #7A8B5C; }
-    .nav-on { color: #2E3B34; border-bottom: 1px solid #9C6B58; padding-bottom: 5px; }
+    .glass { background: rgba(255,255,255,0.09); backdrop-filter: blur(26px) saturate(150%); -webkit-backdrop-filter: blur(26px) saturate(150%); border: 1px solid rgba(255,255,255,0.22); border-radius: 28px; box-shadow: 0 18px 50px rgba(3,8,20,0.5), inset 0 1px 0 rgba(255,255,255,0.45), inset 0 -18px 34px rgba(255,255,255,0.05); }
+    .glass-strong { background: rgba(255,255,255,0.16); backdrop-filter: blur(26px) saturate(150%); -webkit-backdrop-filter: blur(26px) saturate(150%); border: 1px solid rgba(255,255,255,0.3); border-radius: 28px; box-shadow: 0 18px 50px rgba(3,8,20,0.5), inset 0 1px 0 rgba(255,255,255,0.55); }
+    .glass-sm { background: rgba(255,255,255,0.11); backdrop-filter: blur(20px) saturate(150%); -webkit-backdrop-filter: blur(20px) saturate(150%); border: 1px solid rgba(255,255,255,0.24); border-radius: 100px; box-shadow: 0 8px 22px rgba(3,8,20,0.38), inset 0 1px 0 rgba(255,255,255,0.5); }
+    .glass-field { background: rgba(255,255,255,0.07); backdrop-filter: blur(18px); -webkit-backdrop-filter: blur(18px); border: 1px solid rgba(255,255,255,0.2); border-radius: 16px; box-shadow: inset 0 1px 0 rgba(255,255,255,0.3); }
+    .bright { background: rgba(255,255,255,0.92); color: #0A0F1C; border: 1px solid rgba(255,255,255,0.9); border-radius: 100px; box-shadow: 0 10px 26px rgba(3,8,20,0.42), inset 0 1px 0 rgba(255,255,255,0.95); display: inline-flex; align-items: center; gap: 10px; font-weight: 500; }
+    .meta { font-size: 12px; letter-spacing: 0.16em; text-transform: uppercase; color: rgba(244,246,251,0.62); }
+    .blob { position: absolute; border-radius: 50%; }
   </style>
 </helmet>

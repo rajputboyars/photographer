@@ -25,7 +25,7 @@
       "x": 0,
       "y": 0,
       "w": 1440,
-      "h": 5000
+      "h": 3900
     },
     {
       "file": "Portfolio.dc.html",
@@ -34,7 +34,7 @@
       "x": 1600,
       "y": 0,
       "w": 1440,
-      "h": 3400
+      "h": 2900
     },
     {
       "file": "Services.dc.html",
@@ -43,7 +43,7 @@
       "x": 3200,
       "y": 0,
       "w": 1440,
-      "h": 3300
+      "h": 3100
     },
     {
       "file": "About.dc.html",
@@ -52,7 +52,7 @@
       "x": 4800,
       "y": 0,
       "w": 1440,
-      "h": 2800
+      "h": 2600
     },
     {
       "file": "Contact.dc.html",
@@ -61,7 +61,7 @@
       "x": 6400,
       "y": 0,
       "w": 1440,
-      "h": 1800
+      "h": 1900
     },
     {
       "file": "MobileHome.dc.html",
@@ -70,7 +70,7 @@
       "x": 8000,
       "y": 0,
       "w": 390,
-      "h": 3450
+      "h": 2600
     },
     {
       "file": "StyleSheet.dc.html",
@@ -79,7 +79,7 @@
       "x": 8560,
       "y": 0,
       "w": 1240,
-      "h": 880
+      "h": 900
     },
     {
       "file": "ThemeMidnightGold.dc.html",
@@ -224,7 +224,7 @@
       "x": 0,
       "y": -170,
       "w": 520,
-      "text": "Built in theme 10 — Ink & Petal.\nEverything in square brackets is a placeholder for a real fact: prices, phone, city, review quotes, couple and venue names. Replace them before this goes live; nothing here is invented."
+      "text": "Built in Liquid Glass.\nEverything in square brackets is a placeholder for a real fact: prices, phone, city, review quotes, couple and venue names. Replace them before this goes live; nothing here is invented."
     },
     {
       "id": "note-2",
@@ -256,11 +256,11 @@
       "x": 0,
       "y": -190,
       "w": 800,
-      "text": "The same home page — same copy, same sections, same photographs — rendered in five interface styles.\nDifferences are surface treatment only: material, depth, corner radius, shadow and type weight. Say which one and I'll carry it across the other pages."
+      "text": "Five interface styles compared. Liquid Glass is the one built out across the website pages."
     }
   ],
   "launch": {
     "view": "canvas",
-    "page": "page-5"
+    "page": "page-1"
   }
 }
