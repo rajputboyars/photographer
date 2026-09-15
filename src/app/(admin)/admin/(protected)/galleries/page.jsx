@@ -1,7 +1,8 @@
 import Image from "next/image";
+import Icon from "@/components/Icon";
 import { store } from "@/lib/store";
 import { deleteGallery, saveGallery } from "@/app/(admin)/admin/actions";
-import { Card, PageTitle, field, ghostBtn, label, primaryBtn } from "@/components/admin/AdminChrome";
+import { Card, EmptyState, PageTitle, field, label, primaryBtn } from "@/components/admin/AdminChrome";
 
 export const dynamic = "force-dynamic";
 
@@ -12,33 +13,57 @@ export default async function GalleriesPage() {
     <>
       <PageTitle title="Galleries" subtitle="What shows on the portfolio, and what each cover looks like." />
 
-      <div className="grid gap-4 lg:grid-cols-3">
+      <div className="grid gap-5 lg:grid-cols-3">
         <div className="grid gap-4 sm:grid-cols-2 lg:col-span-2">
           {galleries.map((g) => (
-            <Card key={g.slug} className="overflow-hidden">
-              <div className="relative h-40">
-                <Image src={g.thumbnail} alt="" fill sizes="(max-width: 1024px) 50vw, 25vw" className="object-cover" />
+            <Card key={g.slug} className="group overflow-hidden">
+              <div className="relative h-44">
+                <Image src={g.thumbnail} alt="" fill sizes="(max-width: 1024px) 50vw, 25vw" className="object-cover transition duration-700 group-hover:scale-105" />
+                <div className="absolute inset-0 bg-gradient-to-t from-ground/90 via-ground/10 to-transparent" />
+                <span className="absolute bottom-3 left-3 rounded-full border border-white/20 bg-black/40 px-2.5 py-1 text-[12px] backdrop-blur">
+                  {g.type}
+                </span>
               </div>
               <div className="flex flex-col gap-2 p-4">
-                <div className="flex items-baseline justify-between gap-3">
-                  <span className="text-[15px]">{g.name}</span>
-                  <span className="text-[13px] text-ink/50">{g.type}</span>
+                <span className="text-[15px]">{g.name}</span>
+                <span className="text-[13px] text-ink/40">/works/{g.slug}</span>
+                <div className="flex flex-wrap gap-1.5 pt-1">
+                  {g.categories.length ? (
+                    g.categories.map((c) => (
+                      <span key={c} className="rounded-md border border-white/10 bg-white/[0.04] px-2 py-0.5 text-[12px] text-ink/60">
+                        {c}
+                      </span>
+                    ))
+                  ) : (
+                    <span className="text-[12px] text-ink/35">No categories</span>
+                  )}
                 </div>
-                <div className="text-[13px] text-ink/45">/works/{g.slug}</div>
-                <div className="text-[13px] text-ink/45">{g.categories.join(" · ") || "No categories"}</div>
-                <form action={deleteGallery} className="pt-1">
+                <form action={deleteGallery} className="pt-2">
                   <input type="hidden" name="slug" value={g.slug} />
-                  <button type="submit" className="text-[13px] text-rose-300/80 hover:text-rose-200">
+                  <button type="submit" className="inline-flex items-center gap-1.5 text-[13px] text-rose-300/70 transition hover:text-rose-200">
+                    <Icon name="trash" className="h-3.5 w-3.5" />
                     Remove
                   </button>
                 </form>
               </div>
             </Card>
           ))}
+          {galleries.length === 0 ? (
+            <Card className="sm:col-span-2">
+              <EmptyState icon="images" title="No galleries yet">
+                Add one with the form — it appears on the portfolio straight away.
+              </EmptyState>
+            </Card>
+          ) : null}
         </div>
 
         <Card className="h-fit p-6">
-          <h2 className="pb-4 text-lg font-normal">Add or update a gallery</h2>
+          <div className="flex items-center gap-2.5 pb-4">
+            <span className="flex h-8 w-8 items-center justify-center rounded-lg border border-white/12 bg-white/[0.05]">
+              <Icon name="plus" className="h-4 w-4 text-accent" />
+            </span>
+            <h2 className="text-[17px]">Add or update</h2>
+          </div>
           <form action={saveGallery} className="flex flex-col gap-4">
             <label className={label}>
               Couple or client
@@ -63,8 +88,8 @@ export default async function GalleriesPage() {
             <button type="submit" className={primaryBtn}>
               Save gallery
             </button>
-            <p className="text-[13px] leading-relaxed text-ink/45">
-              Photo uploads need file storage, so for now covers point at files already in{" "}
+            <p className="text-[13px] leading-relaxed text-ink/40">
+              Photo uploads need file storage, so covers point at files already in{" "}
               <code className="rounded bg-black/30 px-1">public/images/photos</code>.
             </p>
           </form>

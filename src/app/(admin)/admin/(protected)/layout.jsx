@@ -1,4 +1,4 @@
-import { AdminHeader, DemoBanner } from "@/components/admin/AdminChrome";
+import { DemoBanner, MobileBar, MobileNav, Sidebar } from "@/components/admin/AdminChrome";
 import { usingDemoData } from "@/lib/store";
 
 export const metadata = {
@@ -8,10 +8,20 @@ export const metadata = {
 
 export default function AdminLayout({ children }) {
   return (
-    <div className="min-h-screen bg-ground">
-      <AdminHeader />
-      {usingDemoData ? <DemoBanner /> : null}
-      <main className="mx-auto max-w-6xl px-4 py-8 md:px-8 md:py-10">{children}</main>
+    <div className="flex min-h-screen bg-ground">
+      <Sidebar />
+      <div className="flex min-w-0 flex-1 flex-col">
+        <MobileBar />
+        <main className="mx-auto w-full max-w-5xl flex-1 px-4 py-8 md:px-8 md:py-10">
+          {usingDemoData ? (
+            <div className="pb-7">
+              <DemoBanner />
+            </div>
+          ) : null}
+          {children}
+        </main>
+        <MobileNav />
+      </div>
     </div>
   );
 }

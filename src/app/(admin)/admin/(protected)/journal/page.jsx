@@ -1,6 +1,9 @@
+import Image from "next/image";
+import Link from "next/link";
+import Icon from "@/components/Icon";
 import { store } from "@/lib/store";
 import { deletePost, savePost } from "@/app/(admin)/admin/actions";
-import { Card, PageTitle, field, label, primaryBtn } from "@/components/admin/AdminChrome";
+import { Card, EmptyState, PageTitle, field, label, primaryBtn } from "@/components/admin/AdminChrome";
 
 export const dynamic = "force-dynamic";
 
@@ -11,37 +14,63 @@ export default async function JournalPage() {
     <>
       <PageTitle title="Journal" subtitle="Posts about recent weddings — the pages that rank for venue names." />
 
-      <div className="grid gap-4 lg:grid-cols-3">
+      <div className="grid gap-5 lg:grid-cols-3">
         <div className="flex flex-col gap-4 lg:col-span-2">
-          {posts.map((post) => (
-            <Card key={post.id} className="p-5">
-              <div className="flex flex-wrap items-start justify-between gap-3">
-                <div>
-                  <div className="text-[16px]">{post.title}</div>
-                  <div className="pt-0.5 text-[13px] text-ink/45">/journal/{post.slug}</div>
+          {posts.map((post) => {
+            const live = post.status === "published";
+            return (
+              <Card key={post.id} className="flex gap-4 overflow-hidden p-4">
+                <div className="relative hidden h-[104px] w-[132px] shrink-0 overflow-hidden rounded-xl sm:block">
+                  <Image src={post.cover} alt="" fill sizes="132px" className="object-cover" />
                 </div>
-                <span
-                  className={`rounded-full border px-2.5 py-0.5 text-xs ${
-                    post.status === "published" ? "border-emerald-300/40 text-emerald-200" : "border-white/20 text-ink/55"
-                  }`}
-                >
-                  {post.status}
-                </span>
-              </div>
-              <p className="pt-3 text-sm leading-relaxed text-ink/65">{post.excerpt}</p>
-              <form action={deletePost} className="pt-3">
-                <input type="hidden" name="id" value={post.id} />
-                <button type="submit" className="text-[13px] text-rose-300/80 hover:text-rose-200">
-                  Delete
-                </button>
-              </form>
+                <div className="flex min-w-0 flex-1 flex-col gap-1.5">
+                  <div className="flex flex-wrap items-start justify-between gap-2">
+                    <span className="text-[16px]">{post.title}</span>
+                    <span
+                      className={`rounded-full border px-2.5 py-0.5 text-[12px] ${
+                        live ? "border-emerald-400/40 bg-emerald-400/10 text-emerald-200" : "border-white/18 bg-white/5 text-ink/55"
+                      }`}
+                    >
+                      {post.status}
+                    </span>
+                  </div>
+                  <span className="text-[13px] text-ink/40">/journal/{post.slug}</span>
+                  <p className="line-clamp-2 text-[14px] leading-relaxed text-ink/60">{post.excerpt}</p>
+                  <div className="flex items-center gap-4 pt-1.5">
+                    {live ? (
+                      <Link href={`/journal/${post.slug}`} className="inline-flex items-center gap-1.5 text-[13px] text-accent hover:text-white">
+                        <Icon name="external" className="h-3.5 w-3.5" />
+                        View
+                      </Link>
+                    ) : null}
+                    <form action={deletePost}>
+                      <input type="hidden" name="id" value={post.id} />
+                      <button type="submit" className="inline-flex items-center gap-1.5 text-[13px] text-rose-300/70 transition hover:text-rose-200">
+                        <Icon name="trash" className="h-3.5 w-3.5" />
+                        Delete
+                      </button>
+                    </form>
+                  </div>
+                </div>
+              </Card>
+            );
+          })}
+          {posts.length === 0 ? (
+            <Card>
+              <EmptyState icon="pen" title="No posts yet">
+                A post per wedding is how the site starts ranking for venue names.
+              </EmptyState>
             </Card>
-          ))}
-          {posts.length === 0 ? <Card className="p-8 text-sm text-ink/50">No posts yet.</Card> : null}
+          ) : null}
         </div>
 
         <Card className="h-fit p-6">
-          <h2 className="pb-4 text-lg font-normal">New post</h2>
+          <div className="flex items-center gap-2.5 pb-4">
+            <span className="flex h-8 w-8 items-center justify-center rounded-lg border border-white/12 bg-white/[0.05]">
+              <Icon name="pen" className="h-4 w-4 text-accent" />
+            </span>
+            <h2 className="text-[17px]">New post</h2>
+          </div>
           <form action={savePost} className="flex flex-col gap-4">
             <label className={label}>
               Title
@@ -57,7 +86,7 @@ export default async function JournalPage() {
             </label>
             <label className={label}>
               Body
-              <textarea name="body" rows={6} className={field} />
+              <textarea name="body" rows={6} placeholder="One paragraph per line." className={field} />
             </label>
             <label className={label}>
               Cover image path
@@ -73,9 +102,6 @@ export default async function JournalPage() {
             <button type="submit" className={primaryBtn}>
               Save post
             </button>
-            <p className="text-[13px] leading-relaxed text-ink/45">
-              Posts are stored but there is no public /journal route yet — that is the next piece of work.
-            </p>
           </form>
         </Card>
       </div>
