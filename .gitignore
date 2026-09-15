@@ -43,3 +43,5 @@ next-env.d.ts
 # seeded design canvas (generated, ~3MB — rebuild from design/*.dc.html)
 /design/*.html
 !/design/*.dc.html
+# uploaded photographs (written at runtime, not source)
+/public/uploads/

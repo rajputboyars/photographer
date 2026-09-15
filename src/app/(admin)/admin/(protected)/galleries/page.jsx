@@ -3,22 +3,38 @@ import Icon from "@/components/Icon";
 import { store } from "@/lib/store";
 import { deleteGallery, saveGallery } from "@/app/(admin)/admin/actions";
 import { Card, EmptyState, PageTitle, field, label, primaryBtn } from "@/components/admin/AdminChrome";
+import PhotoUploader from "@/components/admin/PhotoUploader";
+import { storageIsPersistent } from "@/lib/storage";
 
 export const dynamic = "force-dynamic";
 
 export default async function GalleriesPage() {
-  const galleries = await store.listGalleries();
+  const [galleries, uploads, persistent] = await Promise.all([
+    store.listGalleries(),
+    store.listUploads(),
+    storageIsPersistent(),
+  ]);
 
   return (
     <>
       <PageTitle title="Galleries" subtitle="What shows on the portfolio, and what each cover looks like." />
+
+      <Card className="mb-5 p-6">
+        <div className="flex items-center gap-2.5 pb-4">
+          <span className="flex h-8 w-8 items-center justify-center rounded-lg border border-white/12 bg-white/[0.05]">
+            <Icon name="images" className="h-4 w-4 text-accent" />
+          </span>
+          <h2 className="text-[17px]">Photographs</h2>
+        </div>
+        <PhotoUploader uploads={uploads} persistent={persistent} targetInputId="gallery-cover" />
+      </Card>
 
       <div className="grid gap-5 lg:grid-cols-3">
         <div className="grid gap-4 sm:grid-cols-2 lg:col-span-2">
           {galleries.map((g) => (
             <Card key={g.slug} className="group overflow-hidden">
               <div className="relative h-44">
-                <Image src={g.thumbnail} alt="" fill sizes="(max-width: 1024px) 50vw, 25vw" className="object-cover transition duration-700 group-hover:scale-105" />
+                <Image src={g.thumbnail} alt="" fill sizes="(max-width: 1024px) 50vw, 25vw" unoptimized={g.thumbnail.startsWith("/api/")} className="object-cover transition duration-700 group-hover:scale-105" />
                 <div className="absolute inset-0 bg-gradient-to-t from-ground/90 via-ground/10 to-transparent" />
                 <span className="absolute bottom-3 left-3 rounded-full border border-white/20 bg-black/40 px-2.5 py-1 text-[12px] backdrop-blur">
                   {g.type}
@@ -71,7 +87,7 @@ export default async function GalleriesPage() {
             </label>
             <label className={label}>
               Slug
-              <input name="slug" required placeholder="priya-arjun" pattern="[a-z0-9-]+" className={field} />
+              <input name="slug" required placeholder="priya-arjun" pattern="[a-z0-9]+(-[a-z0-9]+)*" className={field} />
             </label>
             <label className={label}>
               Type
@@ -79,7 +95,13 @@ export default async function GalleriesPage() {
             </label>
             <label className={label}>
               Cover image path
-              <input name="thumbnail" required defaultValue="/images/photos/wedding-ceremony.jpg" className={field} />
+              <input
+                id="gallery-cover"
+                name="thumbnail"
+                required
+                defaultValue={uploads[0]?.url ?? "/images/photos/wedding-ceremony.jpg"}
+                className={field}
+              />
             </label>
             <label className={label}>
               Categories, comma separated
@@ -89,8 +111,8 @@ export default async function GalleriesPage() {
               Save gallery
             </button>
             <p className="text-[13px] leading-relaxed text-ink/40">
-              Photo uploads need file storage, so covers point at files already in{" "}
-              <code className="rounded bg-black/30 px-1">public/images/photos</code>.
+              Upload a photograph above and copy its path, or point at any file in{" "}
+              <code className="rounded bg-black/30 px-1">public/images</code>.
             </p>
           </form>
         </Card>

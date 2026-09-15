@@ -3,14 +3,18 @@ import PortfolioGrid from "@/components/PortfolioGrid";
 import CtaBand from "@/components/CtaBand";
 import { GhostLink, Arrow, SectionHead } from "@/components/Glass";
 import { photos, site } from "@/lib/site";
-import DATA from "@/data.js";
+import { store } from "@/lib/store";
+
+export const dynamic = "force-dynamic";
 
 export const metadata = {
   title: "Portfolio",
   description: `Recent weddings, pre-weddings and celebrations photographed and filmed by ${site.name}.`,
 };
 
-export default function PortfolioPage() {
+export default async function PortfolioPage() {
+  const galleries = await store.listGalleries();
+
   return (
     <PageShell image={photos.heroPortfolio}>
       <section className="flex flex-col items-center gap-4 py-10 text-center md:py-14">
@@ -24,7 +28,7 @@ export default function PortfolioPage() {
         </p>
       </section>
 
-      <PortfolioGrid galleries={DATA} />
+      <PortfolioGrid galleries={galleries} />
 
       <div className="flex justify-center py-12">
         <GhostLink href="/contact">

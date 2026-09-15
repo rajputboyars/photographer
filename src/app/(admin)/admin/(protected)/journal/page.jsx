@@ -78,7 +78,7 @@ export default async function JournalPage() {
             </label>
             <label className={label}>
               Slug
-              <input name="slug" required pattern="[a-z0-9-]+" placeholder="three-days-at-the-palace" className={field} />
+              <input name="slug" required pattern="[a-z0-9]+(-[a-z0-9]+)*" placeholder="three-days-at-the-palace" className={field} />
             </label>
             <label className={label}>
               Excerpt
