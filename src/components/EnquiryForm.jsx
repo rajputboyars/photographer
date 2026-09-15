@@ -26,27 +26,33 @@ export default function EnquiryForm() {
 
   const update = (key) => (e) => setForm((f) => ({ ...f, [key]: e.target.value }));
 
-  // No backend yet: the enquiry opens in the studio's mail client, pre-filled.
-  // To collect leads server-side instead, replace this with a POST to an API
-  // route or form service and keep the same field names.
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    const body = [
-      `Event: ${eventType}`,
-      `Name: ${form.name}`,
-      `WhatsApp: ${form.phone}`,
-      `Email: ${form.email}`,
-      `Date: ${form.date}`,
-      `City or venue: ${form.venue}`,
-      `Budget: ${form.budget || "Not given"}`,
-      `Reply on WhatsApp: ${whatsapp ? "yes" : "no"}`,
-      "",
-      form.notes,
-    ].join("\n");
+  const [status, setStatus] = useState({ state: "idle", message: "" });
 
-    window.location.href = `mailto:${site.email}?subject=${encodeURIComponent(
-      `Enquiry — ${eventType}${form.date ? ` on ${form.date}` : ""}`
-    )}&body=${encodeURIComponent(body)}`;
+  // Posts to /api/enquiries, which stores the lead for the admin inbox.
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    setStatus({ state: "sending", message: "" });
+
+    try {
+      const response = await fetch("/api/enquiries", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ ...form, eventType, whatsappOk: whatsapp }),
+      });
+
+      if (!response.ok) throw new Error(`Request failed (${response.status})`);
+
+      setStatus({
+        state: "sent",
+        message: `Thank you — your enquiry is with me. I reply within ${site.replyHours} hours.`,
+      });
+      setForm({ name: "", phone: "", email: "", date: "", venue: "", budget: "", notes: "" });
+    } catch {
+      setStatus({
+        state: "error",
+        message: `That did not send. Please WhatsApp ${site.phone} or email ${site.email} instead.`,
+      });
+    }
   };
 
   return (
@@ -76,36 +82,36 @@ export default function EnquiryForm() {
       <div className="grid gap-5 sm:grid-cols-2">
         <label className="flex flex-col gap-2.5">
           <span className={labelClass}>Your name</span>
-          <input required value={form.name} onChange={update("name")} placeholder="Priya &amp; Arjun" className={fieldClass} autoComplete="name" />
+          <input name="name" required value={form.name} onChange={update("name")} placeholder="Priya &amp; Arjun" className={fieldClass} autoComplete="name" />
         </label>
 
         <label className="flex flex-col gap-2.5">
           <span className={labelClass}>WhatsApp number</span>
-          <input required type="tel" value={form.phone} onChange={update("phone")} placeholder="+91" className={fieldClass} autoComplete="tel" />
+          <input name="phone" required type="tel" value={form.phone} onChange={update("phone")} placeholder="+91" className={fieldClass} autoComplete="tel" />
         </label>
 
         <label className="flex flex-col gap-2.5">
           <span className={labelClass}>Email</span>
-          <input required type="email" value={form.email} onChange={update("email")} placeholder="you@email.com" className={fieldClass} autoComplete="email" />
+          <input name="email" required type="email" value={form.email} onChange={update("email")} placeholder="you@email.com" className={fieldClass} autoComplete="email" />
         </label>
 
         <label className="flex flex-col gap-2.5">
           <span className={labelClass}>Date of the main event</span>
           <div className="relative">
-            <input required type="date" value={form.date} onChange={update("date")} className={`${fieldClass} pr-12 [color-scheme:dark]`} />
+            <input name="date" required type="date" value={form.date} onChange={update("date")} className={`${fieldClass} pr-12 [color-scheme:dark]`} />
             <Icon name="calendar" className="pointer-events-none absolute right-4 top-1/2 h-[18px] w-[18px] -translate-y-1/2 text-ink/50" />
           </div>
         </label>
 
         <label className="flex flex-col gap-2.5">
           <span className={labelClass}>City or venue</span>
-          <input value={form.venue} onChange={update("venue")} placeholder="Where is it happening?" className={fieldClass} />
+          <input name="venue" value={form.venue} onChange={update("venue")} placeholder="Where is it happening?" className={fieldClass} />
         </label>
 
         <label className="flex flex-col gap-2.5">
           <span className={labelClass}>Budget range</span>
           <div className="relative">
-            <select value={form.budget} onChange={update("budget")} className={`${fieldClass} appearance-none pr-12 ${form.budget ? "" : "text-ink/45"}`}>
+            <select name="budget" value={form.budget} onChange={update("budget")} className={`${fieldClass} appearance-none pr-12 ${form.budget ? "" : "text-ink/45"}`}>
               <option value="">Select a range</option>
               {BUDGETS.map((b) => (
                 <option key={b} value={b} className="bg-panel text-ink">
@@ -122,6 +128,7 @@ export default function EnquiryForm() {
         <span className={labelClass}>Anything I should know?</span>
         <textarea
           rows={4}
+          name="notes"
           value={form.notes}
           onChange={update("notes")}
           placeholder="How many events, roughly how many guests, and the one photograph you'd be upset not to have."
@@ -142,12 +149,25 @@ export default function EnquiryForm() {
       </label>
 
       <div className="flex flex-col items-start gap-4 sm:flex-row sm:items-center sm:gap-5">
-        <button type="submit" className="bright inline-flex items-center gap-2.5 px-8 py-4 text-base transition hover:bg-white">
-          Send enquiry
+        <button
+          type="submit"
+          disabled={status.state === "sending"}
+          className="bright inline-flex items-center gap-2.5 px-8 py-4 text-base transition hover:bg-white disabled:opacity-60"
+        >
+          {status.state === "sending" ? "Sending…" : "Send enquiry"}
           <Arrow />
         </button>
         <span className="text-sm text-ink/60">No advance to ask · No mailing list</span>
       </div>
+
+      {status.message ? (
+        <p
+          role="status"
+          className={`text-[15px] leading-relaxed ${status.state === "error" ? "text-rose-300" : "text-accent"}`}
+        >
+          {status.message}
+        </p>
+      ) : null}
     </form>
   );
 }
