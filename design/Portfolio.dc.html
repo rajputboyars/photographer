@@ -7,132 +7,137 @@
 <body>
 <x-dc>
 <helmet>
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Jost:wght@300;400;500&display=swap">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Petit+Formal+Script&family=Gilda+Display&family=Quattrocento+Sans:wght@400;700&display=swap">
   <style>
-    body { margin: 0; background: #F7F3ED; color: #14100E; font-family: "Jost", "Avenir Next", "Segoe UI", sans-serif; font-weight: 300; -webkit-font-smoothing: antialiased; }
-    a { color: oklch(0.55 0.09 70); text-decoration: none; }
-    a:hover { color: oklch(0.42 0.08 70); }
-    h1, h2, h3 { font-family: "Cormorant Garamond", "Iowan Old Style", Georgia, serif; font-weight: 300; margin: 0; letter-spacing: -0.01em; }
+    body { margin: 0; background: #FBF7EF; color: #2E3B34; font-family: "Quattrocento Sans", "Avenir Next", sans-serif; font-weight: 400; -webkit-font-smoothing: antialiased; }
+    a { color: #9C6B58; text-decoration: none; } a:hover { color: #7A4F3E; }
+    h1, h2, h3 { font-family: "Gilda Display", Georgia, serif; font-weight: 400; margin: 0; }
     p { margin: 0; text-wrap: pretty; }
-    .eyebrow { font-size: 11px; letter-spacing: 0.26em; text-transform: uppercase; color: oklch(0.55 0.09 70); font-weight: 400; }
-    .chip { font-size: 13px; letter-spacing: 0.12em; text-transform: uppercase; padding: 12px 22px; border: 1px solid #E3DACE; color: #4A423B; background: #FFFDF9; }
-    .chip-on { background: #14100E; border-color: #14100E; color: #FFFDF9; }
-    .tile { position: relative; overflow: hidden; }
-    .tile-cap { position: absolute; inset: auto 0 0 0; background: linear-gradient(180deg, rgba(20,16,14,0) 0%, rgba(20,16,14,0.86) 100%); padding: 30px 26px 24px; display: flex; flex-direction: column; gap: 6px; }
-    .tile-kind { font-size: 10px; letter-spacing: 0.24em; text-transform: uppercase; color: oklch(0.84 0.06 70); }
-    .tile-name { font-family: "Cormorant Garamond", Georgia, serif; font-size: 26px; color: #FFFDF9; }
+    .script { font-family: "Petit Formal Script", cursive; color: #9C6B58; }
+    .tag { font-size: 11px; letter-spacing: 0.28em; text-transform: uppercase; color: #7A8B5C; }
+    .torn { border: 1px solid #E6DCC8; background: #FFFFFF; padding: 12px; box-shadow: 0 10px 28px rgba(46,59,52,0.07); }
+    .btn-dark { background: #2E3B34; color: #FBF7EF; padding: 16px 30px; font-size: 11px; letter-spacing: 0.28em; text-transform: uppercase; display: inline-flex; align-items: center; gap: 12px; }
+    .btn-line { border: 1px solid #7A8B5C; color: #2E3B34; padding: 15px 28px; font-size: 11px; letter-spacing: 0.28em; text-transform: uppercase; display: inline-flex; align-items: center; gap: 12px; }
+    .nav { display: flex; align-items: center; gap: 32px; font-size: 11px; letter-spacing: 0.28em; text-transform: uppercase; color: #7A8B5C; }
+    .nav-on { color: #2E3B34; border-bottom: 1px solid #9C6B58; padding-bottom: 5px; }
   </style>
 </helmet>
 
-<div style="width: 1440px; background: #F7F3ED;">
-
-  <!-- header -->
-  <div style="display: flex; align-items: center; justify-content: space-between; padding: 26px 72px; border-bottom: 1px solid #E3DACE; background: #FFFDF9;">
-    <div style="display: flex; flex-direction: column; gap: 2px;">
-      <div style="font-family: 'Cormorant Garamond', Georgia, serif; font-size: 24px; letter-spacing: 0.06em;">Isha Photography</div>
-      <div style="font-size: 9px; letter-spacing: 0.34em; text-transform: uppercase; color: #4A423B;">Films &amp; Photographs</div>
+<div style="width: 1440px; background: #FBF7EF; overflow: hidden;">
+  <div style="display: flex; flex-direction: column; align-items: center; gap: 14px; padding: 32px 56px 20px;">
+    <span class="script" style="font-size: 36px;">Isha Photography</span>
+    <div class="nav">
+      <span class="">Home</span>
+      <span class="nav-on">Portfolio</span>
+      <span class="">Collections</span>
+      <span class="">About</span>
+      <span style="border: 1px solid #7A8B5C; color: #2E3B34; padding: 11px 20px;">Check your date</span>
     </div>
-    <div style="display: flex; align-items: center; gap: 36px; font-size: 13px; letter-spacing: 0.12em; text-transform: uppercase; color: #4A423B;">
-      <span>Home</span>
-      <span style="color: #14100E; border-bottom: 1px solid oklch(0.62 0.09 70); padding-bottom: 4px;">Portfolio</span>
-      <span>Services</span>
-      <span>About</span>
-      <span style="display: inline-flex; align-items: center; gap: 10px; background: #14100E; color: #FFFDF9; padding: 13px 22px;">
-        Check your date
-        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"></path><path d="m13 6 6 6-6 6"></path></svg>
-      </span>
+  </div>
+  <div style="display: flex; align-items: center; justify-content: center; gap: 18px; padding: 0 56px 8px;">
+    <span style="flex-grow: 1; height: 1px; background: #E6DCC8;"></span>
+    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#C9A99E" stroke-width="1"><path d="M12 4c3 3 3 6 0 8-3-2-3-5 0-8Z"></path><path d="M12 12v8"></path><path d="M12 15c-2-1-4-1-5 0"></path><path d="M12 17c2-1 4-1 5 0"></path></svg>
+    <span style="flex-grow: 1; height: 1px; background: #E6DCC8;"></span>
+  </div>
+
+  <!-- PAGE HEAD -->
+  <div style="padding: 40px 56px 34px; display: flex; flex-direction: column; align-items: center; gap: 14px;">
+    <span class="tag">Portfolio</span>
+    <h1 style="font-size: 58px; line-height: 1.1; text-align: center;">Every gallery here is<br>someone&rsquo;s <span class="script" style="font-size: 64px;">whole year</span></h1>
+    <p style="font-size: 16px; line-height: 1.85; color: #5A665E; max-width: 560px; text-align: center; padding-top: 4px;">Filter by the kind of day you&rsquo;re planning. Each cover opens the full set — ceremony, portraits and the film.</p>
+  </div>
+
+  <!-- FILTERS -->
+  <div style="padding: 0 56px 40px; display: flex; flex-wrap: wrap; justify-content: center; gap: 10px;">
+    <span style="background: #2E3B34; color: #FBF7EF; padding: 11px 20px; font-size: 11px; letter-spacing: 0.24em; text-transform: uppercase;">All work</span>
+    <span style="border: 1px solid #E6DCC8; background: #FFFFFF; color: #5A665E; padding: 11px 20px; font-size: 11px; letter-spacing: 0.24em; text-transform: uppercase;">Weddings</span>
+    <span style="border: 1px solid #E6DCC8; background: #FFFFFF; color: #5A665E; padding: 11px 20px; font-size: 11px; letter-spacing: 0.24em; text-transform: uppercase;">Pre-wedding</span>
+    <span style="border: 1px solid #E6DCC8; background: #FFFFFF; color: #5A665E; padding: 11px 20px; font-size: 11px; letter-spacing: 0.24em; text-transform: uppercase;">Haldi &amp; Mehndi</span>
+    <span style="border: 1px solid #E6DCC8; background: #FFFFFF; color: #5A665E; padding: 11px 20px; font-size: 11px; letter-spacing: 0.24em; text-transform: uppercase;">Sangeet</span>
+    <span style="border: 1px solid #E6DCC8; background: #FFFFFF; color: #5A665E; padding: 11px 20px; font-size: 11px; letter-spacing: 0.24em; text-transform: uppercase;">Reception</span>
+    <span style="border: 1px solid #E6DCC8; background: #FFFFFF; color: #5A665E; padding: 11px 20px; font-size: 11px; letter-spacing: 0.24em; text-transform: uppercase;">Birthdays</span>
+    <span style="border: 1px solid #E6DCC8; background: #FFFFFF; color: #5A665E; padding: 11px 20px; font-size: 11px; letter-spacing: 0.24em; text-transform: uppercase;">Corporate</span>
+    <span style="border: 1px solid #E6DCC8; background: #FFFFFF; color: #5A665E; padding: 11px 20px; font-size: 11px; letter-spacing: 0.24em; text-transform: uppercase;">Portraits</span>
+  </div>
+
+  <!-- GRID -->
+  <div style="padding: 0 56px 40px; display: grid; grid-template-columns: repeat(12, minmax(0, 1fr)); gap: 30px; align-items: start;">
+    <div class="torn" style="grid-column: span 5; transform: rotate(-1.5deg);">
+      <div style="height: 440px; overflow: hidden;"><img src="g6.jpg" alt="Mehndi ceremony" style="width: 100%; height: 100%; object-fit: cover;"></div>
+      <div style="display: flex; flex-direction: column; align-items: center; gap: 3px; padding: 14px 0 4px;"><span class="script" style="font-size: 21px;">[Couple] &amp; [Couple]</span><span class="tag" style="font-size: 10px;">Wedding &middot; three days</span></div>
+    </div>
+    <div class="torn" style="grid-column: span 4; transform: rotate(2deg); margin-top: 36px;">
+      <div style="height: 380px; overflow: hidden;"><img src="g5.jpg" alt="Pre-wedding portrait" style="width: 100%; height: 100%; object-fit: cover;"></div>
+      <div style="display: flex; flex-direction: column; align-items: center; gap: 3px; padding: 14px 0 4px;"><span class="script" style="font-size: 21px;">[Couple] &amp; [Couple]</span><span class="tag" style="font-size: 10px;">Pre-wedding</span></div>
+    </div>
+    <div class="torn" style="grid-column: span 3; transform: rotate(-2.5deg); margin-top: 8px;">
+      <div style="height: 320px; overflow: hidden;"><img src="g2.jpg" alt="Haldi ceremony" style="width: 100%; height: 100%; object-fit: cover;"></div>
+      <div style="display: flex; flex-direction: column; align-items: center; gap: 3px; padding: 14px 0 4px;"><span class="script" style="font-size: 21px;">[Couple] &amp; [Couple]</span><span class="tag" style="font-size: 10px;">Haldi</span></div>
+    </div>
+
+    <div class="torn" style="grid-column: span 4; transform: rotate(1.5deg);">
+      <div style="height: 340px; overflow: hidden;"><img src="g4.jpg" alt="Birthday celebration" style="width: 100%; height: 100%; object-fit: cover;"></div>
+      <div style="display: flex; flex-direction: column; align-items: center; gap: 3px; padding: 14px 0 4px;"><span class="script" style="font-size: 21px;">[Family name]</span><span class="tag" style="font-size: 10px;">First birthday</span></div>
+    </div>
+    <div class="torn" style="grid-column: span 4; transform: rotate(-2deg); margin-top: 26px;">
+      <div style="height: 340px; overflow: hidden;"><img src="g9.jpg" alt="Reception" style="width: 100%; height: 100%; object-fit: cover;"></div>
+      <div style="display: flex; flex-direction: column; align-items: center; gap: 3px; padding: 14px 0 4px;"><span class="script" style="font-size: 21px;">[Couple] &amp; [Couple]</span><span class="tag" style="font-size: 10px;">Reception</span></div>
+    </div>
+    <div class="torn" style="grid-column: span 4; transform: rotate(2.5deg); margin-top: 6px;">
+      <div style="height: 340px; overflow: hidden;"><img src="g3.jpg" alt="Corporate event" style="width: 100%; height: 100%; object-fit: cover;"></div>
+      <div style="display: flex; flex-direction: column; align-items: center; gap: 3px; padding: 14px 0 4px;"><span class="script" style="font-size: 21px;">[Company name]</span><span class="tag" style="font-size: 10px;">Corporate</span></div>
+    </div>
+
+    <div class="torn" style="grid-column: span 3; transform: rotate(-1.5deg);">
+      <div style="height: 320px; overflow: hidden;"><img src="g10.jpg" alt="Sangeet night" style="width: 100%; height: 100%; object-fit: cover;"></div>
+      <div style="display: flex; flex-direction: column; align-items: center; gap: 3px; padding: 14px 0 4px;"><span class="script" style="font-size: 21px;">[Couple] &amp; [Couple]</span><span class="tag" style="font-size: 10px;">Sangeet</span></div>
+    </div>
+    <div class="torn" style="grid-column: span 5; transform: rotate(2deg); margin-top: 30px;">
+      <div style="height: 400px; overflow: hidden;"><img src="g7.jpg" alt="Wedding ceremony" style="width: 100%; height: 100%; object-fit: cover;"></div>
+      <div style="display: flex; flex-direction: column; align-items: center; gap: 3px; padding: 14px 0 4px;"><span class="script" style="font-size: 21px;">[Couple] &amp; [Couple]</span><span class="tag" style="font-size: 10px;">Wedding &middot; two days</span></div>
+    </div>
+    <div class="torn" style="grid-column: span 4; transform: rotate(-2deg); margin-top: 10px;">
+      <div style="height: 360px; overflow: hidden;"><img src="g8.jpg" alt="Studio portraits" style="width: 100%; height: 100%; object-fit: cover;"></div>
+      <div style="display: flex; flex-direction: column; align-items: center; gap: 3px; padding: 14px 0 4px;"><span class="script" style="font-size: 21px;">[Client name]</span><span class="tag" style="font-size: 10px;">Portraits</span></div>
     </div>
   </div>
 
-  <!-- page head -->
-  <div style="padding: 84px 72px 44px; display: flex; align-items: flex-end; justify-content: space-between; gap: 60px;">
-    <div style="display: flex; flex-direction: column; gap: 20px; max-width: 720px;">
-      <span class="eyebrow">Portfolio</span>
-      <h1 style="font-size: 66px; line-height: 1.02;">Every gallery here<br>is someone&rsquo;s whole year</h1>
-    </div>
-    <p style="font-size: 16px; line-height: 1.75; color: #4A423B; max-width: 380px;">Filter by the kind of day you&rsquo;re planning. Each cover opens the full set — ceremony, portraits and the film.</p>
-  </div>
-
-  <!-- filters -->
-  <div style="padding: 0 72px 44px; display: flex; flex-wrap: wrap; gap: 12px;">
-    <span class="chip chip-on">All work</span>
-    <span class="chip">Weddings</span>
-    <span class="chip">Pre-wedding</span>
-    <span class="chip">Haldi &amp; Mehndi</span>
-    <span class="chip">Sangeet</span>
-    <span class="chip">Reception</span>
-    <span class="chip">Birthdays</span>
-    <span class="chip">Corporate</span>
-    <span class="chip">Portraits</span>
-  </div>
-
-  <!-- grid -->
-  <div style="padding: 0 72px 24px; display: grid; grid-template-columns: repeat(12, minmax(0, 1fr)); gap: 20px;">
-    <div class="tile" style="grid-column: span 5; height: 520px;">
-      <img src="g6.jpg" alt="Mehndi ceremony" style="width: 100%; height: 100%; object-fit: cover;">
-      <div class="tile-cap"><span class="tile-kind">Wedding &middot; 3 days</span><span class="tile-name">[Couple] &amp; [Couple]</span></div>
-    </div>
-    <div class="tile" style="grid-column: span 4; height: 520px;">
-      <img src="g5.jpg" alt="Pre-wedding portrait" style="width: 100%; height: 100%; object-fit: cover;">
-      <div class="tile-cap"><span class="tile-kind">Pre-wedding</span><span class="tile-name">[Couple] &amp; [Couple]</span></div>
-    </div>
-    <div class="tile" style="grid-column: span 3; height: 520px;">
-      <img src="g2.jpg" alt="Haldi ceremony" style="width: 100%; height: 100%; object-fit: cover;">
-      <div class="tile-cap"><span class="tile-kind">Haldi</span><span class="tile-name">[Couple] &amp; [Couple]</span></div>
-    </div>
-
-    <div class="tile" style="grid-column: span 4; height: 420px;">
-      <img src="g4.jpg" alt="Birthday celebration" style="width: 100%; height: 100%; object-fit: cover;">
-      <div class="tile-cap"><span class="tile-kind">First birthday</span><span class="tile-name">[Family name]</span></div>
-    </div>
-    <div class="tile" style="grid-column: span 4; height: 420px;">
-      <img src="g9.jpg" alt="Reception" style="width: 100%; height: 100%; object-fit: cover;">
-      <div class="tile-cap"><span class="tile-kind">Reception</span><span class="tile-name">[Couple] &amp; [Couple]</span></div>
-    </div>
-    <div class="tile" style="grid-column: span 4; height: 420px;">
-      <img src="g3.jpg" alt="Corporate event" style="width: 100%; height: 100%; object-fit: cover;">
-      <div class="tile-cap"><span class="tile-kind">Corporate</span><span class="tile-name">[Company name]</span></div>
-    </div>
-
-    <div class="tile" style="grid-column: span 3; height: 440px;">
-      <img src="g10.jpg" alt="Sangeet night" style="width: 100%; height: 100%; object-fit: cover;">
-      <div class="tile-cap"><span class="tile-kind">Sangeet</span><span class="tile-name">[Couple] &amp; [Couple]</span></div>
-    </div>
-    <div class="tile" style="grid-column: span 5; height: 440px;">
-      <img src="g7.jpg" alt="Wedding ceremony" style="width: 100%; height: 100%; object-fit: cover;">
-      <div class="tile-cap"><span class="tile-kind">Wedding &middot; 2 days</span><span class="tile-name">[Couple] &amp; [Couple]</span></div>
-    </div>
-    <div class="tile" style="grid-column: span 4; height: 440px;">
-      <img src="g8.jpg" alt="Studio portraits" style="width: 100%; height: 100%; object-fit: cover;">
-      <div class="tile-cap"><span class="tile-kind">Portraits</span><span class="tile-name">[Client name]</span></div>
-    </div>
-  </div>
-
-  <div style="display: flex; justify-content: center; padding: 34px 0 96px;">
-    <span style="display: inline-flex; align-items: center; gap: 12px; border: 1px solid #14100E; color: #14100E; padding: 16px 34px; font-size: 13px; letter-spacing: 0.14em; text-transform: uppercase;">
-      Load more galleries
-      <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 5v14"></path><path d="m6 13 6 6 6-6"></path></svg>
+  <div style="display: flex; justify-content: center; padding: 30px 0 70px;">
+    <span class="btn-line">Load more galleries
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 5v14"></path><path d="m6 13 6 6 6-6"></path></svg>
     </span>
   </div>
 
   <!-- CTA -->
-  <div style="background: #14100E; padding: 78px 72px; display: flex; align-items: center; justify-content: space-between; gap: 60px;">
-    <div style="display: flex; flex-direction: column; gap: 14px;">
-      <h2 style="font-size: 44px; line-height: 1.1; color: #FFFDF9;">Like what you see?</h2>
-      <p style="font-size: 16px; line-height: 1.7; color: rgba(255,253,249,0.78); max-width: 520px;">Send me your date and I&rsquo;ll tell you within [N] hours whether it&rsquo;s free — and what a day like yours usually costs.</p>
+  <div style="background: #2E3B34; padding: 66px 56px; display: flex; align-items: center; justify-content: space-between; gap: 50px;">
+    <div style="display: flex; flex-direction: column; gap: 12px;">
+      <h2 style="font-size: 42px; line-height: 1.12; color: #FBF7EF;">Like what you <span class="script" style="font-size: 48px; color: #E0C9A6;">see?</span></h2>
+      <p style="font-size: 16px; line-height: 1.8; color: rgba(251,247,239,0.78); max-width: 520px;">Send your date and I&rsquo;ll tell you within [N] hours whether it&rsquo;s free — and what a day like yours usually costs.</p>
     </div>
-    <span style="display: inline-flex; align-items: center; gap: 12px; background: oklch(0.62 0.09 70); color: #14100E; padding: 18px 32px; font-size: 13px; letter-spacing: 0.14em; text-transform: uppercase; white-space: nowrap;">
-      Check your date
-      <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"></path><path d="m13 6 6 6-6 6"></path></svg>
-    </span>
+    <span style="background: #E0C9A6; color: #2E3B34; padding: 16px 30px; font-size: 11px; letter-spacing: 0.28em; text-transform: uppercase; white-space: nowrap;">Check your date</span>
   </div>
-
-  <!-- footer -->
-  <div style="background: #14100E; color: rgba(255,253,249,0.7); padding: 0 72px 34px;">
-    <div style="height: 1px; background: rgba(255,253,249,0.12);"></div>
-    <div style="display: flex; justify-content: space-between; padding-top: 24px; font-size: 12px; letter-spacing: 0.1em;">
-      <span>&copy; [YEAR] Isha Photography &middot; [YOUR CITY]</span>
-      <span>[hello@yourdomain.com] &middot; [+91 00000 00000]</span>
+  <div style="background: #2E3B34; color: rgba(251,247,239,0.76); padding: 56px 56px 30px;">
+    <div style="display: grid; grid-template-columns: repeat(12, minmax(0, 1fr)); gap: 40px; padding-bottom: 40px;">
+      <div style="grid-column: span 5; display: flex; flex-direction: column; gap: 14px;">
+        <span class="script" style="font-size: 30px; color: #E0C9A6;">Isha Photography</span>
+        <p style="font-size: 15px; line-height: 1.8; max-width: 330px;">Gentle, handmade coverage of weddings and family celebrations in [YOUR CITY] — printed properly and bound by hand.</p>
+      </div>
+      <div style="grid-column: span 2; display: flex; flex-direction: column; gap: 12px; font-size: 14px;">
+        <span class="tag" style="color: #E0C9A6; margin-bottom: 4px;">Pages</span>
+        <span>Portfolio</span><span>Collections</span><span>About</span><span>Contact</span>
+      </div>
+      <div style="grid-column: span 2; display: flex; flex-direction: column; gap: 12px; font-size: 14px;">
+        <span class="tag" style="color: #E0C9A6; margin-bottom: 4px;">Follow</span>
+        <span>Instagram</span><span>Facebook</span><span>YouTube</span>
+      </div>
+      <div style="grid-column: span 3; display: flex; flex-direction: column; gap: 12px; font-size: 14px;">
+        <span class="tag" style="color: #E0C9A6; margin-bottom: 4px;">Get in touch</span>
+        <span>[hello@yourdomain.com]</span><span>[+91 00000 00000]</span><span>[Studio address, City]</span>
+      </div>
+    </div>
+    <div style="height: 1px; background: rgba(251,247,239,0.16);"></div>
+    <div style="display: flex; justify-content: space-between; padding-top: 22px; font-size: 12px; letter-spacing: 0.1em;">
+      <span>&copy; [YEAR] Isha Photography</span><span>Privacy &middot; Terms</span>
     </div>
   </div>
 

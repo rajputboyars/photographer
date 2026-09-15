@@ -7,74 +7,82 @@
 <body>
 <x-dc>
 <helmet>
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Jost:wght@300;400;500&display=swap">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Petit+Formal+Script&family=Gilda+Display&family=Quattrocento+Sans:wght@400;700&display=swap">
   <style>
-    body { margin: 0; background: #F7F3ED; color: #14100E; font-family: "Jost", "Avenir Next", "Segoe UI", sans-serif; font-weight: 300; }
-    a { color: oklch(0.55 0.09 70); } a:hover { color: oklch(0.42 0.08 70); }
-    h1, h2 { font-family: "Cormorant Garamond", Georgia, serif; font-weight: 300; margin: 0; }
+    body { margin: 0; background: #FBF7EF; color: #2E3B34; font-family: "Quattrocento Sans", "Avenir Next", sans-serif; font-weight: 400; }
+    a { color: #9C6B58; } a:hover { color: #7A4F3E; }
+    h1, h2 { font-family: "Gilda Display", Georgia, serif; font-weight: 400; margin: 0; }
     p { margin: 0; }
-    .lbl { font-size: 10px; letter-spacing: 0.24em; text-transform: uppercase; color: #4A423B; }
-    .sw { height: 92px; display: flex; align-items: flex-end; padding: 10px; font-size: 11px; letter-spacing: 0.06em; }
+    .script { font-family: "Petit Formal Script", cursive; color: #9C6B58; }
+    .lbl { font-size: 10px; letter-spacing: 0.26em; text-transform: uppercase; color: #8C978A; }
+    .sw { height: 88px; display: flex; align-items: flex-end; padding: 10px; font-size: 11px; letter-spacing: 0.04em; }
   </style>
 </helmet>
 
-<div style="width: 1240px; background: #F7F3ED; padding: 56px;">
+<div style="width: 1240px; background: #FBF7EF; padding: 52px;">
 
-  <div style="display: flex; flex-direction: column; gap: 10px; margin-bottom: 44px;">
-    <span style="font-size: 11px; letter-spacing: 0.26em; text-transform: uppercase; color: oklch(0.55 0.09 70);">Design system</span>
-    <h1 style="font-size: 44px; line-height: 1.1;">Isha Photography &mdash; visual language</h1>
+  <div style="display: flex; flex-direction: column; gap: 10px; margin-bottom: 40px;">
+    <span class="lbl" style="color: #7A8B5C;">Design system &mdash; Ink &amp; Petal</span>
+    <h1 style="font-size: 42px; line-height: 1.1;">Isha Photography &mdash; <span class="script" style="font-size: 46px;">visual language</span></h1>
   </div>
 
   <div style="display: grid; grid-template-columns: repeat(12, minmax(0, 1fr)); gap: 40px;">
 
-    <div style="grid-column: span 7; display: flex; flex-direction: column; gap: 22px;">
+    <div style="grid-column: span 7; display: flex; flex-direction: column; gap: 20px;">
       <span class="lbl">Typography</span>
-      <div style="display: flex; flex-direction: column; gap: 16px; border-top: 1px solid #E3DACE; padding-top: 20px;">
-        <div style="display: flex; align-items: baseline; gap: 20px;">
-          <span style="font-family: 'Cormorant Garamond', Georgia, serif; font-size: 58px; line-height: 1;">Cormorant Garamond</span>
-          <span style="font-size: 12px; color: #4A423B;">Display &middot; 300 / 400 / italic</span>
+      <div style="display: flex; flex-direction: column; gap: 14px; border-top: 1px solid #E6DCC8; padding-top: 18px;">
+        <div style="display: flex; align-items: baseline; gap: 18px;">
+          <span style="font-family: 'Gilda Display', Georgia, serif; font-size: 46px; line-height: 1;">Gilda Display</span>
+          <span style="font-size: 12px; color: #8C978A;">Headings &middot; 400</span>
         </div>
-        <div style="display: flex; align-items: baseline; gap: 20px;">
-          <span style="font-size: 34px; line-height: 1;">Jost</span>
-          <span style="font-size: 12px; color: #4A423B;">Body &amp; UI &middot; 300 / 400 / 500</span>
+        <div style="display: flex; align-items: baseline; gap: 18px;">
+          <span class="script" style="font-size: 42px; line-height: 1.2;">Petit Formal Script</span>
+          <span style="font-size: 12px; color: #8C978A;">Accent &middot; names, numbers, warm phrases only</span>
+        </div>
+        <div style="display: flex; align-items: baseline; gap: 18px;">
+          <span style="font-size: 28px; line-height: 1;">Quattrocento Sans</span>
+          <span style="font-size: 12px; color: #8C978A;">Body &amp; UI &middot; 400 / 700</span>
         </div>
       </div>
-      <div style="display: flex; flex-direction: column; gap: 12px; border-top: 1px solid #E3DACE; padding-top: 20px;">
-        <span style="font-family: 'Cormorant Garamond', Georgia, serif; font-size: 52px; line-height: 1.05;">Display 52&ndash;82 / 0.98</span>
-        <span style="font-family: 'Cormorant Garamond', Georgia, serif; font-size: 30px; line-height: 1.1;">Section heading 44 / 1.1</span>
-        <span style="font-size: 17px; line-height: 1.8; color: #4A423B; max-width: 520px;">Body 16&ndash;17 / 1.75&ndash;1.85 &mdash; long-form paragraphs stay under 620px so the measure never runs past about 78 characters.</span>
-        <span style="font-size: 11px; letter-spacing: 0.26em; text-transform: uppercase; color: oklch(0.55 0.09 70);">Eyebrow 11 / 0.26em uppercase</span>
+      <div style="display: flex; flex-direction: column; gap: 12px; border-top: 1px solid #E6DCC8; padding-top: 18px;">
+        <span style="font-family: 'Gilda Display', Georgia, serif; font-size: 48px; line-height: 1.08;">Display 52&ndash;68 / 1.08</span>
+        <span style="font-family: 'Gilda Display', Georgia, serif; font-size: 30px; line-height: 1.1;">Section heading 42 / 1.12</span>
+        <span style="font-size: 16px; line-height: 1.9; color: #5A665E; max-width: 520px;">Body 15&ndash;16 / 1.85&ndash;1.9 &mdash; paragraphs stay under 580px so the measure never runs past about 75 characters.</span>
+        <span class="lbl" style="color: #7A8B5C;">Tag 11 / 0.28em uppercase</span>
       </div>
     </div>
 
-    <div style="grid-column: span 5; display: flex; flex-direction: column; gap: 22px;">
+    <div style="grid-column: span 5; display: flex; flex-direction: column; gap: 20px;">
       <span class="lbl">Palette</span>
-      <div style="display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 10px; border-top: 1px solid #E3DACE; padding-top: 20px;">
-        <div class="sw" style="background: #14100E; color: rgba(255,253,249,0.8);">Ink #14100E</div>
-        <div class="sw" style="background: #4A423B; color: rgba(255,253,249,0.8);">Ink soft #4A423B</div>
-        <div class="sw" style="background: oklch(0.62 0.09 70); color: #14100E;">Brass 0.62 0.09 70</div>
-        <div class="sw" style="background: #F7F3ED; border: 1px solid #E3DACE; color: #4A423B;">Bone #F7F3ED</div>
-        <div class="sw" style="background: #EFE8DE; color: #4A423B;">Sand #EFE8DE</div>
-        <div class="sw" style="background: #FFFDF9; border: 1px solid #E3DACE; color: #4A423B;">Paper #FFFDF9</div>
+      <div style="display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 10px; border-top: 1px solid #E6DCC8; padding-top: 18px;">
+        <div class="sw" style="background: #2E3B34; color: rgba(251,247,239,0.85);">Forest #2E3B34</div>
+        <div class="sw" style="background: #5A665E; color: rgba(251,247,239,0.85);">Body #5A665E</div>
+        <div class="sw" style="background: #9C6B58; color: #FBF7EF;">Terracotta #9C6B58</div>
+        <div class="sw" style="background: #7A8B5C; color: #FBF7EF;">Sage #7A8B5C</div>
+        <div class="sw" style="background: #E0C9A6; color: #2E3B34;">Sand #E0C9A6</div>
+        <div class="sw" style="background: #C9A99E; color: #2E3B34;">Blush #C9A99E</div>
+        <div class="sw" style="background: #FBF7EF; border: 1px solid #E6DCC8; color: #5A665E;">Cream #FBF7EF</div>
+        <div class="sw" style="background: #EFEADD; color: #5A665E;">Oat #EFEADD</div>
+        <div class="sw" style="background: #FFFFFF; border: 1px solid #E6DCC8; color: #5A665E;">Print #FFFFFF</div>
       </div>
-      <p style="font-size: 14px; line-height: 1.7; color: #4A423B;">One accent only. Brass sits on ink or paper; never two accents in the same view.</p>
+      <p style="font-size: 14px; line-height: 1.75; color: #5A665E;">Terracotta is the accent and sage carries the small caps. Sand is reserved for type and buttons on the forest panels.</p>
 
-      <span class="lbl" style="margin-top: 8px;">Buttons</span>
-      <div style="display: flex; flex-wrap: wrap; gap: 12px; border-top: 1px solid #E3DACE; padding-top: 20px;">
-        <span style="background: oklch(0.62 0.09 70); color: #14100E; padding: 16px 26px; font-size: 12px; letter-spacing: 0.14em; text-transform: uppercase;">Primary</span>
-        <span style="background: #14100E; color: #FFFDF9; padding: 16px 26px; font-size: 12px; letter-spacing: 0.14em; text-transform: uppercase;">Dark</span>
-        <span style="border: 1px solid #14100E; color: #14100E; padding: 16px 26px; font-size: 12px; letter-spacing: 0.14em; text-transform: uppercase;">Secondary</span>
-        <span style="color: #14100E; border-bottom: 1px solid #14100E; padding: 8px 2px; font-size: 12px; letter-spacing: 0.14em; text-transform: uppercase;">Text link</span>
+      <span class="lbl" style="margin-top: 6px;">Buttons</span>
+      <div style="display: flex; flex-wrap: wrap; gap: 12px; border-top: 1px solid #E6DCC8; padding-top: 18px;">
+        <span style="background: #2E3B34; color: #FBF7EF; padding: 16px 28px; font-size: 11px; letter-spacing: 0.28em; text-transform: uppercase;">Primary</span>
+        <span style="background: #E0C9A6; color: #2E3B34; padding: 16px 28px; font-size: 11px; letter-spacing: 0.28em; text-transform: uppercase;">On dark</span>
+        <span style="border: 1px solid #7A8B5C; color: #2E3B34; padding: 15px 26px; font-size: 11px; letter-spacing: 0.28em; text-transform: uppercase;">Secondary</span>
+        <span style="color: #9C6B58; border-bottom: 1px solid #C9A99E; padding: 8px 2px; font-size: 11px; letter-spacing: 0.28em; text-transform: uppercase;">Text link</span>
       </div>
     </div>
 
-    <div style="grid-column: span 12; display: flex; flex-direction: column; gap: 18px; margin-top: 8px;">
+    <div style="grid-column: span 12; display: flex; flex-direction: column; gap: 16px; margin-top: 6px;">
       <span class="lbl">Rules of the layout</span>
-      <div style="display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 24px; border-top: 1px solid #E3DACE; padding-top: 20px;">
-        <p style="font-size: 15px; line-height: 1.7; color: #4A423B;"><strong style="font-weight: 500; color: #14100E;">Grid.</strong> 12 columns, 72px page margin on desktop, 20px on mobile, 20&ndash;24px gutters.</p>
-        <p style="font-size: 15px; line-height: 1.7; color: #4A423B;"><strong style="font-weight: 500; color: #14100E;">Corners.</strong> Nothing is rounded. Square frames, hairline #E3DACE borders.</p>
-        <p style="font-size: 15px; line-height: 1.7; color: #4A423B;"><strong style="font-weight: 500; color: #14100E;">Photographs.</strong> Full-bleed, no shadows, no filters. Captions sit on a dark gradient inside the frame.</p>
-        <p style="font-size: 15px; line-height: 1.7; color: #4A423B;"><strong style="font-weight: 500; color: #14100E;">One action.</strong> Every section points at &ldquo;Check your date&rdquo;. Secondary links never compete with it.</p>
+      <div style="display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 24px; border-top: 1px solid #E6DCC8; padding-top: 18px;">
+        <p style="font-size: 15px; line-height: 1.75; color: #5A665E;"><strong style="color: #2E3B34;">Grid.</strong> 12 columns, 56px page margin on desktop, 20px on mobile, 20&ndash;30px gutters.</p>
+        <p style="font-size: 15px; line-height: 1.75; color: #5A665E;"><strong style="color: #2E3B34;">Photographs sit in prints.</strong> White card, 12px mat, hairline border, soft shadow, tilted 1.5&ndash;2.5&deg; — alternate the direction so no two neighbours lean the same way.</p>
+        <p style="font-size: 15px; line-height: 1.75; color: #5A665E;"><strong style="color: #2E3B34;">Script is seasoning.</strong> One script phrase per heading at most, and never for body copy, buttons or navigation.</p>
+        <p style="font-size: 15px; line-height: 1.75; color: #5A665E;"><strong style="color: #2E3B34;">One action.</strong> Every section points at &ldquo;Check your date&rdquo;. Botanical line art appears at most twice per page, always behind content.</p>
       </div>
     </div>
 

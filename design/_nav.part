@@ -1,0 +1,15 @@
+  <div style="display: flex; flex-direction: column; align-items: center; gap: 14px; padding: 32px 56px 20px;">
+    <span class="script" style="font-size: 36px;">Isha Photography</span>
+    <div class="nav">
+      <span class="NAV_HOME">Home</span>
+      <span class="NAV_PORTFOLIO">Portfolio</span>
+      <span class="NAV_SERVICES">Collections</span>
+      <span class="NAV_ABOUT">About</span>
+      <span style="border: 1px solid #7A8B5C; color: #2E3B34; padding: 11px 20px;">Check your date</span>
+    </div>
+  </div>
+  <div style="display: flex; align-items: center; justify-content: center; gap: 18px; padding: 0 56px 8px;">
+    <span style="flex-grow: 1; height: 1px; background: #E6DCC8;"></span>
+    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#C9A99E" stroke-width="1"><path d="M12 4c3 3 3 6 0 8-3-2-3-5 0-8Z"></path><path d="M12 12v8"></path><path d="M12 15c-2-1-4-1-5 0"></path><path d="M12 17c2-1 4-1 5 0"></path></svg>
+    <span style="flex-grow: 1; height: 1px; background: #E6DCC8;"></span>
+  </div>

@@ -1,0 +1,24 @@
+  <div style="background: #2E3B34; color: rgba(251,247,239,0.76); padding: 56px 56px 30px;">
+    <div style="display: grid; grid-template-columns: repeat(12, minmax(0, 1fr)); gap: 40px; padding-bottom: 40px;">
+      <div style="grid-column: span 5; display: flex; flex-direction: column; gap: 14px;">
+        <span class="script" style="font-size: 30px; color: #E0C9A6;">Isha Photography</span>
+        <p style="font-size: 15px; line-height: 1.8; max-width: 330px;">Gentle, handmade coverage of weddings and family celebrations in [YOUR CITY] — printed properly and bound by hand.</p>
+      </div>
+      <div style="grid-column: span 2; display: flex; flex-direction: column; gap: 12px; font-size: 14px;">
+        <span class="tag" style="color: #E0C9A6; margin-bottom: 4px;">Pages</span>
+        <span>Portfolio</span><span>Collections</span><span>About</span><span>Contact</span>
+      </div>
+      <div style="grid-column: span 2; display: flex; flex-direction: column; gap: 12px; font-size: 14px;">
+        <span class="tag" style="color: #E0C9A6; margin-bottom: 4px;">Follow</span>
+        <span>Instagram</span><span>Facebook</span><span>YouTube</span>
+      </div>
+      <div style="grid-column: span 3; display: flex; flex-direction: column; gap: 12px; font-size: 14px;">
+        <span class="tag" style="color: #E0C9A6; margin-bottom: 4px;">Get in touch</span>
+        <span>[hello@yourdomain.com]</span><span>[+91 00000 00000]</span><span>[Studio address, City]</span>
+      </div>
+    </div>
+    <div style="height: 1px; background: rgba(251,247,239,0.16);"></div>
+    <div style="display: flex; justify-content: space-between; padding-top: 22px; font-size: 12px; letter-spacing: 0.1em;">
+      <span>&copy; [YEAR] Isha Photography</span><span>Privacy &middot; Terms</span>
+    </div>
+  </div>

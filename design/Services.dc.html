@@ -7,220 +7,216 @@
 <body>
 <x-dc>
 <helmet>
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Jost:wght@300;400;500&display=swap">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Petit+Formal+Script&family=Gilda+Display&family=Quattrocento+Sans:wght@400;700&display=swap">
   <style>
-    body { margin: 0; background: #F7F3ED; color: #14100E; font-family: "Jost", "Avenir Next", "Segoe UI", sans-serif; font-weight: 300; -webkit-font-smoothing: antialiased; }
-    a { color: oklch(0.55 0.09 70); text-decoration: none; }
-    a:hover { color: oklch(0.42 0.08 70); }
-    h1, h2, h3 { font-family: "Cormorant Garamond", "Iowan Old Style", Georgia, serif; font-weight: 300; margin: 0; letter-spacing: -0.01em; }
+    body { margin: 0; background: #FBF7EF; color: #2E3B34; font-family: "Quattrocento Sans", "Avenir Next", sans-serif; font-weight: 400; -webkit-font-smoothing: antialiased; }
+    a { color: #9C6B58; text-decoration: none; } a:hover { color: #7A4F3E; }
+    h1, h2, h3 { font-family: "Gilda Display", Georgia, serif; font-weight: 400; margin: 0; }
     p { margin: 0; text-wrap: pretty; }
-    .eyebrow { font-size: 11px; letter-spacing: 0.26em; text-transform: uppercase; color: oklch(0.55 0.09 70); font-weight: 400; }
-    .inc { display: flex; align-items: flex-start; gap: 12px; font-size: 15px; line-height: 1.6; color: #4A423B; }
-    .rule { height: 1px; background: #E3DACE; border: 0; }
+    .script { font-family: "Petit Formal Script", cursive; color: #9C6B58; }
+    .tag { font-size: 11px; letter-spacing: 0.28em; text-transform: uppercase; color: #7A8B5C; }
+    .torn { border: 1px solid #E6DCC8; background: #FFFFFF; padding: 12px; box-shadow: 0 10px 28px rgba(46,59,52,0.07); }
+    .btn-dark { background: #2E3B34; color: #FBF7EF; padding: 16px 30px; font-size: 11px; letter-spacing: 0.28em; text-transform: uppercase; display: inline-flex; align-items: center; gap: 12px; }
+    .btn-line { border: 1px solid #7A8B5C; color: #2E3B34; padding: 15px 28px; font-size: 11px; letter-spacing: 0.28em; text-transform: uppercase; display: inline-flex; align-items: center; gap: 12px; }
+    .nav { display: flex; align-items: center; gap: 32px; font-size: 11px; letter-spacing: 0.28em; text-transform: uppercase; color: #7A8B5C; }
+    .nav-on { color: #2E3B34; border-bottom: 1px solid #9C6B58; padding-bottom: 5px; }
   </style>
 </helmet>
 
-<div style="width: 1440px; background: #F7F3ED;">
-
-  <!-- header -->
-  <div style="display: flex; align-items: center; justify-content: space-between; padding: 26px 72px; border-bottom: 1px solid #E3DACE; background: #FFFDF9;">
-    <div style="display: flex; flex-direction: column; gap: 2px;">
-      <div style="font-family: 'Cormorant Garamond', Georgia, serif; font-size: 24px; letter-spacing: 0.06em;">Isha Photography</div>
-      <div style="font-size: 9px; letter-spacing: 0.34em; text-transform: uppercase; color: #4A423B;">Films &amp; Photographs</div>
-    </div>
-    <div style="display: flex; align-items: center; gap: 36px; font-size: 13px; letter-spacing: 0.12em; text-transform: uppercase; color: #4A423B;">
-      <span>Home</span>
-      <span>Portfolio</span>
-      <span style="color: #14100E; border-bottom: 1px solid oklch(0.62 0.09 70); padding-bottom: 4px;">Services</span>
-      <span>About</span>
-      <span style="display: inline-flex; align-items: center; gap: 10px; background: #14100E; color: #FFFDF9; padding: 13px 22px;">
-        Check your date
-        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"></path><path d="m13 6 6 6-6 6"></path></svg>
-      </span>
+<div style="width: 1440px; background: #FBF7EF; overflow: hidden;">
+  <div style="display: flex; flex-direction: column; align-items: center; gap: 14px; padding: 32px 56px 20px;">
+    <span class="script" style="font-size: 36px;">Isha Photography</span>
+    <div class="nav">
+      <span class="">Home</span>
+      <span class="">Portfolio</span>
+      <span class="nav-on">Collections</span>
+      <span class="">About</span>
+      <span style="border: 1px solid #7A8B5C; color: #2E3B34; padding: 11px 20px;">Check your date</span>
     </div>
   </div>
-
-  <!-- page head -->
-  <div style="padding: 84px 72px 56px; display: flex; align-items: flex-end; justify-content: space-between; gap: 60px;">
-    <div style="display: flex; flex-direction: column; gap: 20px; max-width: 760px;">
-      <span class="eyebrow">Services &amp; packages</span>
-      <h1 style="font-size: 66px; line-height: 1.02;">Clear prices, before<br>you have to ask</h1>
-    </div>
-    <p style="font-size: 16px; line-height: 1.75; color: #4A423B; max-width: 380px;">Three ways most people book. Everything is adjustable — extra days, a second shooter, travel outside [YOUR CITY].</p>
+  <div style="display: flex; align-items: center; justify-content: center; gap: 18px; padding: 0 56px 8px;">
+    <span style="flex-grow: 1; height: 1px; background: #E6DCC8;"></span>
+    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#C9A99E" stroke-width="1"><path d="M12 4c3 3 3 6 0 8-3-2-3-5 0-8Z"></path><path d="M12 12v8"></path><path d="M12 15c-2-1-4-1-5 0"></path><path d="M12 17c2-1 4-1 5 0"></path></svg>
+    <span style="flex-grow: 1; height: 1px; background: #E6DCC8;"></span>
   </div>
 
-  <!-- packages -->
-  <div style="padding: 0 72px 90px; display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 24px; align-items: start;">
+  <!-- PAGE HEAD -->
+  <div style="padding: 40px 56px 40px; display: flex; flex-direction: column; align-items: center; gap: 14px;">
+    <span class="tag">Collections &amp; pricing</span>
+    <h1 style="font-size: 58px; line-height: 1.1; text-align: center;">Clear prices, before<br>you have to <span class="script" style="font-size: 64px;">ask</span></h1>
+    <p style="font-size: 16px; line-height: 1.85; color: #5A665E; max-width: 560px; text-align: center; padding-top: 4px;">Three ways most people book. Everything is adjustable — extra days, a second shooter, travel outside [YOUR CITY].</p>
+  </div>
 
-    <div style="background: #FFFDF9; border: 1px solid #E3DACE; padding: 42px 36px 40px; display: flex; flex-direction: column; gap: 24px;">
-      <div style="display: flex; flex-direction: column; gap: 10px;">
-        <span style="font-size: 11px; letter-spacing: 0.24em; text-transform: uppercase; color: oklch(0.55 0.09 70);">Half day</span>
-        <h3 style="font-size: 34px; line-height: 1.1;">The Portrait</h3>
-        <p style="font-size: 15px; line-height: 1.7; color: #4A423B;">Pre-wedding, engagement, maternity or a studio session.</p>
+  <!-- COLLECTIONS -->
+  <div style="padding: 0 56px 70px; display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 26px; align-items: start;">
+
+    <div style="background: #FFFFFF; border: 1px solid #E6DCC8; padding: 40px 34px; display: flex; flex-direction: column; gap: 22px; align-items: center; text-align: center;">
+      <span class="script" style="font-size: 32px;">Half a day</span>
+      <h3 style="font-size: 30px;">The Portrait</h3>
+      <p style="font-size: 15px; line-height: 1.8; color: #5A665E;">Pre-wedding, engagement, maternity or a studio session.</p>
+      <div style="width: 40px; height: 1px; background: #E6DCC8;"></div>
+      <span style="font-family: 'Gilda Display', Georgia, serif; font-size: 38px; color: #9C6B58;">[YOUR PRICE]</span>
+      <div style="display: flex; flex-direction: column; gap: 13px; width: 100%; padding-top: 4px;">
+        <span style="font-size: 15px; line-height: 1.65; color: #5A665E;">Up to four hours, one location</span>
+        <span style="font-size: 15px; line-height: 1.65; color: #5A665E;">[N]+ edited photographs</span>
+        <span style="font-size: 15px; line-height: 1.65; color: #5A665E;">60-second save-the-date reel</span>
+        <span style="font-size: 15px; line-height: 1.65; color: #5A665E;">Private online gallery</span>
+        <span style="font-size: 15px; line-height: 1.65; color: #5A665E;">A small set of hand-made prints</span>
       </div>
-      <div class="rule"></div>
-      <div style="display: flex; align-items: baseline; gap: 10px;">
-        <span style="font-family: 'Cormorant Garamond', Georgia, serif; font-size: 46px; line-height: 1;">[YOUR PRICE]</span>
-        <span style="font-size: 13px; color: #4A423B;">/ session</span>
-      </div>
-      <div style="display: flex; flex-direction: column; gap: 14px;">
-        <div class="inc"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="oklch(0.62 0.09 70)" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink: 0; margin-top: 3px;"><path d="M20 6 9 17l-5-5"></path></svg>Up to 4 hours, one location</div>
-        <div class="inc"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="oklch(0.62 0.09 70)" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink: 0; margin-top: 3px;"><path d="M20 6 9 17l-5-5"></path></svg>[N]+ edited photographs</div>
-        <div class="inc"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="oklch(0.62 0.09 70)" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink: 0; margin-top: 3px;"><path d="M20 6 9 17l-5-5"></path></svg>60-second save-the-date reel</div>
-        <div class="inc"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="oklch(0.62 0.09 70)" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink: 0; margin-top: 3px;"><path d="M20 6 9 17l-5-5"></path></svg>Private online gallery</div>
-      </div>
-      <span style="display: inline-flex; align-items: center; justify-content: center; gap: 10px; border: 1px solid #14100E; color: #14100E; padding: 15px 24px; font-size: 13px; letter-spacing: 0.14em; text-transform: uppercase; margin-top: 6px;">Enquire</span>
+      <span class="btn-line" style="margin-top: 6px;">Enquire</span>
     </div>
 
-    <div style="background: #14100E; border: 1px solid #14100E; padding: 42px 36px 40px; display: flex; flex-direction: column; gap: 24px; position: relative;">
-      <span style="position: absolute; top: -1px; right: 28px; background: oklch(0.62 0.09 70); color: #14100E; font-size: 10px; letter-spacing: 0.2em; text-transform: uppercase; padding: 8px 14px;">Most booked</span>
-      <div style="display: flex; flex-direction: column; gap: 10px;">
-        <span style="font-size: 11px; letter-spacing: 0.24em; text-transform: uppercase; color: oklch(0.78 0.09 70);">One day</span>
-        <h3 style="font-size: 34px; line-height: 1.1; color: #FFFDF9;">The Ceremony</h3>
-        <p style="font-size: 15px; line-height: 1.7; color: rgba(255,253,249,0.76);">A single wedding day, a reception, or a birthday covered end to end.</p>
+    <div style="background: #2E3B34; padding: 40px 34px; display: flex; flex-direction: column; gap: 22px; align-items: center; text-align: center; position: relative;">
+      <span style="position: absolute; top: 0; left: 50%; transform: translate(-50%, -50%); background: #E0C9A6; color: #2E3B34; font-size: 10px; letter-spacing: 0.24em; text-transform: uppercase; padding: 8px 16px;">Most booked</span>
+      <span class="script" style="font-size: 32px; color: #E0C9A6;">The whole day</span>
+      <h3 style="font-size: 30px; color: #FBF7EF;">The Ceremony</h3>
+      <p style="font-size: 15px; line-height: 1.8; color: rgba(251,247,239,0.78);">A single wedding day, a reception, or a birthday covered end to end.</p>
+      <div style="width: 40px; height: 1px; background: rgba(251,247,239,0.25);"></div>
+      <span style="font-family: 'Gilda Display', Georgia, serif; font-size: 38px; color: #E0C9A6;">[YOUR PRICE]</span>
+      <div style="display: flex; flex-direction: column; gap: 13px; width: 100%; padding-top: 4px;">
+        <span style="font-size: 15px; line-height: 1.65; color: rgba(251,247,239,0.82);">Photographer and film-maker, full day</span>
+        <span style="font-size: 15px; line-height: 1.65; color: rgba(251,247,239,0.82);">[N]+ edited photographs</span>
+        <span style="font-size: 15px; line-height: 1.65; color: rgba(251,247,239,0.82);">[N]-minute highlight film</span>
+        <span style="font-size: 15px; line-height: 1.65; color: rgba(251,247,239,0.82);">Sneak peek within [N] days</span>
+        <span style="font-size: 15px; line-height: 1.65; color: rgba(251,247,239,0.82);">Hand-bound [N]-page album</span>
       </div>
-      <div style="height: 1px; background: rgba(255,253,249,0.16);"></div>
-      <div style="display: flex; align-items: baseline; gap: 10px;">
-        <span style="font-family: 'Cormorant Garamond', Georgia, serif; font-size: 46px; line-height: 1; color: #FFFDF9;">[YOUR PRICE]</span>
-        <span style="font-size: 13px; color: rgba(255,253,249,0.7);">/ day</span>
-      </div>
-      <div style="display: flex; flex-direction: column; gap: 14px;">
-        <div class="inc" style="color: rgba(255,253,249,0.82);"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="oklch(0.78 0.09 70)" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink: 0; margin-top: 3px;"><path d="M20 6 9 17l-5-5"></path></svg>Photographer + film-maker, full day</div>
-        <div class="inc" style="color: rgba(255,253,249,0.82);"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="oklch(0.78 0.09 70)" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink: 0; margin-top: 3px;"><path d="M20 6 9 17l-5-5"></path></svg>[N]+ edited photographs</div>
-        <div class="inc" style="color: rgba(255,253,249,0.82);"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="oklch(0.78 0.09 70)" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink: 0; margin-top: 3px;"><path d="M20 6 9 17l-5-5"></path></svg>[N]-minute highlight film</div>
-        <div class="inc" style="color: rgba(255,253,249,0.82);"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="oklch(0.78 0.09 70)" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink: 0; margin-top: 3px;"><path d="M20 6 9 17l-5-5"></path></svg>Sneak peek within [N] days</div>
-        <div class="inc" style="color: rgba(255,253,249,0.82);"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="oklch(0.78 0.09 70)" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink: 0; margin-top: 3px;"><path d="M20 6 9 17l-5-5"></path></svg>[N]-page printed album</div>
-      </div>
-      <span style="display: inline-flex; align-items: center; justify-content: center; gap: 10px; background: oklch(0.62 0.09 70); color: #14100E; padding: 15px 24px; font-size: 13px; letter-spacing: 0.14em; text-transform: uppercase; margin-top: 6px;">Check your date</span>
+      <span style="background: #E0C9A6; color: #2E3B34; padding: 16px 30px; font-size: 11px; letter-spacing: 0.28em; text-transform: uppercase; margin-top: 6px;">Check your date</span>
     </div>
 
-    <div style="background: #FFFDF9; border: 1px solid #E3DACE; padding: 42px 36px 40px; display: flex; flex-direction: column; gap: 24px;">
-      <div style="display: flex; flex-direction: column; gap: 10px;">
-        <span style="font-size: 11px; letter-spacing: 0.24em; text-transform: uppercase; color: oklch(0.55 0.09 70);">Three days +</span>
-        <h3 style="font-size: 34px; line-height: 1.1;">The Whole Wedding</h3>
-        <p style="font-size: 15px; line-height: 1.7; color: #4A423B;">Haldi, mehndi, sangeet, wedding and reception, in one continuous story.</p>
+    <div style="background: #FFFFFF; border: 1px solid #E6DCC8; padding: 40px 34px; display: flex; flex-direction: column; gap: 22px; align-items: center; text-align: center;">
+      <span class="script" style="font-size: 32px;">Every event</span>
+      <h3 style="font-size: 30px;">The Whole Wedding</h3>
+      <p style="font-size: 15px; line-height: 1.8; color: #5A665E;">Haldi, mehndi, sangeet, wedding and reception, in one story.</p>
+      <div style="width: 40px; height: 1px; background: #E6DCC8;"></div>
+      <span style="font-family: 'Gilda Display', Georgia, serif; font-size: 38px; color: #9C6B58;">[YOUR PRICE]</span>
+      <div style="display: flex; flex-direction: column; gap: 13px; width: 100%; padding-top: 4px;">
+        <span style="font-size: 15px; line-height: 1.65; color: #5A665E;">Everything in The Ceremony, per day</span>
+        <span style="font-size: 15px; line-height: 1.65; color: #5A665E;">Second photographer throughout</span>
+        <span style="font-size: 15px; line-height: 1.65; color: #5A665E;">Full-length ceremony film</span>
+        <span style="font-size: 15px; line-height: 1.65; color: #5A665E;">Travel &amp; stay within [N] km</span>
+        <span style="font-size: 15px; line-height: 1.65; color: #5A665E;">Two albums, one for each family</span>
       </div>
-      <div class="rule"></div>
-      <div style="display: flex; align-items: baseline; gap: 10px;">
-        <span style="font-family: 'Cormorant Garamond', Georgia, serif; font-size: 46px; line-height: 1;">[YOUR PRICE]</span>
-        <span style="font-size: 13px; color: #4A423B;">/ from</span>
-      </div>
-      <div style="display: flex; flex-direction: column; gap: 14px;">
-        <div class="inc"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="oklch(0.62 0.09 70)" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink: 0; margin-top: 3px;"><path d="M20 6 9 17l-5-5"></path></svg>Everything in The Ceremony, per day</div>
-        <div class="inc"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="oklch(0.62 0.09 70)" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink: 0; margin-top: 3px;"><path d="M20 6 9 17l-5-5"></path></svg>Second photographer throughout</div>
-        <div class="inc"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="oklch(0.62 0.09 70)" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink: 0; margin-top: 3px;"><path d="M20 6 9 17l-5-5"></path></svg>Full-length ceremony film</div>
-        <div class="inc"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="oklch(0.62 0.09 70)" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink: 0; margin-top: 3px;"><path d="M20 6 9 17l-5-5"></path></svg>Travel &amp; stay included within [N] km</div>
-        <div class="inc"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="oklch(0.62 0.09 70)" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink: 0; margin-top: 3px;"><path d="M20 6 9 17l-5-5"></path></svg>Two albums, one for each family</div>
-      </div>
-      <span style="display: inline-flex; align-items: center; justify-content: center; gap: 10px; border: 1px solid #14100E; color: #14100E; padding: 15px 24px; font-size: 13px; letter-spacing: 0.14em; text-transform: uppercase; margin-top: 6px;">Enquire</span>
+      <span class="btn-line" style="margin-top: 6px;">Enquire</span>
     </div>
 
   </div>
 
-  <!-- add-ons -->
-  <div style="background: #EFE8DE; padding: 86px 72px;">
-    <div style="display: flex; align-items: flex-end; justify-content: space-between; margin-bottom: 40px;">
-      <div style="display: flex; flex-direction: column; gap: 16px;">
-        <span class="eyebrow">Add to any package</span>
-        <h2 style="font-size: 44px; line-height: 1.1;">The extras people ask for</h2>
-      </div>
+  <!-- ADD-ONS -->
+  <div style="background: #EFEADD; padding: 66px 56px; display: flex; flex-direction: column; gap: 36px;">
+    <div style="display: flex; flex-direction: column; align-items: center; gap: 10px;">
+      <span class="tag">Add to any collection</span>
+      <h2 style="font-size: 42px;">The extras people ask for</h2>
     </div>
-    <div style="display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 20px;">
-      <div style="background: #FFFDF9; border: 1px solid #E3DACE; padding: 30px 26px; display: flex; flex-direction: column; gap: 10px;">
-        <span style="font-size: 18px;">Drone coverage</span>
-        <p style="font-size: 14px; line-height: 1.65; color: #4A423B;">Venue and baraat from above, where permitted.</p>
-        <span style="font-size: 14px; color: oklch(0.5 0.09 70); margin-top: 6px;">[YOUR PRICE]</span>
+    <div style="display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 22px;">
+      <div style="background: #FBF7EF; border: 1px solid #E6DCC8; padding: 28px 26px; display: flex; flex-direction: column; gap: 10px;">
+        <h3 style="font-size: 22px;">Drone coverage</h3>
+        <p style="font-size: 14px; line-height: 1.7; color: #5A665E;">Venue and baraat from above, where permitted.</p>
+        <span class="tag" style="color: #9C6B58; padding-top: 4px;">[YOUR PRICE]</span>
       </div>
-      <div style="background: #FFFDF9; border: 1px solid #E3DACE; padding: 30px 26px; display: flex; flex-direction: column; gap: 10px;">
-        <span style="font-size: 18px;">Same-day edit</span>
-        <p style="font-size: 14px; line-height: 1.65; color: #4A423B;">A short film cut and screened at the reception.</p>
-        <span style="font-size: 14px; color: oklch(0.5 0.09 70); margin-top: 6px;">[YOUR PRICE]</span>
+      <div style="background: #FBF7EF; border: 1px solid #E6DCC8; padding: 28px 26px; display: flex; flex-direction: column; gap: 10px;">
+        <h3 style="font-size: 22px;">Same-day edit</h3>
+        <p style="font-size: 14px; line-height: 1.7; color: #5A665E;">A short film cut and screened at the reception.</p>
+        <span class="tag" style="color: #9C6B58; padding-top: 4px;">[YOUR PRICE]</span>
       </div>
-      <div style="background: #FFFDF9; border: 1px solid #E3DACE; padding: 30px 26px; display: flex; flex-direction: column; gap: 10px;">
-        <span style="font-size: 18px;">Extra album</span>
-        <p style="font-size: 14px; line-height: 1.65; color: #4A423B;">Hand-bound, [N] pages, for parents or siblings.</p>
-        <span style="font-size: 14px; color: oklch(0.5 0.09 70); margin-top: 6px;">[YOUR PRICE]</span>
+      <div style="background: #FBF7EF; border: 1px solid #E6DCC8; padding: 28px 26px; display: flex; flex-direction: column; gap: 10px;">
+        <h3 style="font-size: 22px;">Extra album</h3>
+        <p style="font-size: 14px; line-height: 1.7; color: #5A665E;">Hand-bound, [N] pages, for parents or siblings.</p>
+        <span class="tag" style="color: #9C6B58; padding-top: 4px;">[YOUR PRICE]</span>
       </div>
-      <div style="background: #FFFDF9; border: 1px solid #E3DACE; padding: 30px 26px; display: flex; flex-direction: column; gap: 10px;">
-        <span style="font-size: 18px;">Destination travel</span>
-        <p style="font-size: 14px; line-height: 1.65; color: #4A423B;">Beyond [N] km — quoted at cost, no markup.</p>
-        <span style="font-size: 14px; color: oklch(0.5 0.09 70); margin-top: 6px;">At cost</span>
+      <div style="background: #FBF7EF; border: 1px solid #E6DCC8; padding: 28px 26px; display: flex; flex-direction: column; gap: 10px;">
+        <h3 style="font-size: 22px;">Destination travel</h3>
+        <p style="font-size: 14px; line-height: 1.7; color: #5A665E;">Beyond [N] km — quoted at cost, no markup.</p>
+        <span class="tag" style="color: #9C6B58; padding-top: 4px;">At cost</span>
       </div>
     </div>
   </div>
 
-  <!-- process -->
-  <div style="padding: 90px 72px;">
-    <div style="display: flex; flex-direction: column; gap: 16px; margin-bottom: 48px;">
-      <span class="eyebrow">How booking works</span>
-      <h2 style="font-size: 44px; line-height: 1.1;">Four steps, no surprises</h2>
+  <!-- PROCESS -->
+  <div style="padding: 70px 56px 60px; display: flex; flex-direction: column; gap: 42px;">
+    <div style="display: flex; flex-direction: column; align-items: center; gap: 10px;">
+      <span class="tag">How booking works</span>
+      <h2 style="font-size: 42px;">Four steps, no surprises</h2>
     </div>
-    <div style="display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 24px;">
-      <div style="display: flex; flex-direction: column; gap: 14px; border-top: 1px solid #14100E; padding-top: 22px;">
-        <span style="font-family: 'Cormorant Garamond', Georgia, serif; font-size: 40px; line-height: 1; color: oklch(0.62 0.09 70);">01</span>
-        <span style="font-size: 20px;">Send your date</span>
-        <p style="font-size: 15px; line-height: 1.7; color: #4A423B;">One form, one minute. I reply with availability and the full price list.</p>
+    <div style="display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 26px;">
+      <div style="display: flex; flex-direction: column; gap: 12px; align-items: center; text-align: center;">
+        <span class="script" style="font-size: 44px;">one</span>
+        <h3 style="font-size: 22px;">Send your date</h3>
+        <p style="font-size: 15px; line-height: 1.75; color: #5A665E;">One form, one minute. I reply with availability and the full price list.</p>
       </div>
-      <div style="display: flex; flex-direction: column; gap: 14px; border-top: 1px solid #E3DACE; padding-top: 22px;">
-        <span style="font-family: 'Cormorant Garamond', Georgia, serif; font-size: 40px; line-height: 1; color: oklch(0.62 0.09 70);">02</span>
-        <span style="font-size: 20px;">Talk it through</span>
-        <p style="font-size: 15px; line-height: 1.7; color: #4A423B;">A call or a coffee to go over the events, the venues and who matters.</p>
+      <div style="display: flex; flex-direction: column; gap: 12px; align-items: center; text-align: center;">
+        <span class="script" style="font-size: 44px;">two</span>
+        <h3 style="font-size: 22px;">Talk it through</h3>
+        <p style="font-size: 15px; line-height: 1.75; color: #5A665E;">A call or a coffee to go over the events, the venues and who matters.</p>
       </div>
-      <div style="display: flex; flex-direction: column; gap: 14px; border-top: 1px solid #E3DACE; padding-top: 22px;">
-        <span style="font-family: 'Cormorant Garamond', Georgia, serif; font-size: 40px; line-height: 1; color: oklch(0.62 0.09 70);">03</span>
-        <span style="font-size: 20px;">Hold the date</span>
-        <p style="font-size: 15px; line-height: 1.7; color: #4A423B;">[N]% advance locks it. The rest is due after the last event.</p>
+      <div style="display: flex; flex-direction: column; gap: 12px; align-items: center; text-align: center;">
+        <span class="script" style="font-size: 44px;">three</span>
+        <h3 style="font-size: 22px;">Hold the date</h3>
+        <p style="font-size: 15px; line-height: 1.75; color: #5A665E;">[N]% advance locks it. The rest is due after the last event.</p>
       </div>
-      <div style="display: flex; flex-direction: column; gap: 14px; border-top: 1px solid #E3DACE; padding-top: 22px;">
-        <span style="font-family: 'Cormorant Garamond', Georgia, serif; font-size: 40px; line-height: 1; color: oklch(0.62 0.09 70);">04</span>
-        <span style="font-size: 20px;">Get it back</span>
-        <p style="font-size: 15px; line-height: 1.7; color: #4A423B;">Sneak peek in [N] days, full gallery and film in [N] weeks.</p>
+      <div style="display: flex; flex-direction: column; gap: 12px; align-items: center; text-align: center;">
+        <span class="script" style="font-size: 44px;">four</span>
+        <h3 style="font-size: 22px;">Get it back</h3>
+        <p style="font-size: 15px; line-height: 1.75; color: #5A665E;">Sneak peek in [N] days, full gallery and film in [N] weeks.</p>
       </div>
     </div>
   </div>
 
   <!-- FAQ -->
-  <div style="padding: 0 72px 96px; display: grid; grid-template-columns: repeat(12, minmax(0, 1fr)); gap: 56px;">
-    <div style="grid-column: span 4; display: flex; flex-direction: column; gap: 16px;">
-      <span class="eyebrow">Before you ask</span>
-      <h2 style="font-size: 40px; line-height: 1.12;">The questions that come up every time</h2>
+  <div style="padding: 0 56px 70px; display: grid; grid-template-columns: repeat(12, minmax(0, 1fr)); gap: 50px;">
+    <div style="grid-column: span 4; display: flex; flex-direction: column; gap: 14px;">
+      <span class="tag">Before you ask</span>
+      <h2 style="font-size: 38px; line-height: 1.15;">The questions that come up <span class="script" style="font-size: 42px;">every time</span></h2>
     </div>
     <div style="grid-column: span 8; display: flex; flex-direction: column;">
-      <div style="display: flex; flex-direction: column; gap: 10px; padding: 24px 0; border-top: 1px solid #E3DACE;">
-        <span style="font-size: 19px;">How far in advance should we book?</span>
-        <p style="font-size: 15px; line-height: 1.7; color: #4A423B;">Peak season dates usually go [N] months ahead. If your date is close, ask anyway — cancellations happen.</p>
+      <div style="display: flex; flex-direction: column; gap: 10px; padding: 24px 0; border-top: 1px solid #E6DCC8;">
+        <h3 style="font-size: 21px;">How far in advance should we book?</h3>
+        <p style="font-size: 15px; line-height: 1.8; color: #5A665E;">Peak season dates usually go [N] months ahead. If your date is close, ask anyway — cancellations happen.</p>
       </div>
-      <div style="display: flex; flex-direction: column; gap: 10px; padding: 24px 0; border-top: 1px solid #E3DACE;">
-        <span style="font-size: 19px;">Do you travel outside [YOUR CITY]?</span>
-        <p style="font-size: 15px; line-height: 1.7; color: #4A423B;">Often. Travel and stay are included within [N] km; beyond that they&rsquo;re billed at cost with nothing added on top.</p>
+      <div style="display: flex; flex-direction: column; gap: 10px; padding: 24px 0; border-top: 1px solid #E6DCC8;">
+        <h3 style="font-size: 21px;">Do you travel outside [YOUR CITY]?</h3>
+        <p style="font-size: 15px; line-height: 1.8; color: #5A665E;">Often. Travel and stay are included within [N] km; beyond that they&rsquo;re billed at cost with nothing added on top.</p>
       </div>
-      <div style="display: flex; flex-direction: column; gap: 10px; padding: 24px 0; border-top: 1px solid #E3DACE;">
-        <span style="font-size: 19px;">Can we choose which photographs get edited?</span>
-        <p style="font-size: 15px; line-height: 1.7; color: #4A423B;">Yes. You get the full culled gallery first and pick the ones you want finished.</p>
+      <div style="display: flex; flex-direction: column; gap: 10px; padding: 24px 0; border-top: 1px solid #E6DCC8;">
+        <h3 style="font-size: 21px;">Can we choose which photographs get edited?</h3>
+        <p style="font-size: 15px; line-height: 1.8; color: #5A665E;">Yes. You get the full culled gallery first and pick the ones you want finished.</p>
       </div>
-      <div style="display: flex; flex-direction: column; gap: 10px; padding: 24px 0; border-top: 1px solid #E3DACE; border-bottom: 1px solid #E3DACE;">
-        <span style="font-size: 19px;">What if it rains, or the schedule slips?</span>
-        <p style="font-size: 15px; line-height: 1.7; color: #4A423B;">It always slips. We stay until the events you booked are done — overtime isn&rsquo;t charged by the hour.</p>
+      <div style="display: flex; flex-direction: column; gap: 10px; padding: 24px 0; border-top: 1px solid #E6DCC8; border-bottom: 1px solid #E6DCC8;">
+        <h3 style="font-size: 21px;">What if it rains, or the schedule slips?</h3>
+        <p style="font-size: 15px; line-height: 1.8; color: #5A665E;">It always slips. We stay until the events you booked are done — overtime isn&rsquo;t charged by the hour.</p>
       </div>
     </div>
   </div>
 
-  <!-- CTA + footer -->
-  <div style="background: #14100E; padding: 78px 72px; display: flex; align-items: center; justify-content: space-between; gap: 60px;">
-    <div style="display: flex; flex-direction: column; gap: 14px;">
-      <h2 style="font-size: 44px; line-height: 1.1; color: #FFFDF9;">Not sure which one fits?</h2>
-      <p style="font-size: 16px; line-height: 1.7; color: rgba(255,253,249,0.78); max-width: 520px;">Tell me the events and the rough guest count and I&rsquo;ll put together a package that matches, priced in writing.</p>
+  <!-- CTA -->
+  <div style="background: #2E3B34; padding: 66px 56px; display: flex; align-items: center; justify-content: space-between; gap: 50px;">
+    <div style="display: flex; flex-direction: column; gap: 12px;">
+      <h2 style="font-size: 42px; line-height: 1.12; color: #FBF7EF;">Not sure which one <span class="script" style="font-size: 48px; color: #E0C9A6;">fits?</span></h2>
+      <p style="font-size: 16px; line-height: 1.8; color: rgba(251,247,239,0.78); max-width: 520px;">Tell me the events and the rough guest count and I&rsquo;ll put together a collection that matches, priced in writing.</p>
     </div>
-    <span style="display: inline-flex; align-items: center; gap: 12px; background: oklch(0.62 0.09 70); color: #14100E; padding: 18px 32px; font-size: 13px; letter-spacing: 0.14em; text-transform: uppercase; white-space: nowrap;">
-      Get a custom quote
-      <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"></path><path d="m13 6 6 6-6 6"></path></svg>
-    </span>
+    <span style="background: #E0C9A6; color: #2E3B34; padding: 16px 30px; font-size: 11px; letter-spacing: 0.28em; text-transform: uppercase; white-space: nowrap;">Get a custom quote</span>
   </div>
-  <div style="background: #14100E; color: rgba(255,253,249,0.7); padding: 0 72px 34px;">
-    <div style="height: 1px; background: rgba(255,253,249,0.12);"></div>
-    <div style="display: flex; justify-content: space-between; padding-top: 24px; font-size: 12px; letter-spacing: 0.1em;">
-      <span>&copy; [YEAR] Isha Photography &middot; [YOUR CITY]</span>
-      <span>[hello@yourdomain.com] &middot; [+91 00000 00000]</span>
+  <div style="background: #2E3B34; color: rgba(251,247,239,0.76); padding: 56px 56px 30px;">
+    <div style="display: grid; grid-template-columns: repeat(12, minmax(0, 1fr)); gap: 40px; padding-bottom: 40px;">
+      <div style="grid-column: span 5; display: flex; flex-direction: column; gap: 14px;">
+        <span class="script" style="font-size: 30px; color: #E0C9A6;">Isha Photography</span>
+        <p style="font-size: 15px; line-height: 1.8; max-width: 330px;">Gentle, handmade coverage of weddings and family celebrations in [YOUR CITY] — printed properly and bound by hand.</p>
+      </div>
+      <div style="grid-column: span 2; display: flex; flex-direction: column; gap: 12px; font-size: 14px;">
+        <span class="tag" style="color: #E0C9A6; margin-bottom: 4px;">Pages</span>
+        <span>Portfolio</span><span>Collections</span><span>About</span><span>Contact</span>
+      </div>
+      <div style="grid-column: span 2; display: flex; flex-direction: column; gap: 12px; font-size: 14px;">
+        <span class="tag" style="color: #E0C9A6; margin-bottom: 4px;">Follow</span>
+        <span>Instagram</span><span>Facebook</span><span>YouTube</span>
+      </div>
+      <div style="grid-column: span 3; display: flex; flex-direction: column; gap: 12px; font-size: 14px;">
+        <span class="tag" style="color: #E0C9A6; margin-bottom: 4px;">Get in touch</span>
+        <span>[hello@yourdomain.com]</span><span>[+91 00000 00000]</span><span>[Studio address, City]</span>
+      </div>
+    </div>
+    <div style="height: 1px; background: rgba(251,247,239,0.16);"></div>
+    <div style="display: flex; justify-content: space-between; padding-top: 22px; font-size: 12px; letter-spacing: 0.1em;">
+      <span>&copy; [YEAR] Isha Photography</span><span>Privacy &middot; Terms</span>
     </div>
   </div>
 

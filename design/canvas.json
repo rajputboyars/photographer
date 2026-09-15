@@ -5,16 +5,12 @@
       "name": "Website pages"
     },
     {
-      "id": "page-2",
-      "name": "Hero directions"
-    },
-    {
       "id": "page-3",
-      "name": "Theme options"
+      "name": "Themes 1–5"
     },
     {
       "id": "page-4",
-      "name": "More themes (6–10)"
+      "name": "Themes 6–10"
     }
   ],
   "artboards": [
@@ -25,7 +21,7 @@
       "x": 0,
       "y": 0,
       "w": 1440,
-      "h": 5400
+      "h": 5000
     },
     {
       "file": "Portfolio.dc.html",
@@ -34,16 +30,16 @@
       "x": 1600,
       "y": 0,
       "w": 1440,
-      "h": 2700
+      "h": 3400
     },
     {
       "file": "Services.dc.html",
-      "title": "Services & Packages",
+      "title": "Collections & Pricing",
       "page": "page-1",
       "x": 3200,
       "y": 0,
       "w": 1440,
-      "h": 3050
+      "h": 3300
     },
     {
       "file": "About.dc.html",
@@ -52,7 +48,7 @@
       "x": 4800,
       "y": 0,
       "w": 1440,
-      "h": 2550
+      "h": 2800
     },
     {
       "file": "Contact.dc.html",
@@ -61,7 +57,7 @@
       "x": 6400,
       "y": 0,
       "w": 1440,
-      "h": 1600
+      "h": 1800
     },
     {
       "file": "MobileHome.dc.html",
@@ -70,7 +66,7 @@
       "x": 8000,
       "y": 0,
       "w": 390,
-      "h": 3300
+      "h": 3450
     },
     {
       "file": "StyleSheet.dc.html",
@@ -79,24 +75,6 @@
       "x": 8560,
       "y": 0,
       "w": 1240,
-      "h": 860
-    },
-    {
-      "file": "HeroAltSplit.dc.html",
-      "title": "Direction B — Editorial split",
-      "page": "page-2",
-      "x": 0,
-      "y": 0,
-      "w": 1440,
-      "h": 880
-    },
-    {
-      "file": "HeroAltCinematic.dc.html",
-      "title": "Direction C — Cinematic",
-      "page": "page-2",
-      "x": 1600,
-      "y": 0,
-      "w": 1440,
       "h": 880
     },
     {
@@ -197,7 +175,7 @@
       "x": 0,
       "y": -170,
       "w": 520,
-      "text": "Everything in square brackets is a placeholder for a real fact — prices, phone, city, review quotes, couple names.\nReplace them before this goes live; nothing here is invented."
+      "text": "Built in theme 10 — Ink & Petal.\nEverything in square brackets is a placeholder for a real fact: prices, phone, city, review quotes, couple and venue names. Replace them before this goes live; nothing here is invented."
     },
     {
       "id": "note-2",
@@ -208,20 +186,12 @@
       "text": "The whole site points at one action: \"Check your date\".\nThis form is the conversion page — every other CTA lands here."
     },
     {
-      "id": "note-3",
-      "page": "page-2",
-      "x": 0,
-      "y": -170,
-      "w": 640,
-      "text": "Direction A (warm editorial) is built out across the pages on the first page of this canvas.\nThese two are alternates for the same brand, if you want a different opening note: B is quieter and more typographic, C is cinematic and photo-first."
-    },
-    {
       "id": "note-4",
       "page": "page-3",
       "x": 0,
       "y": -190,
       "w": 760,
-      "text": "Five theme directions for the same site. Each shows a hero plus a services block so you can judge the type and colour, not just a palette.\nPick a number and I'll rebuild all five pages (and the mobile screen) in that theme."
+      "text": "Themes 1–5 (not chosen). Kept for reference."
     },
     {
       "id": "note-5",
@@ -229,11 +199,11 @@
       "x": 0,
       "y": -190,
       "w": 780,
-      "text": "Second round — pushed much further than themes 1–5.\nThese lean on movement, scale and collage rather than colour alone: vertical reel frames, overlapping tilted cards, a headline filled with your photograph, film-strip framing, and hand-torn prints.\nPick a number, or tell me which parts of which ones to combine."
+      "text": "Themes 6–10. Number 10, Ink & Petal, is the one built out across the website pages."
     }
   ],
   "launch": {
     "view": "canvas",
-    "page": "page-4"
+    "page": "page-1"
   }
 }
