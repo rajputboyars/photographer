@@ -4,17 +4,17 @@ import GalleryCard from "@/components/GalleryCard";
 import CtaBand from "@/components/CtaBand";
 import Icon from "@/components/Icon";
 import { Arrow, BrightLink, GhostLink, Panel, Pill, SectionHead } from "@/components/Glass";
-import { collections, site, testimonials } from "@/lib/site";
+import { collections, photos, site, testimonials } from "@/lib/site";
 
 const FEATURED = [
-  { src: "/images/home-section/IMG-20250104-WA0013.jpg", alt: "Mehndi ceremony", height: "h-[260px] md:h-[300px]" },
-  { src: "/images/home-section/card5.jpg", alt: "Pre-wedding portrait", height: "h-[300px] md:h-[360px]", className: "md:-mt-10" },
-  { src: "/images/home-section/IMG-20250104-WA0019.jpg", alt: "Reception", height: "h-[260px] md:h-[300px]" },
+  { src: photos.mehndi, alt: "Mehndi ceremony", height: "h-[260px] md:h-[300px]" },
+  { src: photos.preWedding, alt: "Pre-wedding portrait", height: "h-[300px] md:h-[360px]", className: "md:-mt-10" },
+  { src: photos.reception, alt: "Reception", height: "h-[260px] md:h-[300px]" },
 ];
 
 export default function Home() {
   return (
-    <PageShell image="/images/home-section/home4.jpg" imageAlt="">
+    <PageShell image={photos.heroHome} imageAlt="">
       {/* HERO */}
       <section className="flex animate-rise flex-col items-center gap-6 py-10 text-center md:py-16">
         <Pill className="px-5 py-2.5 text-sm">
@@ -92,7 +92,7 @@ export default function Home() {
         <div className="grid gap-5 md:grid-cols-12">
           <GalleryCard
             className="md:col-span-7"
-            src="/images/home-section/IMG-20250104-WA0017.jpg"
+            src={photos.wedding}
             alt="Wedding ceremony"
             caption="[Couple] & [Couple] · [Venue]"
             height="h-[280px] md:h-[400px]"
@@ -100,15 +100,15 @@ export default function Home() {
           />
           <GalleryCard
             className="md:col-span-5"
-            src="/images/home-section/IMG-20250104-WA0012.jpg"
+            src={photos.sangeet}
             alt="Sangeet night"
             caption="[Couple] & [Couple] · Sangeet"
             height="h-[280px] md:h-[400px]"
             sizes="(max-width: 768px) 100vw, 42vw"
           />
-          <GalleryCard className="md:col-span-4" src="/images/home-section/IMG-20250104-WA0021.jpg" alt="First birthday" height="h-[240px] md:h-[280px]" />
-          <GalleryCard className="md:col-span-4" src="/images/home-section/card4.jpg" alt="Birthday celebration" height="h-[240px] md:h-[280px]" />
-          <GalleryCard className="md:col-span-4" src="/images/home-section/card2.jpg" alt="Haldi ceremony" height="h-[240px] md:h-[280px]" />
+          <GalleryCard className="md:col-span-4" src={photos.birthday} alt="First birthday" height="h-[240px] md:h-[280px]" />
+          <GalleryCard className="md:col-span-4" src={photos.celebration} alt="Birthday celebration" height="h-[240px] md:h-[280px]" />
+          <GalleryCard className="md:col-span-4" src={photos.haldi} alt="Haldi ceremony" height="h-[240px] md:h-[280px]" />
         </div>
       </section>
 
@@ -117,7 +117,7 @@ export default function Home() {
         <Panel className="grid gap-10 p-7 md:grid-cols-12 md:items-center md:p-11">
           <div className="relative h-[320px] overflow-hidden rounded-[22px] md:col-span-5 md:h-[440px]">
             <Image
-              src="/images/home-section/about.jpg"
+              src={photos.portrait}
               alt="Chandra Shekar, photographer"
               fill
               sizes="(max-width: 768px) 100vw, 40vw"

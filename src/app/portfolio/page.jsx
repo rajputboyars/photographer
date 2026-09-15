@@ -2,7 +2,7 @@ import PageShell from "@/components/PageShell";
 import PortfolioGrid from "@/components/PortfolioGrid";
 import CtaBand from "@/components/CtaBand";
 import { GhostLink, Arrow, SectionHead } from "@/components/Glass";
-import { site } from "@/lib/site";
+import { photos, site } from "@/lib/site";
 import DATA from "@/data.js";
 
 export const metadata = {
@@ -12,7 +12,7 @@ export const metadata = {
 
 export default function PortfolioPage() {
   return (
-    <PageShell image="/images/home-section/IMG-20250104-WA0013.jpg">
+    <PageShell image={photos.heroPortfolio}>
       <section className="flex flex-col items-center gap-4 py-10 text-center md:py-14">
         <span className="meta">Portfolio</span>
         <h1 className="max-w-[820px] text-[clamp(2.2rem,5vw,3.9rem)] font-light leading-[1.05] tracking-tight">
